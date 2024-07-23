@@ -1,0 +1,34 @@
+---
+sidebar_position: 1
+title: 1. Monde
+tags: [Coordonnées, Tableau]
+description: Coordonnées principales de l'Overworld
+# slug: /custom_url
+---
+
+import {CoordinatesTable} from './ts/coordinate-table';
+
+# Monde
+
+:::info
+
+Une bordure est définie dans le monde, vous pouvez aller de `-5000` à `5000` (en X et en Z).
+
+:::
+
+<br/>
+
+<CoordinatesTable 
+  data={[
+    ['Village du nord (Base principale)', '200 -700'],
+    ['Ancient City (Warden)', '-1700 -49 1665'],
+    ['Entrée dans l\'Ancient City', '-1645 114 1634'],
+    ['Manoir', '-3700 -1000'],
+    ['Portail de l\'End (Stronghold)', '1300 1100'],
+    ['Spawner à zombies - 1', '468 -29 -360'],
+    ['Spawner à zombies - 2', '645 -41 -913'],
+    ['Temple de la Mer', '200 4350'],
+    ['Tour de pillagers', '1550 1200'],
+    ['Village du désert', '107 -4783'],
+  ]}
+/>

@@ -44,9 +44,6 @@ export const CoordinatesTable = ({ data }) => {
                                         cursor: 'pointer',
                                         opacity: isPressed[index] ? 0.5 : 1,
                                     }}
-                                    onClick={() => {
-                                        navigator.clipboard.writeText(row[1]);
-                                    }}
                                 />
                             </CopyToClipboard>
                         </td>

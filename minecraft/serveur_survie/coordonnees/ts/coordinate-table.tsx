@@ -1,6 +1,7 @@
 
 import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded'; // https://mui.com/material-ui/material-icons/
 import { useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export const CoordinatesTable = ({ data }) => {
 
@@ -33,20 +34,21 @@ export const CoordinatesTable = ({ data }) => {
                         <td>{row[0]}</td>
                         <td className='center-text'>{row[1]}</td>
                         <td className='center-icon'>
-                            <ContentCopyRoundedIcon
-                                className='copy-icon'
-                                onMouseDown={() => handleMouseDown(index)}
-                                onMouseUp={() => handleMouseUp(index)}
-                                onMouseLeave={() => handleMouseLeave(index)}
-                                style={{
-                                    cursor: 'pointer',
-                                    opacity: isPressed[index] ? 0.5 : 1,
-                                }}
-                                onClick={() => {
-                                    navigator.clipboard.writeText(row[1]);
-                                }}
-
-                            />
+                            <CopyToClipboard text={row[1]}>
+                                <ContentCopyRoundedIcon
+                                    className='copy-icon'
+                                    onMouseDown={() => handleMouseDown(index)}
+                                    onMouseUp={() => handleMouseUp(index)}
+                                    onMouseLeave={() => handleMouseLeave(index)}
+                                    style={{
+                                        cursor: 'pointer',
+                                        opacity: isPressed[index] ? 0.5 : 1,
+                                    }}
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(row[1]);
+                                    }}
+                                />
+                            </CopyToClipboard>
                         </td>
                     </tr>
                 ))}

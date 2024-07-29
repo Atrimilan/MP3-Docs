@@ -8,7 +8,17 @@
         font: var(--ifm-font-size-base) / var(--ifm-line-height-base) var(--ifm-font-family-base);
     }
 
+    input,
+    button {
+        border: 1px solid var(--ifm-table-border-color);
+        background: #1b1b1d77;
+    }
+
     input {
+        &::placeholder {
+            color: rgb(130, 130, 130);
+            font-style: oblique;
+        }
         padding: 7px 20px;
         width: 100%;
         margin-right: 15px;

@@ -1,3 +1,5 @@
+import WifiOutlinedIcon from '@mui/icons-material/WifiOutlined';
+import WifiOffOutlinedIcon from '@mui/icons-material/WifiOffOutlined';
 import { useEffect, useState } from "react";
 
 const fetchStatus = () => {
@@ -15,35 +17,39 @@ export const ServerStatus = () => {
     }, []);
 
     return (
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Serveur</th>
-                        <th>Joueurs</th>
-                        <th>MOTD</th>
-                        <th>Version</th>
-                        <th>Statut</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {servers ? (
-                        servers.map(server => (
-                            <tr key={server.id}>
-                                <td>{server.world_name}</td>
-                                <td>{server.online} / {server.max}</td>
-                                <td>{server.desc}</td>
-                                <td>{server.version}</td>
-                                <td>{server.running ? 'En ligne' : 'Hors ligne'}</td>
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan={5}>Chargement des données...</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-        </div>
+        <>
+            {
+                servers?.map(server => (
+                    <div className="info-box">
+
+                        <img src={"/img/" + server.id + ".png"} alt="Photo du serveur" />
+
+                        <div className="content">
+
+                            <div className="title">
+                                <h1>{server.world_name}</h1>
+                            </div>
+
+                            <div className="description">
+                                <span>{"Serveur " + server.version}</span>
+                            </div>
+
+                            <div className="status">
+                                {server.running ?
+                                    <><span className='on'>En ligne</span>&nbsp;<WifiOutlinedIcon className='on' /></>
+                                    :
+                                    <><span className='off'>Hors ligne</span>&nbsp;<WifiOffOutlinedIcon className='off' /></>
+                                }
+                            </div>
+
+                            <div className="connected">
+                                <span>Joueurs : {server.online} / {server.max}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                ))
+            }
+        </>
     )
 };

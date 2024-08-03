@@ -14,6 +14,11 @@ export const ServerStatus = () => {
 
     useEffect(() => {
         fetchStatus().then(data => setServers(data));
+
+        const intervalId = setInterval(() => {
+            fetchStatus().then(data => setServers(data));
+        }, 10000);
+        return () => clearInterval(intervalId);
     }, []);
 
     return (

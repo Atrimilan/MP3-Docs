@@ -44,11 +44,11 @@ export const ProxyStatus = () => {
 
     return (
         <>
-            {serverInfo?.online_players > 0 &&
+            {serverInfo &&
                 <div>
                     <h2>Joueurs en ligne : <span>{serverInfo?.online_players}/{serverInfo?.max_players}</span></h2>
                     <div>
-                        {serverInfo.player_list.map(player => (
+                        {serverInfo?.online_players > 0 && serverInfo.player_list.map(player => (
                             <div key={player.name} style={{ alignItems: "center", display: "flex" }}
                                 onMouseEnter={() => handleMouseEnter(player)}
                                 onMouseLeave={() => handleMouseLeave(player)}>

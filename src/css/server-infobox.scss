@@ -1,10 +1,21 @@
 .info-box {
+    margin-top: 30px;
+
     border-radius: 17px;
     display: flex;
-    background-color: var(--ifm-background-surface-color);
-    width: 50%;
+    background: linear-gradient(15deg, #990f92 0%, #058a83 100%);
+    box-shadow:
+        -5px 2px 10px 0px #990f9233,
+        5px -2px 10px 0px #058a8333,
+        0px 0px 10px 0px #00000055;
+
+    h1,
+    h4 {
+        text-shadow: 0px 0px 20px #0a154177;
+    }
 
     img {
+        box-shadow: 0px 0px 10px 0px #410a3fcc;
         border-radius: 10px;
         margin: 7px 0 7px 7px;
         width: 200px;
@@ -29,13 +40,17 @@
         .description {
             bottom: 20px;
             color: var(--ifm-color-primary);
+
+            h4 {
+                margin-bottom: 0;
+            }
         }
 
         .title,
         .description,
         .status,
         .connected {
-            padding: 0px 20px;
+            padding: 0px 30px;
             position: absolute;
         }
 
@@ -55,6 +70,25 @@
         .connected {
             bottom: 20px;
             right: 0px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .info-box {
+        background: none;
+        box-shadow: none;
+        position: relative;
+        height: 115px;
+
+        img {
+            box-shadow: none;
+            width: 100%;
+            border-radius: 17px;
+            position: absolute;
+            margin: 0;
+            z-index: -1;
+            object-fit: cover;
         }
     }
 }

@@ -9,7 +9,9 @@ const fetchProxyStatus = () => {
 
             player_list?.forEach(player => {
                 delete player.uuid;
-                player.image = "https://mc-heads.net/avatar/" + player.name;
+                player.image_avatar = "https://mc-heads.net/avatar/" + player.name;
+                player.image_head = "https://mc-heads.net/head/" + player.name;
+                player.current_image = player.image_avatar;
             });
 
             return { online_players, max_players, player_list };
@@ -23,17 +25,34 @@ export const ProxyStatus = () => {
 
     useEffect(() => {
         fetchProxyStatus().then(data => setServerInfo(data));
+
+        const intervalId = setInterval(() => {
+            fetchProxyStatus().then(data => setServerInfo(data));
+        }, 10000);
+        return () => clearInterval(intervalId);
     }, []);
+
+    const handleMouseEnter = (player) => {
+        player.current_image = player.image_head;
+        setServerInfo({ ...serverInfo });
+    }
+
+    const handleMouseLeave = (player) => {
+        player.current_image = player.image_avatar;
+        setServerInfo({ ...serverInfo });
+    }
 
     return (
         <>
             {serverInfo?.online_players > 0 &&
                 <div>
-                    <h3>Joueurs en ligne : <span>{serverInfo?.online_players}/{serverInfo?.max_players}</span></h3>
+                    <h2>Joueurs en ligne : <span>{serverInfo?.online_players}/{serverInfo?.max_players}</span></h2>
                     <div>
                         {serverInfo.player_list.map(player => (
-                            <div key={player.name} style={{ alignItems: "center", display: "flex" }}>
-                                <img src={player.image} alt={player.name} style={{ width: 35, height: 35, margin: 7 }} />
+                            <div key={player.name} style={{ alignItems: "center", display: "flex" }}
+                                onMouseEnter={() => handleMouseEnter(player)}
+                                onMouseLeave={() => handleMouseLeave(player)}>
+                                <img src={player.current_image} alt={player.name} style={{ width: 35, height: 35, margin: 7 }} />
                                 <span>{player.name}</span>
                             </div>
                         ))}

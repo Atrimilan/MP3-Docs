@@ -4,10 +4,15 @@ import { ProxyStatus } from './proxy-status';
 export const Index = () => {
 
     return (
-        <>
-            <ServerStatus />
-            <br/>
-            <ProxyStatus />
-        </>
+        <div className="index">
+            <div className="left">
+                <ServerStatus />
+            </div>
+
+            <div className="right">
+                <div className="separator" />
+                <ProxyStatus />
+            </div>
+        </div>
     );
 }

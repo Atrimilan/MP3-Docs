@@ -1,0 +1,40 @@
+.index {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .left {
+        width: 50%;
+    }
+    
+    .right {
+        display: flex;
+
+        .separator {
+            width: 2px;
+            background-color: rgb(55, 55, 55);
+            top: 0;
+            bottom: 0;
+            margin: 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .index {
+        display: flex;
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+        }
+        .right {
+            margin-top: 30px;
+
+            .separator {
+                width: 0px;
+                margin: 0 ;
+            }
+        }
+    }
+}

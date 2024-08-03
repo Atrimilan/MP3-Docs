@@ -31,7 +31,7 @@ export const ServerStatus = () => {
                             </div>
 
                             <div className="description">
-                                <span>{"Serveur " + server.version}</span>
+                                <h4>{"Serveur " + server.version}</h4>
                             </div>
 
                             <div className="status">
@@ -43,7 +43,7 @@ export const ServerStatus = () => {
                             </div>
 
                             <div className="connected">
-                                <span>Joueurs : {server.online} / {server.max}</span>
+                                <span>{server.online} / {server.max}</span>
                             </div>
 
                         </div>

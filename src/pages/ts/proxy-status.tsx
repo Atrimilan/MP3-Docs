@@ -46,7 +46,7 @@ export const ProxyStatus = () => {
     return (
         <>
             <div>
-                <h2 style={{ margin: 0, display: "flex", alignContent: 'center' }}>
+                <h2 style={{ display: "flex", alignContent: 'center' }}>
                     <span>Joueurs en ligne :&nbsp;</span>
                     {serverInfo ?
                         <span>{serverInfo.online_players}/{serverInfo.max_players}</span> :

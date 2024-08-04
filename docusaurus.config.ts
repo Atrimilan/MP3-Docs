@@ -33,7 +33,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           path: 'doc_survival',
-          routeBasePath: 'doc_survival',
+          routeBasePath: 'survie',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -49,7 +49,7 @@ const config: Config = {
       {
         id: 'doc_tech',
         path: 'doc_tech',
-        routeBasePath: 'doc_tech',
+        routeBasePath: 'tech',
         sidebarPath: require.resolve('./sidebars.ts'),
       }
     ],
@@ -58,8 +58,8 @@ const config: Config = {
       {
         id: 'doc_creative',
         path: 'doc_creative',
-        routeBasePath: 'doc_creative',
-        sidebarPath: require.resolve('./sidebars.ts'),
+        routeBasePath: 'creatif',
+        sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
   ],
@@ -84,12 +84,12 @@ const config: Config = {
           label: 'Survie'
         },
         {
-          to: '/doc_creative/intro',
+          to: '/creatif/intro',
           label: 'Créatif',
           position: 'left'
         },
         {
-          to: '/doc_tech/intro',
+          to: '/tech/intro',
           label: 'Tech',
           position: 'left'
         },

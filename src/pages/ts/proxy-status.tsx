@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Blocks } from 'react-loader-spinner'
 
 const fetchProxyStatus = () => {
     return fetch("https://api.mcsrvstat.us/3/mp3.pixelfucker.com")
@@ -44,21 +45,31 @@ export const ProxyStatus = () => {
 
     return (
         <>
-            {serverInfo &&
+            <div>
+                <h2 style={{ margin: 0, display: "flex", alignContent: 'center' }}>
+                    <span>Joueurs en ligne :&nbsp;</span>
+                    {serverInfo ?
+                        <span>{serverInfo.online_players}/{serverInfo.max_players}</span> :
+                        <Blocks
+                            height="30"
+                            width="30"
+                            visible={true}
+                        />
+                    }
+                </h2>
                 <div>
-                    <h2>Joueurs en ligne : <span>{serverInfo?.online_players}/{serverInfo?.max_players}</span></h2>
-                    <div>
-                        {serverInfo?.online_players > 0 && serverInfo.player_list.map(player => (
+                    {serverInfo &&
+                        serverInfo.online_players > 0 && serverInfo.player_list.map(player => (
                             <div key={player.name} style={{ alignItems: "center", display: "flex" }}
                                 onMouseEnter={() => handleMouseEnter(player)}
                                 onMouseLeave={() => handleMouseLeave(player)}>
                                 <img src={player.current_image} alt={player.name} style={{ width: 35, height: 35, margin: 7 }} />
                                 <span>{player.name}</span>
                             </div>
-                        ))}
-                    </div>
+                        ))
+                    }
                 </div>
-            }
+            </div>
         </>
     );
 }

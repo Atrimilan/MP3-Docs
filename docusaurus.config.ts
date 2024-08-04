@@ -32,8 +32,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          path: 'minecraft',
-          routeBasePath: 'minecraft',
+          path: 'doc_survival',
+          routeBasePath: 'doc_survival',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -47,9 +47,18 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'tech',
-        path: 'tech',
-        routeBasePath: 'tech',
+        id: 'doc_tech',
+        path: 'doc_tech',
+        routeBasePath: 'doc_tech',
+        sidebarPath: require.resolve('./sidebars.ts'),
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'doc_creative',
+        path: 'doc_creative',
+        routeBasePath: 'doc_creative',
         sidebarPath: require.resolve('./sidebars.ts'),
       },
     ],
@@ -57,11 +66,12 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark'
+      defaultMode: 'dark',
+      disableSwitch: true
     },
     navbar: {
       title: 'Multi Player 3',
-      hideOnScroll: true,
+      hideOnScroll: false,
       logo: {
         alt: 'MP3',
         src: 'img/mp3-logo.png',
@@ -71,10 +81,15 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'sidebarId',
           position: 'left',
-          label: 'Minecraft'
+          label: 'Survie'
         },
         {
-          to: '/tech/intro',
+          to: '/doc_creative/intro',
+          label: 'Créatif',
+          position: 'left'
+        },
+        {
+          to: '/doc_tech/intro',
           label: 'Tech',
           position: 'left'
         },

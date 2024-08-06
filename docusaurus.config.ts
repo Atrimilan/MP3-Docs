@@ -150,7 +150,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `<br>Multi Player 3 - Documentation écrite avec Docusaurus`,
+      copyright: `<br>Multi Player 3 - Site réalisé avec Docusaurus`,
     },
     prism: {
       theme: prismThemes.github,

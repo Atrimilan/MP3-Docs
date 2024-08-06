@@ -36,7 +36,7 @@ export const ServerStatus = () => {
                             </div>
 
                             <div className="description">
-                                <h4>{"Serveur " + server.version}</h4>
+                                <h4>{server.running && "Serveur " + server.version}</h4>
                             </div>
 
                             <div className="status">

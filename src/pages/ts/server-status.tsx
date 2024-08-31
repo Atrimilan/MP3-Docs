@@ -24,8 +24,8 @@ export const ServerStatus = () => {
     return (
         <>
             {
-                servers?.map(server => (
-                    <div className="info-box">
+                servers?.map((server, index)  => (
+                    <div key={server.id} className={`info-box ${index > 0 ? 'spaced' : ''}`}>
 
                         <img src={"/img/" + server.id + ".png"} alt="Photo du serveur" />
 

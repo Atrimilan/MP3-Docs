@@ -62,6 +62,15 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'doc_drehmal',
+        path: 'doc_drehmal',
+        routeBasePath: 'drehmal',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
   ],
 
   themeConfig: {
@@ -82,6 +91,11 @@ const config: Config = {
           sidebarId: 'sidebarId',
           position: 'left',
           label: 'Survie'
+        },
+        {
+          to: '/drehmal/installation',
+          label: 'Drehmal',
+          position: 'left'
         },
         {
           to: '/creatif/intro',

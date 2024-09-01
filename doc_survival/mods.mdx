@@ -6,6 +6,8 @@ description: Mods Minecraft recommandés pour améliorer votre expérience de je
 slug: /mods
 ---
 
+import { DownloadButton } from './ts/download-button';
+
 # Mods recommandés
 
 Cette page vous explique comment optimiser votre jeu et améliorer votre expérience Minecraft à l'aide de mods Fabric. <br/>
@@ -17,8 +19,8 @@ Si vous avez besoin d'aide pour l'installation des mods, demandez-moi directemen
 
 ### I. Installation de Fabric
 
-* Téléchargez [Fabric](https://fabricmc.net/use/installer/).
-* Démarrez l'installateur, et installez la version `1.21`.<br/>
+* Téléchargez <DownloadButton data={{url: "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe", important: true}}/> [Fabric](https://fabricmc.net/use/installer/).
+* Démarrez l'installateur, et **installez la version `1.21`**.<br/>
   <img src="/img/tuto-fabric-installer.png" style={{ borderRadius: '10px', maxHeight: '230px'}} /><br/>
 
 Une nouvelle version de Minecraft est automatiquement créée et ajoutée à votre launcher.
@@ -26,26 +28,39 @@ Une nouvelle version de Minecraft est automatiquement créée et ajoutée à vot
 ### II. Installation des mods
 
 Les mods suivants doivent être téléchargés pour la version `Fabric 1.21` (ou `1.21.x`) :
-* **[Fabric API](https://modrinth.com/mod/fabric-api/versions?gameVersion=1.21&type=release) : Dépendance sans laquelle les autres mods ne peuvent pas fonctionner.**
-* [Sodium](https://modrinth.com/mod/sodium/versions?platform=fabric&gameVersion=1.21&type=release) : Optimisation du jeu.
-* [Lithium](https://modrinth.com/mod/lithium/versions?platform=fabric&gameVersion=1.21&type=release) : Optimisation du jeu.
-* [Iris Shaders](https://modrinth.com/mod/iris/versions?platform=fabric&gameVersion=1.21&type=release) : Permet d'utiliser des shaders.
-* [Distant Horizons](https://modrinth.com/mod/distanthorizons/versions?platform=fabric&gameVersion=1.21) et [Indium](https://modrinth.com/mod/indium/versions?platform=fabric&gameVersion=1.21&type=release) : Augmente **énormément** la distance d'affichage.
-* [RyoamicLights](https://modrinth.com/mod/ryoamiclights/versions?platform=fabric&gameVersion=1.21) et [ObsidianUI](https://modrinth.com/mod/obsidianui/versions?platform=fabric&gameVersion=1.21) : Lumières dynamiques.
-* [Logical Zoom](https://modrinth.com/mod/logical-zoom/versions?gameVersion=1.21&type=release) : Permet de zoomer comme avec **Optifine** (⚠️ la touche doit être modifiée dans les paramètres du jeu).
-* [Mod Menu](https://modrinth.com/mod/modmenu/versions?platform=fabric&gameVersion=1.21&type=release) : Permet de configurer tous les mods depuis le jeu.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/P7dR8mSH/versions/oGwyXeEI/fabric-api-0.102.0%2B1.21.jar", important: true}}/>
+  **[Fabric API](https://modrinth.com/mod/fabric-api/version/0.102.0+1.21) : Dépendance sans laquelle les autres mods ne peuvent pas fonctionner.**
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/AANobbMI/versions/RncWhTxD/sodium-fabric-0.5.11%2Bmc1.21.jar"}}/>
+  [Sodium](https://modrinth.com/mod/sodium/version/mc1.21-0.5.11) : Optimisation du jeu.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NTZCh7rb/lithium-fabric-mc1.21-0.13.0.jar"}}/>
+  [Lithium](https://modrinth.com/mod/lithium/version/mc1.21-0.13.0) : Optimisation du jeu.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/YL57xq9U/versions/kuOV4Ece/iris-1.7.3%2Bmc1.21.jar"}}/>
+  [Iris Shaders](https://modrinth.com/mod/iris/version/1.7.3+1.21) : Permet d'utiliser des shaders.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/uCdwusMi/versions/NCz4yZ3v/DistantHorizons-2.1.2-a-1.21-neo-fabric.jar"}}/>
+  [Distant Horizons](https://modrinth.com/mod/distanthorizons/version/2.1.2-a-1.21) et
+  <DownloadButton data={{url: "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar"}}/>
+  [Indium](https://modrinth.com/mod/indium/version/1.0.35+mc1.21) : Augmente **énormément** la distance d'affichage.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/reCfnRvJ/versions/eFFsHtIr/RyoamicLights-fabric-0.2.11%2Bmc1.21.1.jar"}}/>
+  [RyoamicLights](https://modrinth.com/mod/ryoamiclights/version/0.2.11+mc1.21.1-fabric) et
+  <DownloadButton data={{url: "https://cdn.modrinth.com/data/E0L8mfJZ/versions/Yt9IWzuL/ObsidianUI-fabric-0.2.7%2Bmc1.21.jar"}}/>
+  [ObsidianUI](https://modrinth.com/mod/obsidianui/version/0.2.7+mc1.21-fabric) : Lumières dynamiques.
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/8bOImuGU/versions/pfmJF32p/logical_zoom-0.0.25.jar"}}/>
+  [Logical Zoom](https://modrinth.com/mod/logical-zoom/version/0.0.25) : Permet de zoomer comme avec **Optifine** (⚠️ la touche doit réassignée dans les contrôles du jeu).
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/mOgUt4GM/versions/3ib3Uvvv/modmenu-11.0.2.jar"}}/>
+  [Mod Menu](https://modrinth.com/mod/modmenu/version/11.0.2) : Permet de configurer tous les mods depuis le jeu.
 
 Si vous possédez une Nvidia GTX 16xx, RTX 20xx ou plus récent, vous pouvez ajouter :
-* [Nvidium](https://modrinth.com/mod/nvidium/versions?platform=fabric&gameVersion=1.21) (**Sodium** est obligatoire).
+* <DownloadButton data={{url: "https://cdn.modrinth.com/data/SfMw2IZN/versions/cl0HrTL6/nvidium-0.2.9-beta.jar"}}/>
+  [Nvidium](https://modrinth.com/mod/nvidium/version/0.2.9-beta) (**Sodium** est obligatoire).
   > Notez que **Nvidium** se désactive automatiquement lorsque vous mettez un shader, car il n'est pas compatible avec **Iris Shaders**.
   > Donc si vous ne désactivez jamais les shaders, vous n'avez pas besoin de **Nvidium**.
 
 Enfin, placez tout simplement tous les mods dans votre dossier `%appdata%\.minecraft\mods`.
 
 :::tip Autres mods optionnels
-D'autres mods optionnels peuvent être ajoutés selon vos préférence, n'hésitez pas à parcourir [Modrinth](https://modrinth.com/mods?g=categories:fabric&v=1.21) !<br/>
-_Par exemple : [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/versions?platform=fabric&gameVersion=1.21&type=release), [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map/versions?platform=fabric&gameVersion=1.21&type=release),
-[AmbientSounds](https://modrinth.com/mod/ambientsounds/versions?platform=fabric&gameVersion=1.21&type=release), [BetterF3](https://modrinth.com/mod/betterf3/versions?platform=fabric&gameVersion=1.21&type=release), etc._
+D'autres mods optionnels peuvent être ajoutés selon vos préférence, n'hésitez pas à parcourir [Modrinth](https://modrinth.com/mods?g=categories:fabric&v=1.21&e=client) !<br/>
+_Par exemple : [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/version/24.3.0_Fabric_1.21), [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map/version/1.39.0_Fabric_1.21),
+[AmbientSounds](https://modrinth.com/mod/ambientsounds/version/TWIsleX6), etc._
 
 **Vérifiez bien qu'il s'agit de mods pour `Fabric 1.21` (ou `1.21.x`).**
 :::

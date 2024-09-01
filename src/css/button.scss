@@ -1,0 +1,32 @@
+.download-button,
+.important-download-button {
+    display: inline-block;
+    font-weight: bold;
+    padding: 3px;
+    margin: 0 2px 5px 2px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+
+    &:hover {
+        filter: brightness(1.2);
+        color: white;
+        text-decoration: none;
+    }
+
+    .download-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.download-button {
+    background: linear-gradient(45deg, #2ecf5c, #13b5c7);
+}
+
+.important-download-button {
+    background: linear-gradient(45deg, #de365d, #a925d5);
+}

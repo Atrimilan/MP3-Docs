@@ -65,9 +65,18 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_drehmal',
-        path: 'doc_drehmal',
-        routeBasePath: 'drehmal',
+        id: 'doc_fallen_kingdom',
+        path: 'doc_fallen_kingdom',
+        routeBasePath: 'fallen_kingdom',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'doc_archives',
+        path: 'doc_archives',
+        routeBasePath: 'archives',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
@@ -93,20 +102,25 @@ const config: Config = {
           label: 'Survie'
         },
         {
-          to: '/drehmal/installation',
-          label: 'Drehmal',
+          to: '/fallen_kingdom/rejoindre',
+          label: 'Fallen Kingdom',
           position: 'left'
         },
         {
-          to: '/creatif/intro',
-          label: 'Créatif',
+          to: '/archives/installation',
+          label: 'Archives',
           position: 'left'
         },
-        {
-          to: '/tech/intro',
-          label: 'Tech',
-          position: 'left'
-        },
+        // {
+        //   to: '/creatif/intro',
+        //   label: 'Créatif',
+        //   position: 'left'
+        // },
+        // {
+        //   to: '/tech/intro',
+        //   label: 'Tech',
+        //   position: 'left'
+        // },
         // {
         //   type: 'docSidebar',
         //   sidebarId: 'sidebarId',

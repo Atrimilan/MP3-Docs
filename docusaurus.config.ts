@@ -102,25 +102,25 @@ const config: Config = {
           label: 'Survie'
         },
         {
+          to: '/creatif/presentation',
+          label: 'Créatif',
+          position: 'left'
+        },
+        {
           to: '/fallen_kingdom/rejoindre',
           label: 'Fallen Kingdom',
           position: 'left'
         },
-        {
-          to: '/archives/installation',
-          label: 'Archives',
-          position: 'left'
-        },
-        // {
-        //   to: '/creatif/intro',
-        //   label: 'Créatif',
-        //   position: 'left'
-        // },
         // {
         //   to: '/tech/intro',
         //   label: 'Tech',
         //   position: 'left'
         // },
+        {
+          to: '/archives/installation',
+          label: 'Archives',
+          position: 'left'
+        },
         // {
         //   type: 'docSidebar',
         //   sidebarId: 'sidebarId',

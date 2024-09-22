@@ -12,17 +12,27 @@ import { DownloadButton } from '../components/download-button';
 
 :::warning Serveur fermé
 Le serveur Drehmal a fermé, **mais vous pouvez toujours suivre cette documentation pour optimiser votre jeu !** 😄
+> Si vous souhaitez jouer sur la map Drehmal, tout est disponible sur le site officiel : https://www.drehmal.net/
 :::
 
-## I. Installations requises
+## I. Télécharger le pack
 
 * Téléchargez le <DownloadButton data={{url: "https://drive.usercontent.google.com/download?id=1DfIqVMOAEAFs94kSylZ9lmRJqmEsPrkp&export=download&authuser=0&confirm=t", important: true}}/>
-  **Primordial Pack v2.2.1**, et déplacez le fichier dans `%appdata%/.minecraft/resourcepacks`.
+  **Primordial Pack v2.2.1**
+* Déplacez le fichier dans `%appdata%/.minecraft/resourcepacks`.
+
+## II. Installer les mods conseillés
+
 * Téléchargez <DownloadButton data={{url: "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe", important: true}}/> **Fabric** et installez la version **1.20.1**.<br/>
   <img src="/img/tuto-fabric-installer-1-20-1.png" style={{ borderRadius: '10px', maxHeight: '230px'}} /><br/>
 * Augmentez la mémoire allouée au jeu en suivant la même procédure qu'ici : [Allocation de mémoire vive](/survie/mods#iii-allocation-de-m%C3%A9moire-vive).
 
-Vous devez ensuite installer tous ces mods et les déplacer dans `%appdata%/.minecraft/mods`.
+
+:::danger Attention
+Pour la procédure suivante, à vider le contenu de votre dossier `mods` avant (faites-en une sauvegarde si besoin).
+:::
+
+Vous pouvez ensuite installer tous ces mods et les déplacer dans `%appdata%/.minecraft/mods`.
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/P7dR8mSH/versions/P7uGFii0/fabric-api-0.92.2%2B1.20.1.jar", important: true}}/> **Fabric API**
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/PRN43VSY/versions/uNgEPb10/animatica-0.6%2B1.20.jar"}}/> **Animatica**
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/VSNURh3q/versions/QZ5cUNXs/c2me-fabric-mc1.20.1-0.2.0%2Balpha.11.5.jar"}}/> **C2ME**
@@ -49,13 +59,3 @@ Vous devez ensuite installer tous ces mods et les déplacer dans `%appdata%/.min
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/H8CaAYZC/versions/XGIsoVGT/starlight-1.1.2%2Bfabric.dbc156f.jar"}}/> **Starlight**
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/o7DitHWP/versions/AYN9L9xU/WI-Zoom-1.5-MC1.20.1.jar"}}/> **WI Zoom**  (⚠️ la touche doit réassignée dans les contrôles du jeu)
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/1IjD5062/versions/84Zs6tNo/continuity-3.0.0-beta.5%2B1.20.1.jar"}}/> **Continuity**
-
-:::danger Attention
-Pensez à vider le contenu de votre dossier `mods` avant, sinon vous pourriez avoir des conflits au démarrage du jeu.
-:::
-
-## II. Accéder au serveur :  `/server drehmal`
-
-* Démarrez votre jeu avec la version `fabric-loader-1.20.1` que vous venez d'installer.
-* Connectez-vous au serveur et exécutez la commande `/server drehmal`.
-> **Le serveur est sur whitelist**, demandez-moi sur Discord pour être ajouté ! 😉

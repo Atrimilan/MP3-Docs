@@ -102,7 +102,7 @@ const config: Config = {
           label: 'Survie'
         },
         {
-          to: '/creatif/presentation',
+          to: '/creatif/rejoindre',
           label: 'Créatif',
           position: 'left'
         },

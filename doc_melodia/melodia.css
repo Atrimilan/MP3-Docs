@@ -1,0 +1,31 @@
+.accordion {
+    --decoration-color: var(--ifm-color-primary);
+    --docusaurus-details-decoration-color: var(--decoration-color) !important;
+    a {
+        color: var(--decoration-color) !important;
+    }
+}
+
+.accordion.dimensions {
+    --decoration-color: #06a1fa;
+}
+
+.accordion.mobs {
+    --decoration-color: #38cfd3;
+}
+
+.accordion.biomes {
+    --decoration-color: #60cb26;
+}
+
+.accordion.items {
+    --decoration-color: #f3ba00;
+}
+
+.accordion.misc {
+    --decoration-color: #ffce7c;
+}
+
+.accordion.apis {
+    --decoration-color: #b8b0c0;
+}

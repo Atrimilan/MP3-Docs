@@ -1,0 +1,9 @@
+.accordion {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--ifm-color-emphasis-300) !important;
+
+    & > summary > h3 {
+        margin: 0;
+    }
+}

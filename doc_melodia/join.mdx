@@ -1,0 +1,37 @@
+---
+sidebar_position: 1
+title: Rejoindre le serveur moddé
+tags: [Mods, Serveur]
+description: Informations importantes pour rejoindre le serveur
+slug: /rejoindre
+---
+
+import { DownloadButton } from '/components/download-button';
+
+# Serveur Melodia
+
+> **[TL;DR](#ii-rejoindre-le-serveur) -** Adresse du serveur `mp3.pixelfucker.com:25568`
+
+## I. Installer les mods
+
+Téléchargez et installez <DownloadButton data={{url: "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe", important: true}}/> [Fabric](https://fabricmc.net/use/installer/)
+pour `1.21.1` (**la `1.21` n'est PAS compatible**).
+* Vous devez sélectionner la **version du loader Fabric `0.16.5`** :<br/>
+  <img src="/img/tuto-fabric-installer-1-21-1.png" style={{ borderRadius: '10px', maxHeight: '230px' }} />
+* Vous pouvez vérifier votre version du loader depuis le launcher officiel :<br/>
+  <img src="/img/fabric_loader_version.png" style={{ borderRadius: '10px', border: '2px solid var(--ifm-color-emphasis-200)' }} />
+* **Refaites l'installation si vous utilisez une précédente version du loader.**
+
+Enfin, téléchargez les mods :
+* Téléchargez le modpack <DownloadButton data={{url: "https://drive.usercontent.google.com/download?id=1kmFSIurnz_8UJYeP-v6kgWrzw90ZJWjt&export=download&authuser=0&confirm=t", important: true}}/> **BetterMinecraftAtri-v0.1**
+* Dézippez-le fichier `.zip` obtenu
+* Placez l'ensemble des mods dans votre dossier `%appdata%/.minecraft/mods`.
+
+## II. Rejoindre le serveur
+
+* Démarrez le jeu avec la version de **Fabric 1.21.1** que vous venez d'installer.
+* Rejoignez le serveur à cette adresse : **`mp3.pixelfucker.com:25568`**.
+
+:::warning Serveur non relié au proxy
+L'adresse n'étant pas la même, **vous NE pouvez PAS exécuter `/server Melodia` ni `/melodia` depuis les autres serveurs**.
+:::

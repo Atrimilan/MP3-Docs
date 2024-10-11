@@ -1,0 +1,44 @@
+.docs-table {
+  backdrop-filter: blur(3px);
+  width: 100%;
+  table-layout: fixed;
+
+  td,
+  th {
+    height: 30px;
+    padding: 7px 20px;
+
+    &.docs-table-name {
+      width: 50%;
+    }
+
+    &.docs-table-wiki {
+      width: 20%;
+    }
+
+    &.docs-table-version {
+      width: 10%;
+    }
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--ifm-menu-color-active);
+    font-weight: bold;
+  }
+
+  .wiki {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-icon {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+}

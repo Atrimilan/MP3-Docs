@@ -65,6 +65,15 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'doc_melodia',
+        path: 'doc_melodia',
+        routeBasePath: 'melodia',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'doc_fallen_kingdom',
         path: 'doc_fallen_kingdom',
         routeBasePath: 'fallen_kingdom',
@@ -100,6 +109,11 @@ const config: Config = {
           sidebarId: 'sidebarId',
           position: 'left',
           label: 'Survie'
+        },
+        {
+          to: '/melodia/rejoindre',
+          label: 'Melodia',
+          position: 'left'
         },
         {
           to: '/creatif/rejoindre',

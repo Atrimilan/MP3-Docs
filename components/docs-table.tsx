@@ -59,6 +59,16 @@ export const DocsTable = ({ data }) => {
                                 </a>
                             </td>
                             <td className='center-text'>{row[2]}</td>
+                            {/* <td>
+                                <a href={"https://modrinth.com/mods?q=" + row[0]} target='_blank'>
+                                    Modrinth
+                                </a>
+                            </td>
+                            <td>
+                                <a href={"https://www.curseforge.com/minecraft/mc-mods/search?search=" + row[0]} target='_blank'>
+                                    Curseforge
+                                </a>
+                            </td> */}
                         </tr>
                     ))}
                 </tbody>

@@ -7,11 +7,11 @@
 }
 
 .accordion.dimensions {
-    --decoration-color: #06a1fa;
+    --decoration-color: #0ea7ff;
 }
 
 .accordion.mobs {
-    --decoration-color: #38cfd3;
+    --decoration-color: #38d3b6;
 }
 
 .accordion.biomes {
@@ -23,9 +23,5 @@
 }
 
 .accordion.misc {
-    --decoration-color: #ffce7c;
-}
-
-.accordion.apis {
-    --decoration-color: #b8b0c0;
+    --decoration-color: #ffc07c;
 }

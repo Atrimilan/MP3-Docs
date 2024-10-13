@@ -19,7 +19,7 @@ export const DocsTable = ({ data }) => {
 
     return (
         <div>
-            {filteredData.length > 1 ?
+            {data.length > 1 ?
                 <div className='search-bar'>
                     <input
                         type="text"

@@ -49,13 +49,13 @@ export const DocsTable = ({ data }) => {
                     {filteredData.map((row, index) => (
                         <tr key={index}>
                             <td>
-                                <a href={row[1]} target='_blank' className='link'>
-                                    {row[0]}
+                                <a href={row[1]} target='_blank' className={'link' + (row[5] ? ' gold-gradient-effect' : '')}>
+                                    {(row[5] ? "⭐ " : "") + row[0]}
                                 </a>
                             </td>
                             <td className='center-text'>
-                                <a href={row[4]} target='_blank' className='link wiki'>
-                                    {row[3]} {!!row[3] && <SearchRoundedIcon className='search-icon' />}
+                                <a href={row[4]} target='_blank' className={'link wiki' + (row[5] ? ' gold-gradient-effect' : '')}>
+                                    {row[3]} {!!row[3] && <SearchRoundedIcon className='search-icon' />} 
                                 </a>
                             </td>
                             <td className='center-text'>{row[2]}</td>

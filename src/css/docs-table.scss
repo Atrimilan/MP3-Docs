@@ -9,7 +9,7 @@
     padding: 7px 20px;
 
     &.docs-table-name {
-      width: 50%;
+      width: 40%;
     }
 
     &.docs-table-wiki {
@@ -23,12 +23,6 @@
 
   .center-text {
     text-align: center;
-  }
-
-  .link {
-    text-decoration: none;
-    color: var(--ifm-menu-color-active);
-    font-weight: bold;
   }
 
   .wiki {

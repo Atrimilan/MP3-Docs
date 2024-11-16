@@ -11,181 +11,181 @@ import './melodia.css';
 
 # Wiki des mods
 
-:::warning Modpack en préparation
-<center>
----
-## Le serveur n'est pas encore prêt !
----
-</center>
-
-Il est probable qu'on change pour un serveur `1.20.1` car il y a davantage de mods disponibles.
-<span style={{opacity:0.6}}>_Voire qu'on switch sur `Neoforge`, si jamais `Fabric` ne convient pas pour ce qu'on veut mettre en place (mais en théorie ça ne devrait pas changer)._</span>
-
-Si vous avez des propositions de mods pour `Fabric 1.20.1`, nous sommes preneurs, par ordre de priorité il nous faut:
-* Améliorer la génération des grottes et des océans
-* Ajouts de mobs (passifs, hostiles et NPC)
-* Nouveaux blocs naturels, nouveaux minerais (avec des fonctionnalités pertinentes, pas seulement pour faire des armures)
-* Ajout de dimensions (très complètes)
-* Nouvelles structures (sous-terraines de préférence)
-* Ajout de boss
-* Ajout d'objets et d'éléments décoratifs (pour du build)
-* Nouvelles mécaniques de jeu
-:::
-
-:::info
-* Certains mods sont présents dans plusieurs catégories, par exemple **[AventureZ](https://globox1997.github.io/wiki/mods/AdventureZ/)** et **[Friends & Foes](https://www.curseforge.com/minecraft/mc-mods/friends-and-foes)**.
-* Les mods les moins importants sont placés dans "**📦 Autres mods... 📦**",
-donc si avez besoin de leurs wikis vous devez chercher par vous même. 😉
-:::
-<br/>
-
 <details className="accordion dimensions">
 <summary><h3>🌌 Dimensions</h3></summary>
 <DocsTable data={[
-    ['Deeper and Darker', 'https://modrinth.com/mod/deeperdarker', '1.3.2.1', 'Github Wiki', 'https://github.com/KyaniteMods/DeeperAndDarker/wiki'],
-    ['Eternal Starlight', 'https://modrinth.com/mod/eternal-starlight', '0.1.15', '', ''],
-    ['The Bumblezone', 'https://modrinth.com/mod/the-bumblezone-fabric', '7.7.1', 'Github Wiki', 'https://github.com/TelepathicGrunt/Bumblezone/wiki'],
-    ['VoidZ', 'https://modrinth.com/mod/voidz', '1.0.11', 'MkDocs', 'https://globox1997.github.io/wiki/mods/VoidZ/'],
+    ['Deeper and Darker', 'https://modrinth.com/mod/deeperdarker', '1.3.1', 'Github Wiki', 'https://github.com/KyaniteMods/DeeperAndDarker/wiki', false],
+    ['Eternal Starlight', 'https://modrinth.com/mod/eternal-starlight', '0.1.16', '', '', false],
+    ['The Aether', 'https://modrinth.com/mod/aether', '1.5.1-beta.3', 'wiki.gg', 'https://aether.wiki.gg/wiki/Aether_Wiki', true],
+    ['The Bumblezone', 'https://modrinth.com/mod/the-bumblezone', '7.7.3', 'Github Wiki', 'https://github.com/TelepathicGrunt/Bumblezone/wiki', false],
+    ['The Twilight Forest', 'https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest', '4.6.2790', 'benimatic.com', 'http://benimatic.com/tfwiki/index.php/Main_Page', true],
+    ['The Undergarden', 'https://modrinth.com/mod/the-undergarden', '0.8.22', 'Fandom', 'https://the-undergarden-mod.fandom.com/wiki/The_Undergarden_Mod_Wiki', false],
 ]}/>
 </details>
 
 <details className="accordion items">
-<summary><h3>🗡️ Items, armures, minerais, blocs décoratifs ...</h3></summary>
+<summary><h3>🗡️ Blocs, décoration, items et stuff</h3></summary>
 <DocsTable data={[
-    ['Advanced Netherite', 'https://modrinth.com/mod/advanced-netherite', '2.1.6', 'Github Wiki', 'https://github.com/Autovw/AdvancedNetherite/wiki/Crafting-Recipes'],
-    ['AdventureZ (section #items)', 'https://modrinth.com/mod/adventurez', '1.4.23', 'MkDocs', 'https://globox1997.github.io/wiki/mods/AdventureZ/Items/#list-of-items'],
-    ['Amendments', 'https://www.curseforge.com/minecraft/mc-mods/amendments', '1.2.11', '', ''],
-    ['Aurelj\'s Paintings', 'https://modrinth.com/mod/aureljs-paintings', '1.0.4', '', ''],
-    ['Better Archeology', 'https://modrinth.com/mod/better-archeology', '1.2.0', 'Github Wiki', 'https://github.com/Pandarix/BetterArcheology/wiki'],
-    ['Chipped', 'https://modrinth.com/mod/chipped', '4.0.1', '', ''],
-    ['Comforts', 'https://modrinth.com/mod/comforts', '9.0.2', 'Github Wiki', 'https://github.com/illusivesoulworks/comforts/wiki/Sleeping-Bags'],
-    ['DragonLoot', 'https://modrinth.com/mod/dragonloot', '1.1.7', '', ''],
-    ['Farmer\'s Delight Refabricated', 'https://modrinth.com/mod/farmers-delight-refabricated', '2.1.9', 'Github', 'https://github.com/vectorwing/FarmersDelight/wiki'],
-    ['Friends & Foes (section #blocksitems)', 'https://www.curseforge.com/minecraft/mc-mods/friends-and-foes', '3.0.3', 'Github Wiki', 'https://github.com/Faboslav/friends-and-foes/wiki#blocksitems'],
-    ['Handcrafted', 'https://modrinth.com/mod/handcrafted', '4.0.2', '', ''],
-    ['Knight Quest (section #items et #armors)', 'https://modrinth.com/mod/knight-quest', '1.7.1', '', ''],
-    ['Magnum Torch', 'https://modrinth.com/mod/magnum-torch', '21.1.0', '', ''],
-    ['More Chests', 'https://modrinth.com/mod/more-chests', '2.1', '', ''],
-    ['Nether Chested', 'https://modrinth.com/mod/new-nether-chest', '21.1.0', '', ''],
-    ['Stoneworks', 'https://modrinth.com/mod/stoneworks', '21.1.0', '', ''],
-    ['Tom\'s Simple Storage Mod', 'https://modrinth.com/mod/toms-storage', '2.0.9', '', ''],
-    ['Trading Post', 'https://modrinth.com/mod/trading-post', '21.1.0', '', ''],
-    ['Trimmable Tools', 'https://modrinth.com/datapack/trimmable-tools', '2.0.3', '', ''],
-    ['Wraith Waystones', 'https://modrinth.com/mod/fwaystones', '3.3.3', 'Github Wiki', 'https://github.com/LordDeatHunter/FabricWaystones/wiki/Waystone-Variants'],
-    ['XP Storage', 'https://modrinth.com/mod/xp-storage', '1.5.10', '', ''],
+    ['Advanced Netherite', 'https://modrinth.com/mod/advanced-netherite', '2.1.6', 'Github Wiki', 'https://github.com/Autovw/AdvancedNetherite/wiki/Crafting-Recipes', false],
+    ['Amendments', 'https://modrinth.com/mod/amendments', '1.2.19', 'Github Wiki', 'https://github.com/MehVahdJukaar/Supplementaries/wiki/Amendments', true],
+    ['Aquaculture 2', 'https://www.curseforge.com/minecraft/mc-mods/aquaculture', '2.7.10', 'Github Wiki', 'https://github.com/TeamMetallurgy/Aquaculture/wiki/Fish', false],
+    ['Artifacts', 'https://modrinth.com/mod/artifacts', '12.0.5', 'Github Wiki', 'https://github.com/ochotonida/artifacts/wiki/Items', false],
+    ['Aurelj\'s Paintings', 'https://modrinth.com/mod/aureljs-paintings', '1.0.4', '', '', false],
+    ['Biomes O\' Plenty', 'https://modrinth.com/mod/biomes-o-plenty', '21.1.0.6', '', '', true],
+    ['Chipped', 'https://modrinth.com/mod/chipped', '4.0.2', 'Fandom', 'https://chipped.fandom.com/wiki/Chipped_Wiki', true],
+    ['Enchants Plus', 'https://modrinth.com/datapack/enchants-plus', '1.2', 'Modrinth', 'https://modrinth.com/datapack/enchants-plus', true],
+    ['Explorer\'s Compass', 'https://modrinth.com/mod/explorers-compass', '3.0.2', '', '', true],
+    ['Farmer\'s Delight', 'https://www.curseforge.com/minecraft/mc-mods/farmers-delight', '1.2.4a', 'Github Wiki', 'https://github.com/vectorwing/FarmersDelight/wiki/Getting-Started', true],
+    ['Handcrafted', 'https://modrinth.com/mod/handcrafted', '4.0.2', '', '', false],
+    ['Immersive Ores', 'https://modrinth.com/mod/immersive-ores', '0.1', '', '', false],
+    ['Nature\'s Compass', 'https://modrinth.com/mod/natures-compass', '3.0.3', '', '', true],
+    ['Nether Chested', 'https://modrinth.com/mod/new-nether-chest', '21.1.0', '', '', false],
+    ['Netherite Extras', 'https://modrinth.com/mod/netherite-extras', '0.4.0', '', '', false],
+    ['Relics', 'https://modrinth.com/mod/relics-mod', '0.9.2.0', '', '', true],
+    ['RPG Series - Archers', 'https://modrinth.com/mod/archers', '2.1.1', '', '', true],
+    ['RPG Series - Gazebos', 'https://modrinth.com/mod/gazebos', '2.0.0', '', '', false],
+    ['RPG Series - Jewelry', 'https://modrinth.com/mod/jewelry', '2.0.2', '', '', false],
+    ['RPG Series - Paladins & Priests', 'https://modrinth.com/mod/paladins-and-priests', '2.1.1', '', '', true],
+    ['RPG Series - Rogues & Warriors', 'https://modrinth.com/mod/rogues-and-warriors', '2.1.0', '', '', true],
+    ['RPG Series - Wizards', 'https://modrinth.com/mod/wizards', '2.1.0', '', '', true],
+    ['Runes', 'https://modrinth.com/mod/runes', '1.0.3', '', '', false],
+    ['Spellbound Weapons (Data Pack)', 'https://modrinth.com/datapack/spellbound-weapons', '4.1.0c', 'Github Wiki', 'https://github.com/SpluoSplatus/Spellbound-Weapons/wiki', false],
+    ['Stoneworks', 'https://modrinth.com/mod/stoneworks', '21.1.0', '', '', false],
 ]}/>
 </details>
 
 <details className="accordion mobs">
 <summary><h3>🧟 Mobs et boss</h3></summary>
 <DocsTable data={[
-    ['AdventureZ (section #entities)', 'https://modrinth.com/mod/adventurez', '1.4.23', 'MkDocs', 'https://globox1997.github.io/wiki/mods/AdventureZ/Entities/#list-of-entities'],
-    ['BOMD - Bosses of Mass Destruction', 'https://modrinth.com/mod/bosses-of-mass-destruction', '1.10.1', 'Minecraft Guides', 'https://www.minecraft-guides.com/mod/bosses-of-mass-destruction/'],
-    ['Creeper Overhaul', 'https://modrinth.com/mod/creeper-overhaul', '4.0.5', '', ''],
-    ['Friends & Foes (sections #friends et #foes)', 'https://www.curseforge.com/minecraft/mc-mods/friends-and-foes', '3.0.3', 'Github Wiki', 'https://github.com/Faboslav/friends-and-foes/wiki#foes'],
-    ['Ender Zoology', 'https://modrinth.com/mod/ender-zoology', '21.1.2', '', ''],
-    ['Illager Invasion', 'https://modrinth.com/mod/illager-invasion', '21.1.2', '', ''],
-    ['Knight Quest (section #mobs)', 'https://modrinth.com/mod/knight-quest', '1.7.1', '', ''],
-    ['Mutant Monsters', 'https://modrinth.com/mod/mutant-monsters', '21.1.0', '', ''],
-    ['Variants & Ventures', 'https://modrinth.com/mod/variants-and-ventures', '1.0.6', '', ''],
+    ['Bagus Mob', 'https://www.curseforge.com/minecraft/mc-mods/bagus-mob', '7.2.0', '', '', false],
+    ['Bosses of Mass Destruction [BOMD]', 'https://modrinth.com/mod/bosses-of-mass-destruction', '1.10.2', 'Minecraft Guides', 'https://www.minecraft-guides.com/mod/bosses-of-mass-destruction/', false],
+    ['Creeper Overhaul', 'https://modrinth.com/mod/creeper-overhaul', '4.0.5', '', '', false],
+    ['Earth Mobs', 'https://www.curseforge.com/minecraft/mc-mods/earth-mobs', '19.0.2', '', '', false],
+    ['Enderman Overhaul', 'https://modrinth.com/mod/enderman-overhaul', '2.0.0', '', '', false],
+    ['Ender Zoology', 'https://modrinth.com/mod/ender-zoology', '21.1.2', '', '', false],
+    ['Friends & Foes', 'https://modrinth.com/mod/friends-and-foes-forge', '3.0.5', 'Github Wiki', 'https://github.com/Faboslav/friends-and-foes/wiki', true],
+    ['Hunter\'s Return', 'https://modrinth.com/mod/hunters-return', '18.1.0', '', '', false],
+    ['Illager Invasion', 'https://modrinth.com/mod/illager-invasion', '21.1.2', '', '', true],
+    ['Knight Quest', 'https://modrinth.com/mod/knight-quest', '1.7.1', 'Modrinth', 'https://modrinth.com/mod/knight-quest', true],
+    ['Mobs of Mythology', 'https://modrinth.com/mod/mobs-of-mythology', '2.0.5', '', '', false],
+    ['Monster Plus', 'https://www.curseforge.com/minecraft/mc-mods/monster-plus', '1.1.9.0', 'CurseForge', 'https://www.curseforge.com/minecraft/mc-mods/monster-plus', true],
+    ['Mutant Monsters', 'https://modrinth.com/mod/mutant-monsters', '21.1.0', '', '', false],
+    ['Safro\'s Mobs', 'https://www.curseforge.com/minecraft/mc-mods/safros-mobs', '0.1.2', '', '', false],
+    ['True Ending: Ender Dragon Overhaul (Data Pack)', 'https://modrinth.com/datapack/true-ending', '1.1.2d', '', '', false],
+    ['Useless Reptile', 'https://modrinth.com/mod/useless-reptile', '0.8.3', 'Modrinth', 'https://modrinth.com/mod/useless-reptile', true],
 ]}/>
 </details>
 
 <details className="accordion biomes">
 <summary><h3>🌳 Biomes et structures</h3></summary>
 <DocsTable data={[
-    ['Adventure Dungeons', 'https://modrinth.com/datapack/adventure-dungeons', '1.3', '', ''],
-    ['AdventureZ (section #structures)', 'https://modrinth.com/mod/adventurez', '1.4.23', 'MkDocs', 'https://globox1997.github.io/wiki/mods/AdventureZ/Structures/#list-of-structures'],
-    ['BetterEnd', 'https://modrinth.com/mod/betterend', '21.0.11', 'Github Wiki', 'https://github.com/paulevsGitch/BetterEnd/wiki/Biomes'],
-    ['BetterNether', 'https://modrinth.com/mod/betternether', '21.0.11', 'Github Wiki', 'https://github.com/paulevsGitch/BetterNether/wiki/Biomes'],
-    ['Desolation', 'https://modrinth.com/mod/desolation', '1.7.0', '', ''],
-    ['Farmers Structures', 'https://www.curseforge.com/minecraft/mc-mods/farmers-structures', '1.0.0', '', ''],
-    ['Formations Nether', 'https://modrinth.com/mod/formations-nether', '1.0.5', '', ''],
-    ['Formations Overworld', 'https://modrinth.com/mod/formations-overworld', '1.0.4', '', ''],
-    ['Friends & Foes (section #structures)', 'https://www.curseforge.com/minecraft/mc-mods/friends-and-foes', '3.0.3', 'Github Wiki', 'https://github.com/Faboslav/friends-and-foes/wiki#structures'],
-    ['Luki\'s Crazy Chambers', 'https://modrinth.com/datapack/lukis-crazy-chambers', '2.0', '', ''],
-    ['MES - Moog\'s End Structures', 'https://modrinth.com/mod/mes-moogs-end-structures', '1.3.2', '', ''],
-    ['MNS - Moog\'s Nether Structures', 'https://modrinth.com/mod/mns-moogs-nether-structures', '1.0.2', '', ''],
-    ['MSS - Moog\'s Soaring Structures', 'https://modrinth.com/mod/mss-moogs-soaring-structures', '1.1.2', '', ''],
-    ['MVS - Moog\'s Voyager Structures', 'https://modrinth.com/mod/moogs-voyager-structures', '4.1.4', 'Github Wiki', 'https://github.com/FinnSetchell/MoogsVoyagerStructures/wiki'],
-    ['Nature\'s Spirit', 'https://modrinth.com/mod/natures-spirit', '1.6.3', 'Github Wiki', 'https://github.com/Team-Hibiscus/NaturesSpirit/wiki/World-Generation'],
-    ['Profundis: Nine New Quality Cave Biomes', 'https://modrinth.com/mod/profundis', '1.7.1', '', ''],
-    ['Repurposed Structures', 'https://modrinth.com/mod/repurposed-structures-fabric', '7.5.10', 'Github Wiki', 'https://github.com/TelepathicGrunt/RepurposedStructures/wiki/Details-on-all-RS-structures'],
-    ['Structory', 'https://modrinth.com/datapack/structory', '1.3.5', 'stardustlabs.miraheze.org', 'https://stardustlabs.miraheze.org/wiki/Structory'],
-    ['Structory: Towers', 'https://modrinth.com/datapack/structory-towers', '1.0.7', 'stardustlabs.miraheze.org', 'https://stardustlabs.miraheze.org/wiki/Structory:_Towers'],
-    ['Terralith (sections #biomes et #structures)', 'https://modrinth.com/datapack/terralith', '2.5.5', 'stardustlabs.miraheze.org', 'https://stardustlabs.miraheze.org/wiki/Terralith#Biomes'],
-    ['When Dungeons Arise', 'https://modrinth.com/mod/when-dungeons-arise', '2.1.60', '', ''],
+    ['Better Archeology', 'https://modrinth.com/mod/better-archeology', '1.2.1', 'Github Wiki', 'https://github.com/Pandarix/BetterArcheology/wiki', true],
+    ['BetterEnd', 'https://modrinth.com/mod/betterend', '21.0.11', 'Github Wiki', 'https://github.com/paulevsGitch/BetterEnd/wiki/Biomes', true],
+    ['BetterNether', 'https://modrinth.com/mod/betternether', '21.0.11', 'Github Wiki', 'https://github.com/paulevsGitch/BetterNether/wiki/Biomes', true],
+    ['Comforts', 'https://modrinth.com/mod/comforts', '9.0.3', '', '', false],
+    ['Infinity Cave', 'https://modrinth.com/datapack/infinity-cave', '0.6', '', '', true],
+    ['Luki\'s Crazy Chambers', 'https://modrinth.com/datapack/lukis-crazy-chambers', '1.0', '', '', false],
+    ['Luki\'s Grand Capitals', 'https://modrinth.com/datapack/lukis-grand-capitals', '1.0', '', '', false],
+    ['Minerally', 'https://modrinth.com/mod/minerally', '1.21', '', '', false],
+    ['MES - Moog\'s End Structures', 'https://modrinth.com/mod/mes-moogs-end-structures', '1.3.3', 'Modrinth', 'https://modrinth.com/mod/mes-moogs-end-structures/gallery', false],
+    ['MNS - Moog\'s Nether Structures', 'https://modrinth.com/mod/mns-moogs-nether-structures', '1.0.3', 'Modrinth', 'https://modrinth.com/mod/mns-moogs-nether-structures/gallery', false],
+    ['MSS - Moog\'s Soaring Structures', 'https://modrinth.com/mod/mss-moogs-soaring-structures', '1.2.5', 'Modrinth', 'https://modrinth.com/mod/mss-moogs-soaring-structures/gallery', false],
+    ['MVS - Moog\'s Voyager Structures', 'https://modrinth.com/mod/moogs-voyager-structures', '4.1.5', 'Modrinth', 'https://modrinth.com/mod/moogs-voyager-structures/gallery', false],
+    ['Profundis: Nine New Quality Cave Biomes', 'https://modrinth.com/mod/profundis', '1.7.1', '', '', false],
+    ['Repurposed Structures', 'https://modrinth.com/mod/repurposed-structures-forge', '7.5.10', '', '', false],
+    ['qrafty\'s Underground Villages (Data Pack)', 'https://modrinth.com/datapack/qraftys-bunkers', '2.2', '', '', false],
+    ['Terralith', 'https://modrinth.com/datapack/terralith', '2.5.5', 'stardustlabs.miraheze.org', 'https://stardustlabs.miraheze.org/wiki/Terralith', true],
+    ['Towns and Towers [T and T]', 'https://modrinth.com/mod/towns-and-towers', '1.13.2', '', '', false],
+    ['Underground Bunkers', 'https://modrinth.com/mod/underground-bunkers', '1.0.4', '', '', false],
+    ['Waystones', 'https://modrinth.com/mod/waystones', '2.1.4', 'mods.twelveiterations.com', 'https://mods.twelveiterations.com/mc/waystones/', true],
+    ['When Dungeons Arise', 'https://modrinth.com/mod/when-dungeons-arise', '2.1.60', '', '', true],
+    ['YUNG\'s Better Dungeons', 'https://modrinth.com/mod/yungs-better-dungeons', '5.1.2', '', '', false],
+    ['YUNG\'s Better Mineshafts', 'https://modrinth.com/mod/yungs-better-mineshafts', '5.1.1', '', '', false],
+    ['YUNG\'s Better Ocean Monuments', 'https://modrinth.com/mod/yungs-better-ocean-monuments', '4.1.1', '', '', false],
+    ['YUNG\'s Better Strongholds', 'https://modrinth.com/mod/yungs-better-strongholds', '5.1.2', '', '', false],
+    ['YUNG\'s Better Jungle Temples', 'https://modrinth.com/mod/yungs-better-jungle-temples', '3.1.1', '', '', false],
+    ['YUNG\'s Better Witch Huts', 'https://modrinth.com/mod/yungs-better-witch-huts', '4.1.1', '', '', false],
+    ['YUNG\'s Bridges', 'https://modrinth.com/mod/yungs-bridges', '5.1.1', '', '', false],
+    ['YUNG\'s Extras', 'https://modrinth.com/mod/yungs-extras', '5.1.1', '', '', false],
 ]}/>
 </details>
 
 <details className="accordion misc">
 <summary><h3>📦 Autres mods...</h3></summary>
 <DocsTable data={[
-    ['AdoraBuild: Structures', 'https://modrinth.com/mod/adorabuild-structures', '2.8.0', '', ''],
-    ['Bartering Station', 'https://modrinth.com/mod/bartering-station', '21.1.0', '', ''],
-    ['Better End Cities for BetterEnd', 'https://modrinth.com/mod/better-end-cities-for-betterend', '1.21', '', ''],
-    ['BetterEnd Crashed Ships Tweaks', 'https://modrinth.com/mod/betterend-crashed-ships-tweaks', '1.1.0', '', ''],
-    ['BetterEnd Delight', 'https://modrinth.com/mod/betterend-delight', '1.0.0', '', ''],
-    ['BetterNether Delight', 'https://modrinth.com/mod/betternether-delight', '1.0.0', '', ''],
-    ['Better Statistics Screen', 'https://modrinth.com/mod/better-stats', '3.13.2', '', ''],
-    ['Biome Music', 'https://www.curseforge.com/minecraft/mc-mods/biome-music', '2.5', '', ''],
-    ['Carry On', 'https://modrinth.com/mod/carry-on', '2.2.11', '', ''],
-    ['Charm of Undying', 'https://modrinth.com/mod/charm-of-undying', '9.0.0', '', ''],
-    ['Crawl', 'https://modrinth.com/mod/crawl', '0.13.0', '', ''],
-    ['Death Finder', 'https://modrinth.com/mod/death-finder', '21.1.0', '', ''],
-    ['Diagonal Fences', 'https://modrinth.com/mod/diagonal-fences', '21.1.0', '', ''],
-    ['Diagonal Walls', 'https://modrinth.com/mod/diagonal-walls', '21.1.0', '', ''],
-    ['Diagonal Windows', 'https://modrinth.com/mod/diagonal-windows', '21.1.0', '', ''],
-    ['Double Doors', 'https://modrinth.com/mod/double-doors', '5.9', '', ''],
-    ['DnT - Dungeons and Taverns Ancient City Overhaul', 'https://modrinth.com/datapack/dungeons-and-taverns-ancient-city-overhaul', '2', '', ''],
-    ['DnT - Dungeons and Taverns Ocean Monument Replacement', 'https://modrinth.com/datapack/dungeons-and-taverns-ocean-monument-replacement', '1.2', '', ''],
-    ['DnT - Dungeons and Taverns Swamp Hut Overhaul', 'https://modrinth.com/datapack/dungeons-and-taverns-swamp-hut-overhaul', '2', '', ''],
-    ['DnT - Dungeons and Taverns Woodland Mansion Replacement', 'https://modrinth.com/datapack/dungeons-and-taverns-woodland-mansion-replacement', '1.2', '', ''],
-    ['Duckling', 'httpshttps://modrinth.com/mod/duckling', '5.0.1', '', ''],
-    ['Easy Anvils', 'https://modrinth.com/mod/easy-anvils', '21.0.1', '', ''],
-    ['Easy Magic', 'https://modrinth.com/mod/easy-magic', '21.1.0', '', ''],
-    ['Elytra Vaults', 'https://modrinth.com/datapack/elytra-vaults-atlasplays', '1.0.0', '', ''],
-    ['Explorations', 'https://modrinth.com/mod/explorations', '1.5.3', '', ''],
-    ['FallingTree', 'https://modrinth.com/mod/fallingtree', '1.21.1.2', '', ''],
-    ['Friends&Foes - Flowery Mooblooms', 'https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-fabric', '2.0.2', '', ''],
-    ['FTB Quests', 'https://www.curseforge.com/minecraft/mc-mods/ftb-quests-fabric', '2101.1.0', 'Notion', 'https://feedthebeast.notion.site/FTB-Quests-d50e060fabaa4ec0957a188604d3fb1c'],
-    ['Geophilic', 'https://modrinth.com/datapack/geophilic', '3.1.3', '', ''],
-    ['Grass Overhaul', 'https://modrinth.com/mod/grass-overhaul', '1.0.0', '', ''],
-    ['Hearths', 'https://modrinth.com/datapack/hearths', '1.0.1', '', ''],
-    ['Inmis', 'https://modrinth.com/mod/inmis', '2.8.1', '', ''],
-    ['InmisAddon', 'https://modrinth.com/mod/inmisaddon', '1.0.4', '', ''],
-    ['Jade', 'https://modrinth.com/mod/jade', '15.3.4', '', ''],
-    ['Leaves Be Gone', 'https://modrinth.com/mod/leaves-be-gone', '21.1.0', '', ''],
-    ['Luna Slimes', 'https://modrinth.com/mod/luna-slimes', '1.8.1', '', ''],
-    ['MmmMmmMmmMmm', 'https://modrinth.com/mod/mmmmmmmmmmmm', '2.0.6', '', ''],
-    ['More Babies', 'https://modrinth.com/mod/more-babies', '2.0.0', '', ''],
-    ['More Mob Variants', 'https://modrinth.com/mod/more-mob-variants', '1.3.1.1', '', ''],
-    ['Nature\'s Compass', 'https://modrinth.com/mod/natures-compass', '2.2.7', '', ''],
-    ['NPC Variety', 'https://modrinth.com/mod/npc-variety', '2.3.0', '', ''],
-    ['Patchouli', 'https://modrinth.com/mod/patchouli', '87', '', ''],
-    ['Perlinescent Caves', 'https://modrinth.com/datapack/perlinescent-caves', '1.0', '', ''],
-    ['Ping Wheel', 'https://modrinth.com/mod/ping-wheel', '1.9.2', 'Github Wiki', 'https://github.com/LukenSkyne/Minecraft-Ping-Wheel/wiki'],
-    ['Polymorph', 'https://modrinth.com/mod/polymorph', '1.0.6', '', ''],
-    ['Repurposed Structures - Farmer\'s Delight Compat', 'https://modrinth.com/datapack/repurposed-structures-farmers-delight-compat', '7', '', ''],
-    ['Repurposed Structures - Friends and Foes Compat', 'https://modrinth.com/datapack/repurposed-structures-friends-and-foes-compat', '8', '', ''],
-    ['Riding Partners', 'https://modrinth.com/mod/riding-partners', '1.0.0', '', ''],
-    ['RightClickHarvest', 'https://modrinth.com/mod/rightclickharvest', '4.3.1', '', ''],
-    ['Serene Seasons', 'https://modrinth.com/mod/serene-seasons', '10.1.0.1', '', ''],
-    ['Smarter Farmers', 'https://modrinth.com/mod/smarter-farmers-farmers-replant', '2.1.4', '', ''],
-    ['Snow! Real Magic!', 'https://modrinth.com/mod/snow-real-magic', '11.0.7', '', ''],
-    ['Snow Pig', 'https://modrinth.com/mod/snowpig-fabric', '4.0.3', '', ''],
-    ['Sound Physics Remastered', 'https://modrinth.com/mod/sound-physics-remastered', '1.4.6', '', ''],
-    ['Stony Cliffs Are Cool', 'https://modrinth.com/datapack/stony-cliffs-are-cool', '1.1.2', '', ''],
-    ['Underground Rivers', 'https://modrinth.com/mod/underground-rivers/versions', '1.0.0', '', ''],
-    ['Unnamed Desert', 'https://modrinth.com/mod/unnamed-desert', '1.4.0', '', ''],
-    ['Variant Crafting Tables', 'https://modrinth.com/mod/variant-crafting-tables', '7.1', '', ''],
-    ['Vein Mining', 'https://modrinth.com/mod/vein-mining', '5.0.0-beta', '', ''],
-    ['Villager Names', 'https://modrinth.com/mod/villager-names-serilum', '4.5.4', '', ''],
-    ['Visual Workbench', 'https://modrinth.com/mod/visual-workbench', '21.1.0', '', ''],
-    ['Watut - What Are They Up To', 'https://modrinth.com/mod/what-are-they-up-to', '1.1.3', '', ''],
-    ['Xaero\'s Minimap', 'https://modrinth.com/mod/xaeros-minimap', '24.4.0', '', ''],
-    ['Xaero\'s World Map', 'https://modrinth.com/mod/xaeros-world-map', '1.39.0', '', ''],
-    ['You\'re in Grave Danger', 'https://modrinth.com/mod/yigd', '2.4.10', '', ''],
-    ['3D Skin Layers', 'https://modrinth.com/mod/3dskinlayers', '1.6.7', '', ''],
+    ['AppleSkin', 'https://modrinth.com/mod/appleskin', '3.0.5', '', '', false],
+    ['Better End Cities for BetterEnd', 'https://modrinth.com/mod/better-end-cities-for-betterend', '1.21', '', '', false],
+    ['BetterEnd Crashed Ships Tweaks', 'https://modrinth.com/mod/betterend-crashed-ships-tweaks', '1.1.0', '', '', false],
+    ['Better Than Bunnies', 'https://modrinth.com/mod/better-than-bunnies', '1.4.0', '', '', false],
+    ['Better Than Llamas', 'https://modrinth.com/mod/better-than-llamas', '1.3.0', '', '', false],
+    ['Biome Music', 'https://www.curseforge.com/minecraft/mc-mods/biome-music', '2.5', '', '', false],
+    ['Charm of Undying', 'https://modrinth.com/mod/charm-of-undying', '9.1.0', '', '', false],
+    ['Creeper Firework', 'https://modrinth.com/mod/creeper-firework', '2.2.0', '', '', false],
+    ['Death Finder', 'https://modrinth.com/mod/death-finder', '21.1.0', '', '', false],
+    ['Duckling', 'https://modrinth.com/mod/duckling', '5.0.1', '', '', false],
+    ['Diagonal Fences', 'https://modrinth.com/mod/diagonal-fences', '21.1.0', '', '', false],
+    ['Diagonal Walls', 'https://modrinth.com/mod/diagonal-walls', '21.1.0', '', '', false],
+    ['Diagonal Windows', 'https://modrinth.com/mod/diagonal-windows', '21.1.0', '', '', false],
+    ['Easy Anvils', 'https://modrinth.com/mod/easy-anvils', '21.0.0', '', '', false],
+    ['Easy Magic', 'https://modrinth.com/mod/easy-magic', '21.1.0', '', '', false],
+    ['Explosive Enhancement', 'https://modrinth.com/mod/explosive-enhancement', '1.2.3', '', '', false],
+    ['FallingTree', 'https://modrinth.com/mod/fallingtree', '1.21.1.2', '', '', false],
+    ['Farsight', 'https://www.curseforge.com/minecraft/mc-mods/farsight', '3.8', '', '', false],
+    ['Farmer\'s Delight - Caves Delight', 'https://modrinth.com/mod/caves-delight', '1.0.2.3', '', '', false],
+    ['Farmer\'s Delight - Deeper and Darker Delight', 'https://www.curseforge.com/minecraft/mc-mods/deeper-and-darker-delight', '1.0.2.2', '', '', false],
+    ['Farmer\'s Delight - Friends&Foes Delight', 'https://modrinth.com/mod/friendsfoes-delight', '1.0.1', '', '', false],
+    ['Farmer\'s Delight - Biomes O\' Plenty Delight', 'https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty-delight', '1.0.1.4', '', '', false],
+    ['Farmer\'s Delight - Nature Delight', 'https://www.curseforge.com/minecraft/mc-mods/nature-delight', '1.0.0.1', '', '', false],
+    ['Farmer\'s Delight - Twilight\'s Flavors & Delight', 'https://www.curseforge.com/minecraft/mc-mods/twilights-flavors-delight', '3.0.0+6', '', '', false],
+    ['Farmer\'s Delight - Ocean\'s Delight', 'https://www.curseforge.com/minecraft/mc-mods/oceans-delight', '1.0.3', '', '', false],
+    ['Farmer\'s Delight - Storage Delight', 'https://www.curseforge.com/minecraft/mc-mods/storage-delight-forge', '24.09.11', '', '', false],
+    ['Farmers Structures', 'https://www.curseforge.com/minecraft/mc-mods/farmers-structures', '1.0.1', '', '', false],
+    ['Friends&Foes - Beekeeper Hut', 'https://modrinth.com/mod/friends-and-foes-beekeeper-hut-forge', '2.0.1', '', '', false],
+    ['Friends&Foes - Flowery Mooblooms', 'https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-forge', '2.0.2', '', '', false],
+    ['Leaves Be Gone', 'https://modrinth.com/mod/leaves-be-gone', '21.1.0', '', '', false],
+    ['Legendary Tooltips', 'https://modrinth.com/mod/legendary-tooltips', '1.4.11', '', '', false],
+    ['Let Sleeping Dogs Lie', 'https://modrinth.com/mod/let-sleeping-dogs-lie', '1.3.0', '', '', false],
+    ['Loot Integrations', 'https://www.curseforge.com/minecraft/mc-mods/loot-integrations', '3.9', '', '', false],
+    ['Loot Integrations: Randomized Loot Compatibility', 'https://www.curseforge.com/minecraft/mc-mods/vanilla-loot-addon-for-loot-integrations', '1.1', '', '', false],
+    ['Loot Integrations: Yung Structures Addon', 'https://www.curseforge.com/minecraft/mc-mods/yung-structures-addon-for-loot-integrations', '1.2', '', '', false],
+    ['Missing Wilds', 'https://modrinth.com/mod/missing-wilds', '1.3.2', '', '', false],
+    ['MmmMmmMmmMmm', 'https://modrinth.com/mod/mmmmmmmmmmmm', '2.0.6', '', '', false],
+    ['More Babies', 'https://modrinth.com/mod/more-babies', '2.0.0', '', '', false],
+    ['More Mob Variants', 'https://modrinth.com/mod/more-mob-variants', '1.3.1.1', '', '', false],
+    ['Nyf\'s Spiders', 'https://modrinth.com/mod/nyfs-spiders', '2.3.1', '', '', false],
+    ['Repurposed Structures - Farmer\'s Delight Compat', 'https://modrinth.com/datapack/repurposed-structures-farmers-delight-compat', '7', '', '', false],
+    ['Relics: Artifacts Compat', 'https://modrinth.com/mod/rar-compat', '0.6.3', '', '', false],
+    ['RightClickHarvest', 'https://modrinth.com/mod/rightclickharvest', '4.4.0', '', '', false],
+    ['Serene Seasons', 'https://modrinth.com/mod/serene-seasons', '10.1.0.1', '', '', false],
+    ['Sound Physics Remastered', 'https://modrinth.com/mod/sound-physics-remastered', '1.4.6', '', '', false],
+    ['Smarter Farmers (farmers replant)', 'https://modrinth.com/mod/smarter-farmers-farmers-replant', '2.1.4', '', '', false],
+    ['Snow Pig', 'https://modrinth.com/mod/snowpig-fabric', '4.0.3', '', '', false],
+    ['Trimmable Tools', 'https://modrinth.com/datapack/trimmable-tools', '2.0.3', '', '', false],
+    ['Underground Rivers', 'https://modrinth.com/mod/underground-rivers', '1.0.0', '', '', false],
+    ['Vein Mining', 'https://modrinth.com/mod/vein-mining', '5.0.0-beta.2', '', '', false],
+    ['Visual Workbench', 'https://modrinth.com/mod/visual-workbench', '21.1.0', '', '', false],
+    ['What Are They Up To (Watut)', 'https://modrinth.com/mod/what-are-they-up-to', '1.1.4', '', '', false],
+    ['Xaero\'s Minimap', 'https://modrinth.com/mod/xaeros-minimap', '24.6.1', '', '', false],
+    ['Xaero\'s World Map', 'https://modrinth.com/mod/xaeros-world-map', '1.39.0', '', '', false],
+    ['You\'re in Grave Danger', 'https://modrinth.com/mod/yigd', '2.0.7', '', '', false],
+    ['3D Skin Layers', 'https://modrinth.com/mod/3dskinlayers', '1.6.7', '', '', false],
 ]}/>
 </details>
+
+<br/>
+
+:::warning Problèmes de crash ?
+Certains problèmes connus peuvent survenir notamment à cause de **Sodium**,
+et des mods Fabric transpilé en NeoForge tels que **BetterNether** et **BetterEnd**. Si ça plante sans arrêt,
+[essayez d'enlever Sodium](https://www.reddit.com/r/fabricmc/comments/1fmif7z/game_crashing_getting_block_state_missing_palette/).
+:::
+
+<br/>
+
+:::note Mods souhaités qui ne fonctionnent pas
+* [Snow! Real Magic! `11.0.12`](https://modrinth.com/mod/snow-real-magic) : glitch de Xray lorsque de la neige est posée sur une herbe.
+* [Mythic Metals `0.20.2`](https://modrinth.com/mod/mythicmetals) et sa dépendance [Alloy Forgery `2.4.1`](https://modrinth.com/mod/alloy-forgery) : ne compilent pas avec Sinytra Connector.
+* [AdventureZ `2.4.1`](https://modrinth.com/mod/adventurez) et son addon [VoidZ `1.0.11`](https://modrinth.com/mod/voidz) : ne compilent pas avec Sinytra Connector.
+* [Alex's Caves](https://modrinth.com/mod/alexs-caves) : n'existe pas encore pour Minecraft `1.21.x`.
+* [Alex's Mobs](https://modrinth.com/mod/alexs-mobs) : n'existe pas encore pour Minecraft `1.21.x`.
+:::

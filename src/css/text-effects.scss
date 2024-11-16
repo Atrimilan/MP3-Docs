@@ -1,0 +1,43 @@
+/* Static text effects */
+
+.link {
+    text-decoration: none;
+    color: var(--ifm-menu-color-active);
+    font-weight: bold;
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: #ffffff !important;
+    }
+}
+
+/* Dynamic text effects */
+
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.gold-gradient-effect {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ffd66e, #ffffff, #ffd66e);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+}
+
+.mp3-gradient-effect {
+    text-decoration: none;
+    background: linear-gradient(45deg, #e98aff, #71d7ff, #2effd2, #e98aff);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+}

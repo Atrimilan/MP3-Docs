@@ -1,11 +1,7 @@
 .info-box {
-    border-radius: 17px;
     display: flex;
-    background: linear-gradient(15deg, #990f92 0%, #058a83 100%);
-    box-shadow:
-        -5px 2px 10px 0px #990f9233,
-        5px -2px 10px 0px #058a8333,
-        0px 0px 10px 0px #00000055;
+    position: relative;
+    height: 130px;
 
     h1,
     h4 {
@@ -13,10 +9,12 @@
     }
 
     img {
-        box-shadow: 0px 0px 10px 0px #410a3fcc;
-        border-radius: 10px;
-        margin: 7px 0 7px 7px;
-        width: 200px;
+        filter: brightness(70%);
+        border-radius: 17px;
+        position: absolute;
+        margin: 7px 0 7px 0;
+        width: 100%;
+        z-index: -1;
         height: 120px;
         object-fit: cover;
     }
@@ -72,25 +70,6 @@
         .connected {
             bottom: 20px;
             right: 0px;
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .info-box {
-        background: none;
-        box-shadow: none;
-        position: relative;
-        height: 115px;
-
-        img {
-            box-shadow: none;
-            width: 100%;
-            border-radius: 17px;
-            position: absolute;
-            margin: 0;
-            z-index: -1;
-            object-fit: cover;
         }
     }
 }

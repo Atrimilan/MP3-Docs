@@ -47,15 +47,6 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_tech',
-        path: 'doc_tech',
-        routeBasePath: 'tech',
-        sidebarPath: require.resolve('./sidebars.ts'),
-      }
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
         id: 'doc_creative',
         path: 'doc_creative',
         routeBasePath: 'creatif',
@@ -112,27 +103,22 @@ const config: Config = {
         },
         {
           to: '/melodia/rejoindre',
-          label: 'Melodia',
-          position: 'left'
-        },
-        {
-          to: '/creatif/rejoindre',
-          label: 'Créatif',
-          position: 'left'
-        },
-        {
-          to: '/fallen_kingdom/rejoindre',
-          label: 'Fallen Kingdom',
+          label: 'Moddé',
           position: 'left'
         },
         // {
-        //   to: '/tech/intro',
-        //   label: 'Tech',
+        //   to: '/creatif/rejoindre',
+        //   label: 'Créatif',
+        //   position: 'left'
+        // },
+        // {
+        //   to: '/fallen_kingdom/rejoindre',
+        //   label: 'Fallen Kingdom',
         //   position: 'left'
         // },
         {
-          to: '/archives/installation',
-          label: 'Archives',
+          to: '/archives/drehmal',
+          label: 'Archives 📦',
           position: 'left'
         },
         // {

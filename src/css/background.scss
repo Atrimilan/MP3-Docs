@@ -1,5 +1,9 @@
 .main-wrapper {
-    div > main {
+    div > main,
+    &:not(:has(> div)) {
         background-image: url("/img/doc-bg.png");
+        z-index: 0;
+        background-attachment: fixed;
+        background-size: cover;
     }
 }

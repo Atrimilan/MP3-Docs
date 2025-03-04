@@ -6,7 +6,9 @@ const config: Config = {
   title: 'MP3 Docs',
   tagline: 'Documentation du serveur MP3',
   favicon: 'img/favicon.ico',
-
+  clientModules: [
+    './modules/archive-background.js' // Executed on each loaded page
+  ],
   // Set the production url of your site here
   url: 'http://mp3.pixelfucker.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -47,27 +49,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_creative',
-        path: 'doc_creative',
-        routeBasePath: 'creatif',
-        sidebarPath: require.resolve('./sidebars.ts')
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
         id: 'doc_melodia',
         path: 'doc_melodia',
         routeBasePath: 'melodia',
-        sidebarPath: require.resolve('./sidebars.ts')
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'doc_fallen_kingdom',
-        path: 'doc_fallen_kingdom',
-        routeBasePath: 'fallen_kingdom',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
@@ -80,6 +64,25 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
+    /***** ARCHIVES *****/
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'doc_fallen_kingdom',
+        path: 'doc_fallen_kingdom',
+        routeBasePath: 'fallen_kingdom',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'doc_creative',
+        path: 'doc_creative',
+        routeBasePath: 'creatif',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ]
   ],
 
   themeConfig: {
@@ -106,16 +109,6 @@ const config: Config = {
           label: 'Moddé',
           position: 'left'
         },
-        // {
-        //   to: '/creatif/rejoindre',
-        //   label: 'Créatif',
-        //   position: 'left'
-        // },
-        // {
-        //   to: '/fallen_kingdom/rejoindre',
-        //   label: 'Fallen Kingdom',
-        //   position: 'left'
-        // },
         {
           to: '/archives/drehmal',
           label: 'Archives 📦',

@@ -6,4 +6,11 @@
         background-attachment: fixed;
         background-size: cover;
     }
+
+    &.archive-page {
+        div > main,
+        &:not(:has(> div)) {
+            background-image: url("/img/doc-bg-archive.png");
+        }
+    }
 }

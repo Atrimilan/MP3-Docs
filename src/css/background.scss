@@ -13,4 +13,11 @@
             background-image: url("/img/doc-bg-archive.png");
         }
     }
+
+    &.creative-page {
+        div > main,
+        &:not(:has(> div)) {
+            background-image: url("/img/doc-bg-creative.png");
+        }
+    }
 }

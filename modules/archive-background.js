@@ -1,15 +1,27 @@
-// Custom module that forces the definition of a different custom background for archive pages
+// Custom module that forces the definition of a different custom background for specified pages
 
 export function onRouteDidUpdate({ location, previousLocation }) {
     if (location.pathname !== previousLocation?.pathname) {
 
-        // Not "/archives/" as it may be a redirection page
-        const archivePages = ['/archives/', '/fallen_kingdom/', '/creatif/'];
+        // Pages that need a different background
+        const pageConfigurations = {
+            '/creatif/': 'creative-page',
+            '/archives/': 'archive-page',
+            '/fallen_kingdom/': 'archive-page',
+            '/melodia/': 'archive-page'
+        };
 
-        if (archivePages.some(page => location.pathname.includes(page))) {
-            document.querySelector('.main-wrapper').classList.add('archive-page');
-        } else {
-            document.querySelector('.main-wrapper').classList.remove('archive-page');
+        const mainWrapper = document.querySelector('.main-wrapper');
+
+        Object.values(pageConfigurations)
+            .forEach(className => mainWrapper.classList.remove(className));
+
+        const currentPageConfig = Object.entries(pageConfigurations)
+            .find(([page]) => location.pathname.includes(page));
+
+        if (currentPageConfig) {
+            mainWrapper.classList.add(currentPageConfig[1]);
         }
+        // Else, no class is added, and the default background is used
     }
 }

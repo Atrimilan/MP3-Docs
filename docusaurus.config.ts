@@ -49,9 +49,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_melodia',
-        path: 'doc_melodia',
-        routeBasePath: 'melodia',
+        id: 'doc_creative',
+        path: 'doc_creative',
+        routeBasePath: 'creatif',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
@@ -77,9 +77,9 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_creative',
-        path: 'doc_creative',
-        routeBasePath: 'creatif',
+        id: 'doc_melodia',
+        path: 'doc_melodia',
+        routeBasePath: 'melodia',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ]
@@ -105,8 +105,8 @@ const config: Config = {
           label: 'Survie'
         },
         {
-          to: '/melodia/rejoindre',
-          label: 'Moddé',
+          to: '/creatif/rejoindre',
+          label: 'Créatif',
           position: 'left'
         },
         {

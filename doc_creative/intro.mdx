@@ -6,22 +6,12 @@ description: Présentation du serveur créatif, notamment du Plugin Axiom
 slug: /rejoindre
 ---
 
+import { WorldMapIframe } from '/components/world-map-iframe';
 import { DownloadButton } from '/components/download-button';
+import './creative.css';
 
 # Serveur Créatif
 
-:::tip Accéder au serveur
-Connectez-vous sur MP3 en `1.21.x` et exécutez **``/server Modellum``** ou **`/modellum`**.
-:::
+Connectez-vous sur MP3 en `1.21.4` et exécutez **``/server Modellum``** ou **`/modellum`**.
 
-## Plugins sur le serveur
-
-
-Pensez à me demander la permission si vous souhaitez les utiliser ! 😉
-
-* **World Edit** : [Voir la documentation](https://intellectualsites.gitbook.io/fastasyncworldedit/features/main-commands-and-permissions)
-* **Axiom** : [Voir la documentation](https://axiomdocs.moulberry.com/)
-
-:::info Télécharger Fabric et Axiom _(optionnel)_
-Si souhaitez utiliser Axiom, vous devez **[Installer Fabric](/survie/mods#i-installation-de-fabric)** puis télécharger le mod <DownloadButton data={{url: "https://cdn.modrinth.com/data/N6n5dqoA/versions/G5Wd4EHm/Axiom-4.1.1-for-MC1.21.jar", important: true}}/> **[Axiom](https://modrinth.com/mod/axiom/version/G5Wd4EHm)**.
-:::
+<WorldMapIframe data={{url: "http://mp3.pixelfucker.com:8899/"}} />

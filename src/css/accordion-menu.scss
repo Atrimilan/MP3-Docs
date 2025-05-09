@@ -6,4 +6,10 @@
     & > summary > h3 {
         margin: 0;
     }
+    
+    --accordion-decoration-color: var(--ifm-color-primary);
+    --docusaurus-details-decoration-color: var(--accordion-decoration-color) !important;
+    a {
+        color: var(--accordion-decoration-color) !important;
+    }
 }

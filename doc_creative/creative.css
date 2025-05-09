@@ -1,0 +1,11 @@
+.accordion.plugins {
+    --accordion-decoration-color: #bcf05d;
+}
+
+.accordion.datapacks {
+    --accordion-decoration-color: #ffc07c;
+}
+
+.accordion.gamerules {
+    --accordion-decoration-color: #d6cee5;
+}

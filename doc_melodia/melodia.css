@@ -1,27 +1,19 @@
-.accordion {
-    --decoration-color: var(--ifm-color-primary);
-    --docusaurus-details-decoration-color: var(--decoration-color) !important;
-    a {
-        color: var(--decoration-color) !important;
-    }
-}
-
 .accordion.dimensions {
-    --decoration-color: #0ea7ff;
+    --accordion-decoration-color: #0ea7ff;
 }
 
 .accordion.mobs {
-    --decoration-color: #38d3b6;
+    --accordion-decoration-color: #38d3b6;
 }
 
 .accordion.biomes {
-    --decoration-color: #60cb26;
+    --accordion-decoration-color: #60cb26;
 }
 
 .accordion.items {
-    --decoration-color: #f3ba00;
+    --accordion-decoration-color: #f3ba00;
 }
 
 .accordion.misc {
-    --decoration-color: #ffc07c;
+    --accordion-decoration-color: #ffc07c;
 }

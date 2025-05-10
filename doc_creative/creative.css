@@ -1,11 +1,11 @@
-.accordion.plugins {
-    --accordion-decoration-color: #bcf05d;
+.accordion#important-commands {
+    --accordion-decoration-color: #d6cee5;
 }
 
-.accordion.datapacks {
+.accordion#datapacks-and-terrain {
     --accordion-decoration-color: #ffc07c;
 }
 
-.accordion.gamerules {
-    --accordion-decoration-color: #d6cee5;
+.accordion#mods-and-plugins {
+    --accordion-decoration-color: #f33b57;
 }

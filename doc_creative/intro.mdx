@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 title: Rejoindre le serveur Créatif
-tags: [Mods, Plugin, Serveur]
-description: Présentation du serveur créatif, notamment du Plugin Axiom
+tags: [Datapacks, Mods, Plugins, Serveur]
+description: Présentation du serveur créatif
 slug: /rejoindre
 ---
 
@@ -15,3 +15,50 @@ import './creative.css';
 Connectez-vous sur MP3 en `1.21.4` et exécutez **``/server Modellum``** ou **`/modellum`**.
 
 <WorldMapIframe data={{url: "http://mp3.pixelfucker.com:8899/"}} />
+
+<br/>
+
+<details className="accordion" id="important-commands">
+<summary><h3>⚙️ Commandes importantes</h3></summary>
+#### Téléportation
+* `/warp`&nbsp; `/setwarp`&nbsp; `/delwarp` - Gérer les warps du serveur
+* `/home`&nbsp; `/sethome`&nbsp; `/delhome`&nbsp; `/renamehome` - Gérer vos homes personnels
+* `/tp` - Se téléporter à un joueur, ou à des coordonnées
+* `/back` - Retourner à votre dernière position
+
+#### Temps
+* `/time` - Changer l'heure du serveur
+* `/ptime` - Changer votre heure uniquement
+* `/weather` - Changer la météo du serveur
+* `/pweather` - Changer votre météo uniquement
+
+#### Autres
+* `/speed`&nbsp; `/flyspeed`&nbsp; `/walkspeed` - Gérer votre vitesse de déplacement
+* `/sign` - Modifier le texte d'un panneau ([les couleurs sont disponibles 😉](https://essentialsx.net/wiki/Color-Permissions.html))
+* `/locate biome` - Retrouver un biome dans la carte
+* `/cadre_invisible <pseudo>`&nbsp; `/cadre_invisible_lumineux <pseudo>` - Obtenir un cadre invisible
+</details>
+
+<details className="accordion" id="mods-and-plugins">
+<summary><h3>🏗️ Modes et plugins de construction</h3></summary>
+
+* Par défaut, vous pouvez utiliser **WorldEdit** et **VoxelSniper**.
+  * [Documentation de WorldEdit](https://intellectualsites.gitbook.io/fastasyncworldedit)
+  * [Documentation de VoxelSniper](https://intellectualsites.gitbook.io/fastasyncvoxelsniper)
+* Vous pouvez aussi utiliser le mode **Axiom**, si vous l'avez installé.
+  * [Documentation d'Axiom](https://axiomdocs.moulberry.com/)
+  * [Télécharger Axiom](https://modrinth.com/mod/axiom/versions?g=1.21.4) _(Fabric 1.21.4)_
+* Je vous recommande de tester **ItemSwapper** pour changer rapidement l'item que vous avez en main.
+  * [Télécharger ItemSwapper](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4) _(Fabric 1.21.4)_<br/>
+    [<img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/woodoptions.png"
+        alt="Exemple d'utilisation de ItemSwapper" style={{ borderRadius: '10px', maxHeight: '100px'}} />
+    ](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4)
+</details>
+
+<details className="accordion" id="datapacks-and-terrain">
+<summary><h3>📦 Datapacks et génération du terrain</h3></summary>
+* La carte est générée avec [Terralith](https://modrinth.com/datapack/terralith) et
+[Geophilic](https://modrinth.com/datapack/geophilic), la seed du monde est `2741791201018513590`.
+* Vous pouvez faire pousser les arbres de Terralith en utilisant simplement de la poudre d'os grâce à
+[Biome Saplings](https://modrinth.com/datapack/terralith-biome-saplings).
+</details>

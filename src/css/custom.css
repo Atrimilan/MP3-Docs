@@ -29,13 +29,25 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-@import './coordinates-table.scss';
-@import './docs-table.scss';
-@import './search-bar.scss';
-@import './background.scss';
-@import './server-infobox.scss';
-@import './index.scss';
-@import './download-button.scss';
-@import './accordion-menu.scss';
-@import './text-effects.scss';
-@import './world-map-iframe.scss';
+.markdown {
+  /* Add text shadow for better readability */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+
+  /* Disable in alert boxes, code blocks, accordions and custom iframes */
+  .alert *,
+  code *,
+  .new-tab-link * {
+    text-shadow: none;
+  }
+}
+
+@import "./coordinates-table.scss";
+@import "./docs-table.scss";
+@import "./search-bar.scss";
+@import "./background.scss";
+@import "./server-infobox.scss";
+@import "./index.scss";
+@import "./download-button.scss";
+@import "./accordion-menu.scss";
+@import "./text-effects.scss";
+@import "./world-map-iframe.scss";

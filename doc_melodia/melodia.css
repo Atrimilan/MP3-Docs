@@ -1,19 +1,19 @@
-.accordion.dimensions {
+.accordion#dimensions {
     --accordion-decoration-color: #0ea7ff;
 }
 
-.accordion.mobs {
+.accordion#mobs {
     --accordion-decoration-color: #38d3b6;
 }
 
-.accordion.biomes {
+.accordion#biomes {
     --accordion-decoration-color: #60cb26;
 }
 
-.accordion.items {
+.accordion#items {
     --accordion-decoration-color: #f3ba00;
 }
 
-.accordion.misc {
+.accordion#misc {
     --accordion-decoration-color: #ffc07c;
 }

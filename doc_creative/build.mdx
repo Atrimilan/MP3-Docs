@@ -44,7 +44,7 @@ S'il vous manque des permissions, ou que vous souhaitez d'autres plugins pour co
 | [**Item&nbsp;Swapper**](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4&l=fabric) | Permet de changer rapidement l'item que vous tenez en main, en vous suggérant des items similaires.<br/> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/planktypes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/woodoptions.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/dyes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> |
 
 
-> _Pour connaître les plugins de build installés sur Modellum, jettez un oeil à la section [🧩 Plugins installés](#plugins) plus bas._
+> _Pour connaître les plugins de build installés sur Modellum, jettez un œil à la section [🧩 Plugins installés](#plugins) plus bas._
 </details>
 
 <details className="accordion" id="performance-mods">
@@ -64,7 +64,7 @@ S'il vous manque des permissions, ou que vous souhaitez d'autres plugins pour co
 [3D&nbsp;Skin&nbsp;Layers](https://modrinth.com/mod/3dskinlayers/versions?g=1.21.4&l=fabric), [Zume](https://modrinth.com/mod/zume/versions?g=1.21.4&l=fabric), etc.<br/>
 Si vous préférez le modloader [Neoforge 1.21.4](https://projects.neoforged.net/neoforged/neoforge), c'est aussi possible.
 
-## II. Configuration du serveur
+## III. Configuration du serveur
 
 1. Vous avez à disposition une carte circulaire d'un rayon de `5000 blocs`, les chunks ont été pré-générés pour éviter les latences.<br/>
 Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `2741791201018513590`.
@@ -134,3 +134,51 @@ Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `27
     | `mobGriefing` | `false` | |
     </details>
 </div>
+
+## IV. Détails techniques <span style={{fontSize: '15px', fontWeight: 'normal'}}>pour les nerds ☝️🤓</span>
+
+<details className="accordion" id="technical-details">
+<summary><h3>🔧 Afficher les détails techniques</h3></summary>
+
+#### Configuration de Modellum
+Les permissions sur Modellum sont configurés avec **LuckPerms**, vous avez ainsi accès à de nombreuses commandes
+et fonctionnalités liées aux différents plugins installés sur le serveur, et je peux limiter facilement les accès sensibles.
+
+Le préchargement des chunks est géré par **Chunky**, ça nous permet de voir toute la [carte du monde](http://mp3.pixelfucker.com:8899/)
+sur une simple page Web.
+> De plus, la machine est plutôt performante, mais un coup de `/flyspeed 10` sur quelques miliers de blocs non-chargés et
+> ça peut vite réduire les performances ! 🔥
+
+<br/>
+
+#### Serveur Purpur
+Modellum est un serveur **Purpur** 1.21.4, il s'agit d'un serveur optimisé pour la performance et la personnalisation.<br/>
+Cela m'offre beaucoup de flexibilité, car je peux importer des plugins conçus pour Bukkit, Spigot et Paper,
+et j'ai accès à de nombreux fichiers de configuration.
+
+> **Purpur** est un fork de **PaperMC**, lui-même étant un fork de **SpigotMC**, lui-même étant à l'origine un fork de **Bukkit**.
+
+<br/>
+
+#### Proxy Velocity
+Modellum est sur le réseau MP3, cela signifie que l'adresse du serveur est la même, pour changer de serveur il suffit d'exécuter
+la commande `/server <nom>`, ou plus simplement `/<nom>`.
+
+> En fait, pour que cela fonctionne, tous les serveurs Minecraft sont branchés sur un serveur principal appelé "proxy",
+> qui vous redirige vers le serveur Minecraft désiré. En l'occurrence j'utilise le proxy **Velocity**.
+
+<br/>
+
+#### Autres questions techniques ?
+Si vous êtes intrigués par la technique derrière la configuration de Modellum, sur l'hébergement de mes serveurs Minecraft, sur
+l'hébergement de ce site Web ou sur la configuration des différents systèmes en place, je vous invite à jeter un œil à mes projets :
+* [Code source de ce site Web](https://github.com/Atrimilan/MP3-Docs)
+* [Documentation de l'hébergement (gratuit) du VPS](https://github.com/AmberstoneDream/FreeVirtualMachineCloudHosting/blob/main/Docs/Cloud_Hosted_Oracle_VM.md)
+* [Documentation de l'installation d'un panneau d'administration Crafty Controller](https://github.com/AmberstoneDream/ProxyServerResearch/blob/main/crafty-controller-administration/DOCUMENTATION.md)
+* [Documentation de la configuration d'un proxy Velocity](https://github.com/AmberstoneDream/ProxyServerResearch/blob/main/velocity-proxy/documentation.md)
+* Pour le reste, demandez-moi directement sur Discord, je prendrai plaisir à vous expliquer ! 😄
+</details>
+
+<br/>
+
+<center>![](https://minecraft.wiki/images/Jeb_Sheep_JE4_BE3.webp)</center>

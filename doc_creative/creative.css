@@ -1,5 +1,6 @@
 .accordion#commands,
-.accordion#gamerules {
+.accordion#gamerules,
+.accordion#technical-details {
     --accordion-decoration-color: #d6cee5;
 }
 

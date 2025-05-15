@@ -102,11 +102,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'sidebarId',
           position: 'left',
-          label: 'Survie'
+          label: 'Survie ⛏️'
         },
         {
           to: '/creatif/rejoindre',
-          label: 'Créatif',
+          label: 'Créatif 🎨',
           position: 'left'
         },
         {

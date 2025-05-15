@@ -20,69 +20,25 @@ Cette page liste tous les outils disponibles et recommandés pour améliorer vot
 Modellum est un serveur créatif mettant à disposition un terrain détaillé et immersif grâce à l'utilisation de datapacks, 
 surpassant les générations classiques de Minecraft vanilla.
 
-**Vous êtes libre de construire ce que vous souhaitez, où bon vous semble.**
+* **Monde créatif : <span className='gold-gradient-effect'>`/world creatif`</span>** – Carte circulaire d'un rayon de `5000 blocs`, vous y êtes totalement libres.
+* **Monde plat : <span className='gold-gradient-effect'>`/world flatmap`</span>** – Carte `1000 × 1000 blocs` pour vos tests et vos copies.
 
-:::info Besoin de quelque chose ?
-S'il vous manque des permissions, ou que vous souhaitez d'autres plugins pour construire, prévenez-moi et je m'en occuperai !
+## II. Configuration du serveur
 
-<p style={{display: 'flex', alignItems: 'center'}}>
-    <img src="https://minecraft.wiki/images/Invicon_Command_Block.gif" 
-    style={{maxHeight: '1.5em', paddingRight: '6px'}}/>
-    <span>**Les blocs de commande sont autorisés**, mais comme cela nécessite d'être `/op` il faut me demander directement. 😉</span>
-</p>
-:::
+* Le Nether, l'End et la génération de structures sont **désactivés**.
 
-## II. Mods recommandés
+* le serveur est en **difficulté paisible**, les mobs hostiles sont désactivés.
 
-**Aucun mod n'est requis sur Modellum**, mais voici quelques suggestions pour [Fabric 1.21.4](https://fabricmc.net/use/installer/) :
+* La distance d'affichage sur le serveur est de `20 chunks`.
 
-<details className="accordion" id="building-tools">
-<summary><h3>🏗️ Mods pour le build</h3></summary>
-| Plugin | Information |
-|---|---|
-| [**Axiom**](https://modrinth.com/mod/axiom/versions?g=1.21.4&l=fabric) | Outil tout-en-un facilitant le terraforming, la construction de bâtiments, la création de structures organiques, etc. avec des outils de visuatlisation en temps réel.<br/> Il offre aussi des fonctionnalités pertinentes comme le noclip, le placement de blocs à distance, un sélecteur de blocs par couleur, etc. [[Documentation<IconExternalLink/>](https://axiomdocs.moulberry.com/)] |
-| [**Item&nbsp;Swapper**](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4&l=fabric) | Permet de changer rapidement l'item que vous tenez en main, en vous suggérant des items similaires.<br/> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/planktypes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/woodoptions.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/dyes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> |
-
-
-> _Pour connaître les plugins de build installés sur Modellum, jettez un œil à la section [🧩 Plugins installés](#plugins) plus bas._
-</details>
-
-<details className="accordion" id="performance-mods">
-<summary><h3>⚡ Mods pour les performances</h3></summary>
-| Plugin | Information |
-|---|---|
-| [**Sodium**](https://modrinth.com/mod/sodium/versions?g=1.21.4&l=fabric) | Améliore grandement les performances de Minecraft. |
-| [**Iris&nbsp;Shaders**](https://modrinth.com/mod/iris/versions?g=1.21.4&l=fabric)&nbsp;_(requiert&nbsp;Sodium)_ | Permet le chargement de shaders avec Sodium. Vous pouvez trouver des shaders sur [Modrinth](https://modrinth.com/shaders?v=1.21.4&s=downloads) ou sur [shaderLABS](https://shaderlabs.org/wiki/Shaderpacks). |
-| [**LambDynamicLights**](https://modrinth.com/mod/lambdynamiclights/versions?g=1.21.4&l=fabric) | Ajoute de la lumière dynamique. |
-| [**FerriteCore**](https://modrinth.com/mod/ferrite-core/versions?g=1.21.4&l=fabric) | Réduit l'utilisation de mémoire vive (RAM). |
-| [**ImmediatelyFast**](https://modrinth.com/mod/immediatelyfast/versions?g=1.21.4&l=fabric) | Optimise le rendu graphique de nombreux éléments de Minecraft. |
-| [**ModernFix**](https://modrinth.com/mod/modernfix/versions?g=1.21.4&l=fabric) | Améliore les performances du jeu et corrige de nombreux bugs. |
-</details>
-
-> Tous les mods sont autorisés, vous pouvez aussi utiliser [Mod&nbsp;Menu](https://modrinth.com/mod/modmenu/versions?g=1.21.4&l=fabric),
-[Distant&nbsp;Horizons](https://modrinth.com/mod/distanthorizons/versions?g=1.21.4&l=fabric), [Xaero's&nbsp;Minimap](https://modrinth.com/mod/xaeros-minimap/versions?g=1.21.4&l=fabric),
-[3D&nbsp;Skin&nbsp;Layers](https://modrinth.com/mod/3dskinlayers/versions?g=1.21.4&l=fabric), [Zume](https://modrinth.com/mod/zume/versions?g=1.21.4&l=fabric), etc.<br/>
-Si vous préférez le modloader [Neoforge 1.21.4](https://projects.neoforged.net/neoforged/neoforge), c'est aussi possible.
-
-## III. Configuration du serveur
-
-1. Vous avez à disposition une carte circulaire d'un rayon de `5000 blocs`, les chunks ont été pré-générés pour éviter les latences.<br/>
-Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `2741791201018513590`.
-
-2. La distance d'affichage sur le serveur est de `20 chunks`.
-
-3. Le Nether, l'End et la génération de structures sont **désactivés**.
-
-4. **Difficulté paisible**, les mobs hostiles sont désactivés.
-
-5. J'ai aussi ajouté des alias personnalisés :
+* J'ai ajouté des commandes personnalisées :
     * `/cadre_invisible <pseudo>` : donne un cadre invisible.
     * `/cadre_invisible_lumineux <pseudo>` : donne un cadre invisible lumineux.
     * `/site` : affiche un lien cliquable vers http://mp3.pixelfucker.com/creatif/rejoindre dans le chat.
 
 <div style={{marginLeft: '14px'}}>
     <details className="accordion" id="plugins">
-    <summary><h3>🧩 Plugins installés</h3></summary>
+    <summary><h3>🧩 Plugins disponibles</h3></summary>
 
     :::warning Utiliser Axiom
     Pour utiliser Axiom sur le serveur, vous devez installer le mod
@@ -101,7 +57,7 @@ Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `27
     </details>
 
     <details className="accordion" id="datapacks">
-    <summary><h3>📦 Datapacks installés</h3></summary>
+    <summary><h3>📦 Datapacks utilisés</h3></summary>
     | Datapack | Information |
     |---|---|
     | [**Terralith**](https://modrinth.com/datapack/terralith) | Améliore la génération du terrain et ajoute de nombreux biomes à partir des blocs de Minecraft vanilla. [[Documentation<IconExternalLink/>](https://stardustlabs.miraheze.org/wiki/Terralith)] |
@@ -110,7 +66,7 @@ Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `27
     </details>
 
     <details className="accordion" id="gamerules">
-    <summary><h3>⚙️ Gamerules définies</h3></summary>
+    <summary><h3>⚙️ Gamerules</h3></summary>
     <p style={{display: 'flex', alignItems: 'center'}}>
         <img src="https://minecraft.wiki/images/Invicon_TNT.png" 
         style={{maxHeight: '1.5em', paddingRight: '6px'}}/>
@@ -133,9 +89,48 @@ Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `27
     | `doWeatherCycle ` | `false` | La météo ne change pas. Vous pouvez utiliser  `/pweather <type>` pour modifier votre météo, ou `/weather <type>` pour modifier celui du serveur. |
     | `mobGriefing` | `false` | |
     </details>
+
+    :::note Besoin de quelque chose d'autre ?
+    S'il vous manque des permissions, ou que vous souhaitez d'autres plugins pour construire, prévenez-moi et je m'en occuperai !
+
+    <p style={{display: 'flex', alignItems: 'center'}}>
+        <img src="https://minecraft.wiki/images/Invicon_Command_Block.gif" 
+        style={{maxHeight: '1.5em', paddingRight: '6px'}}/>
+        <span>**Les blocs de commande sont autorisés**, mais comme cela nécessite d'être `/op` il faut me demander l'accès. 😉</span>
+    </p>
+    :::
 </div>
 
-## IV. Détails techniques <span style={{fontSize: '15px', fontWeight: 'normal'}}>pour les nerds ☝️🤓</span>
+## III. Mods recommandés
+
+**Aucun mod n'est requis sur Modellum**, mais voici quelques suggestions pour [Fabric 1.21.4](https://fabricmc.net/use/installer/) :
+
+<details className="accordion" id="building-tools">
+<summary><h3>🏗️ Mods pour le build</h3></summary>
+| Plugin | Information |
+|---|---|
+| [**Axiom**](https://modrinth.com/mod/axiom/versions?g=1.21.4&l=fabric) | Outil tout-en-un facilitant le terraforming, la construction de bâtiments, la création de structures organiques, etc. avec des outils de visuatlisation en temps réel.<br/> Il offre aussi des fonctionnalités pertinentes comme le noclip, le placement de blocs à distance, un sélecteur de blocs par couleur, etc. [[Documentation<IconExternalLink/>](https://axiomdocs.moulberry.com/)] |
+| [**Item&nbsp;Swapper**](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4&l=fabric) | Permet de changer rapidement l'item que vous tenez en main, en vous suggérant des items similaires.<br/> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/planktypes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/woodoptions.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/dyes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> |
+</details>
+
+<details className="accordion" id="performance-mods">
+<summary><h3>⚡ Mods pour les performances</h3></summary>
+| Plugin | Information |
+|---|---|
+| [**Sodium**](https://modrinth.com/mod/sodium/versions?g=1.21.4&l=fabric) | Améliore grandement les performances de Minecraft. |
+| [**Iris&nbsp;Shaders**](https://modrinth.com/mod/iris/versions?g=1.21.4&l=fabric)&nbsp;_(requiert&nbsp;Sodium)_ | Permet le chargement de shaders avec Sodium. Vous pouvez trouver des shaders sur [Modrinth](https://modrinth.com/shaders?v=1.21.4&s=downloads) ou sur [shaderLABS](https://shaderlabs.org/wiki/Shaderpacks). |
+| [**LambDynamicLights**](https://modrinth.com/mod/lambdynamiclights/versions?g=1.21.4&l=fabric) | Ajoute de la lumière dynamique. |
+| [**FerriteCore**](https://modrinth.com/mod/ferrite-core/versions?g=1.21.4&l=fabric) | Réduit l'utilisation de mémoire vive (RAM). |
+| [**ImmediatelyFast**](https://modrinth.com/mod/immediatelyfast/versions?g=1.21.4&l=fabric) | Optimise le rendu graphique de nombreux éléments de Minecraft. |
+| [**ModernFix**](https://modrinth.com/mod/modernfix/versions?g=1.21.4&l=fabric) | Améliore les performances du jeu et corrige de nombreux bugs. |
+</details>
+
+> Tous les mods sont autorisés, vous pouvez aussi utiliser [Mod&nbsp;Menu](https://modrinth.com/mod/modmenu/versions?g=1.21.4&l=fabric),
+[Distant&nbsp;Horizons](https://modrinth.com/mod/distanthorizons/versions?g=1.21.4&l=fabric), [Xaero's&nbsp;Minimap](https://modrinth.com/mod/xaeros-minimap/versions?g=1.21.4&l=fabric),
+[3D&nbsp;Skin&nbsp;Layers](https://modrinth.com/mod/3dskinlayers/versions?g=1.21.4&l=fabric), [Zume](https://modrinth.com/mod/zume/versions?g=1.21.4&l=fabric), etc.<br/>
+Si vous préférez le modloader [Neoforge 1.21.4](https://projects.neoforged.net/neoforged/neoforge), c'est aussi possible.
+
+## IV. Détails techniques <span style={{fontSize: '15px'}}>pour les nerds ☝️🤓</span>
 
 <details className="accordion" id="technical-details">
 <summary><h3>🔧 Afficher les détails techniques</h3></summary>
@@ -144,10 +139,9 @@ Le centre du monde est aux coordonnées `x=0` et `z=0`. La seed du monde est `27
 Les permissions sur Modellum sont configurés avec **LuckPerms**, vous avez ainsi accès à de nombreuses commandes
 et fonctionnalités liées aux différents plugins installés sur le serveur, et je peux limiter facilement les accès sensibles.
 
-Le préchargement des chunks est géré par **Chunky**, ça nous permet de voir toute la [carte du monde](http://mp3.pixelfucker.com:8899/)
-sur une simple page Web.
-> De plus, la machine est plutôt performante, mais un coup de `/flyspeed 10` sur quelques miliers de blocs non-chargés et
-> ça peut vite réduire les performances ! 🔥
+Les chunks ont été préchargés en utilisant **Chunky**, ça nous permet de voir toute la [carte du monde sur une simple page Web](http://mp3.pixelfucker.com:8899/) !
+> De plus, ça permet d'éviter les latences, car faire un `/flyspeed 10` sur quelques miliers de blocs non-chargés,
+> bien que la machine soit plutôt performante, ça demande énormément de ressources ! 🔥
 
 <br/>
 

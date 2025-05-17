@@ -32,10 +32,15 @@ export const Pl3xmapWarps = ({ data }) => {
         );
     }
 
-    // Sort warps alphabetically
-    const sortedWarps = [...warps].sort((a, b) =>
-        a.options.tooltip.content.localeCompare(b.options.tooltip.content)
-    );
+    // Sort warps alphabetically (when starting with "_" it should be at the end of the list)
+    const sortedWarps = [...warps].sort((a, b) => {
+        const warpA = a.options.tooltip.content;
+        const warpB = b.options.tooltip.content;
+
+        if (warpA.startsWith('_') && !warpB.startsWith('_')) return 1;
+        if (!warpA.startsWith('_') && warpB.startsWith('_')) return -1;
+        return warpA.localeCompare(warpB);
+    });
 
     // Display warps in a table
     return (

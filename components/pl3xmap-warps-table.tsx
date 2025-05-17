@@ -32,12 +32,17 @@ export const Pl3xmapWarps = ({ data }) => {
         );
     }
 
+    // Sort warps alphabetically
+    const sortedWarps = [...warps].sort((a, b) =>
+        a.options.tooltip.content.localeCompare(b.options.tooltip.content)
+    );
+
     // Display warps in a table
     return (
         <CoordinatesTable data={
-            warps.map(warp => {
+            sortedWarps.map(warp => {
                 const { x, z } = warp.data.point;
-                return [warp.options.tooltip.content, `${x} ~ ${z}`]; // "~" is the current player "y"
+                return [warp.options.tooltip.content, `${x} ~ ${z}`];
             })
         } />
     );

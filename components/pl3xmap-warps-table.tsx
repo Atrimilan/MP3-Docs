@@ -37,8 +37,8 @@ export const Pl3xmapWarps = ({ data }) => {
         const warpA = a.options.tooltip.content;
         const warpB = b.options.tooltip.content;
 
-        if (warpA.startsWith('_') && !warpB.startsWith('_')) return 1;
-        if (!warpA.startsWith('_') && warpB.startsWith('_')) return -1;
+        if (warpA.startsWith('~') && !warpB.startsWith('~')) return 1;
+        if (!warpA.startsWith('~') && warpB.startsWith('~')) return -1;
         return warpA.localeCompare(warpB);
     });
 

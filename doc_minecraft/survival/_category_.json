@@ -1,0 +1,9 @@
+{
+  "label": "⛏️ Serveur Survie",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Informations utiles pour le serveur survie MP3",
+    "slug": "/survie"
+  }
+}

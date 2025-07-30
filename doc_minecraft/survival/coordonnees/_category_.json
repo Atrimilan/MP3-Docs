@@ -1,9 +1,9 @@
 {
-  "label": "Coordonnées",
+  "label": "Coordonnées du serveur",
   "position": 2,
   "link": {
     "type": "generated-index",
     "description": "Outils divers et informations utiles pour le serveur survie MP3",
-    "slug": "/coordonnees"
+    "slug": "/survie/coordonnees"
   }
 }

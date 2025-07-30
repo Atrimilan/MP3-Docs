@@ -1,0 +1,9 @@
+{
+  "label": "🎨 Serveur Créatif",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Informations utiles pour le serveur créatif MP3",
+    "slug": "/creatif"
+  }
+}

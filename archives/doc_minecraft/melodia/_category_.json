@@ -1,0 +1,9 @@
+{
+  "label": "Serveur moddé",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Informations utiles pour le serveur moddé MP3",
+    "slug": "/melodia"
+  }
+}

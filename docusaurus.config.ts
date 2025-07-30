@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Documentation du serveur MP3',
   favicon: 'img/favicon.ico',
   clientModules: [
-    './modules/archive-background.js' // Executed on each loaded page
+    './modules/route-based-background.js' // Executed on each loaded page
   ],
   // Set the production url of your site here
   url: 'http://mp3.pixelfucker.com',
@@ -34,8 +34,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          path: 'doc_survival',
-          routeBasePath: 'survie',
+          path: 'doc_minecraft',
+          routeBasePath: 'Minecraft',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -49,40 +49,31 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_creative',
-        path: 'doc_creative',
-        routeBasePath: 'creatif',
+        id: 'lethal_company',
+        path: 'doc_lethal_company',
+        routeBasePath: 'Lethal_Company',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: 'doc_archives',
+    //     path: 'doc_archives',
+    //     routeBasePath: 'archives',
+    //     sidebarPath: require.resolve('./sidebars.ts')
+    //   },
+    // ],
+    /********** ARCHIVES **********/
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'doc_archives',
-        path: 'doc_archives',
-        routeBasePath: 'archives',
+        id: 'minecraft_archives',
+        path: 'archives/doc_minecraft',
+        routeBasePath: 'archives/Minecraft',
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
-    /***** ARCHIVES *****/
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'doc_fallen_kingdom',
-        path: 'doc_fallen_kingdom',
-        routeBasePath: 'fallen_kingdom',
-        sidebarPath: require.resolve('./sidebars.ts')
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'doc_melodia',
-        path: 'doc_melodia',
-        routeBasePath: 'melodia',
-        sidebarPath: require.resolve('./sidebars.ts')
-      },
-    ]
   ],
 
   themeConfig: {
@@ -100,26 +91,25 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'sidebarId',
+          sidebarId: 'sidebarId', // This should match the sidebarId in sidebars.ts
           position: 'left',
-          label: 'Survie ⛏️'
+          label: 'Minecraft ⛏️'
         },
         {
-          to: '/creatif/rejoindre',
-          label: 'Créatif 🎨',
+          to: '/Lethal_Company',
+          label: 'Lethal Company ☢️',
           position: 'left'
         },
         {
-          to: '/archives/drehmal',
-          label: 'Archives 📦',
+          to: '/R.E.P.O.',
+          label: 'R.E.P.O. 👻',
           position: 'left'
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'sidebarId',
-        //   position: 'left',
-        //   label: 'Tech'
-        // },
+        {
+          to: '/games',
+          label: 'Autres jeux 🎮',
+          position: 'left'
+        },
         // { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/Atrimilan/',
@@ -132,7 +122,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Adresse du serveur',
+          title: 'Serveur Minecraft',
           items: [
             {
               label: 'mp3.pixelfucker.com',
@@ -165,13 +155,18 @@ const config: Config = {
               href: 'https://www.youtube.com/@Atrimilan',
             },
             {
-              label: 'Profil GitHub',
+              label: 'Page GitHub',
               href: 'https://github.com/Atrimilan/',
+            },
+            {
+              label: 'Profil LinkedIn',
+              href: 'https://www.linkedin.com/in/milan-nicolas/',
+              className: 'linkedin-link',
             },
           ],
         },
       ],
-      copyright: `<br>Multi Player 3 - Site réalisé avec Docusaurus`,
+      copyright: `© 2025 Milan NICOLAS`,
     },
     prism: {
       theme: prismThemes.github,

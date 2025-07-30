@@ -41,6 +41,10 @@
   }
 }
 
+.theme-layout-footer-column {
+  margin-left: 15px;
+}
+
 @import "./coordinates-table.scss";
 @import "./docs-table.scss";
 @import "./search-bar.scss";

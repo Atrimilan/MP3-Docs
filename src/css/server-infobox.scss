@@ -60,10 +60,10 @@
             top: 20px;
             right: 0px;
             .on {
-                color: #19fe8c;
+                color: var(--status-on);
             }
             .off {
-                color: #e64769;
+                color: var(--status-off);
             }
         }
 

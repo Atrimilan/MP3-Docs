@@ -45,6 +45,11 @@
   margin-left: 15px;
 }
 
+:root {
+  --status-on: #19fe8c;
+  --status-off: #e64769;
+}
+
 @import "./coordinates-table.scss";
 @import "./docs-table.scss";
 @import "./search-bar.scss";

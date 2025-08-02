@@ -1,4 +1,4 @@
-import { ServerStatus } from "./server-status";
+import { ServerStatus } from './server-status';
 import { ProxyStatus } from './proxy-status';
 
 export const Index = () => {

@@ -50,11 +50,7 @@ export const ProxyStatus = () => {
                     <span>Joueurs en ligne :&nbsp;</span>
                     {serverInfo ?
                         <span>{serverInfo.online_players}/{serverInfo.max_players}</span> :
-                        <Blocks
-                            height="30"
-                            width="30"
-                            visible={true}
-                        />
+                        <Blocks height="30" width="30" visible={true} />
                     }
                 </h2>
                 <div>

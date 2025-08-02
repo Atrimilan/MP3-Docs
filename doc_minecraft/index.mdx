@@ -6,42 +6,45 @@ description: Documentation des différents serveurs Minecraft du réseau MP3.
 slug: /
 ---
 
-# Rejoindre les serveurs Minecraft
+import { SimpleProxyStatus } from '/components/simple-proxy-status';
 
-Documentation des différents serveurs Minecraft du réseau MP3
+# Serveurs Minecraft MP3
 
+## I. Rejoindre
 
+Addresse du serveur MP3 : **`mp3.pixelfucker.com`**
 
-# Serveur Survie
+Sélectionnez la même version Minecraft que le serveur sur lequel vous souhaitez jouer :
+<SimpleProxyStatus />
 
-## I. Rejoindre le serveur
+Pour changer de serveur, exécuter <span className='gold-gradient-effect'>**`/server <nom>`**</span>
+ou simplement <span className='gold-gradient-effect'>**`/nom`**</span>, par exemple :
+* <span className='gold-gradient-effect'>**`/banane`**</span> pour rejoindre le serveur **Survie**
+* <span className='gold-gradient-effect'>**`/modellum`**</span> pour rejoindre le serveur **Créatif**
 
-Connectez-vous sur MP3 en `1.21.4` et exécutez <span className='mp3-gradient-effect'>**``/server Banane``**</span>
-ou <span className='mp3-gradient-effect'>**`/banane`**</span>.
+> Notez que la commande peut échouer si la version du serveur n'est pas compatible.
 
-:::info Whitelist
-Le serveur est sur whitelist, demandez-moi l'accès sur Discord. 😉
-:::
+## II. Outils et commandes
 
+import './tools.css';
 
-# Outils & commandes
-
-## Pseudo coloré
+<details className="accordion" id="colored-pseudo">
+<summary><h3>🎨 Pseudos colorés</h3></summary>
 
 Vous pouvez modifier la couleur de votre pseudo avec les commandes suivantes :
 
-* Mettre votre pseudo en couleur unie :
+* Appliquer une couleur unie sur votre pseudo :
     ```ps
     /nickcolor <color:#ff1199>
     ```
-    > La couleur est encodée en hexadécimal, précédée d'un `#`.
-* Mettre votre pseudo en dégradé :
+    > La couleur est encodée en hexadécimal, précédée d'un `#`
+* Appliquer un dégrader sur votre pseudo :
     ```ps
     /nickcolor <gradient:#ffb23b:#ff1376>
     ```
-    > Voici un générateur de dégradé : https://cssgradient.io/.<br/>
-    > Notez que vous pouvez ajouter davantage de couleurs, en les séparant par des `:`.
+    > Vous pouvez préciser davantage de couleurs, je vous conseil d'utiliser un générateur de dégradés : https://colordesigner.io/gradient-generator
 * Réinitialiser la couleur de votre pseudo :
     ```ps
     /nonick
     ```
+</details>

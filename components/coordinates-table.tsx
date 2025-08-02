@@ -27,7 +27,6 @@ export const CoordinatesTable = ({ data }) => {
     };
 
     const filteredData = data.filter(row =>
-        // This took me 30 seconds lol, thanks Mistral AI
         row[0].toLowerCase().includes(searchTerm.toLowerCase()) ||
         row[1].toLowerCase().includes(searchTerm.toLowerCase())
     );

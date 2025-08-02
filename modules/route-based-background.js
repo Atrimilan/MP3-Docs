@@ -5,10 +5,10 @@ export function onRouteDidUpdate({ location, previousLocation }) {
 
         // Pages that need a different background
         const pageConfigurations = {
-            '/creatif/': 'creative-page',
-            '/archives/': 'archive-page',
-            '/fallen_kingdom/': 'archive-page',
-            '/melodia/': 'archive-page'
+            '/archives/Minecraft': 'minecraft-archive-page',
+            '/Minecraft': 'minecraft-page',
+            '/Lethal_Company': 'lethal-company-page',
+            '/REPO': 'repo-page'
         };
 
         const mainWrapper = document.querySelector('.main-wrapper');

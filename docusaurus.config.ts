@@ -55,15 +55,24 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.ts')
       },
     ],
-    // [
-    //   '@docusaurus/plugin-content-docs',
-    //   {
-    //     id: 'doc_archives',
-    //     path: 'doc_archives',
-    //     routeBasePath: 'archives',
-    //     sidebarPath: require.resolve('./sidebars.ts')
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'repo',
+        path: 'doc_repo',
+        routeBasePath: 'REPO',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'games',
+        path: 'doc_games',
+        routeBasePath: 'games',
+        sidebarPath: require.resolve('./sidebars.ts')
+      },
+    ],
     /********** ARCHIVES **********/
     [
       '@docusaurus/plugin-content-docs',
@@ -101,7 +110,7 @@ const config: Config = {
           position: 'left'
         },
         {
-          to: '/R.E.P.O.',
+          to: '/REPO',
           label: 'R.E.P.O. 👻',
           position: 'left'
         },
@@ -151,22 +160,22 @@ const config: Config = {
           title: 'Atrimilan',
           items: [
             {
-              label: 'Chaîne Youtube',
+              label: 'Youtube',
               href: 'https://www.youtube.com/@Atrimilan',
             },
             {
-              label: 'Page GitHub',
+              label: 'GitHub',
               href: 'https://github.com/Atrimilan/',
             },
             {
-              label: 'Profil LinkedIn',
+              label: 'LinkedIn',
               href: 'https://www.linkedin.com/in/milan-nicolas/',
               className: 'linkedin-link',
             },
           ],
         },
       ],
-      copyright: `© 2025 Milan NICOLAS`,
+      copyright: `© 2025 Milan NICOLAS - Licence MIT`,
     },
     prism: {
       theme: prismThemes.github,

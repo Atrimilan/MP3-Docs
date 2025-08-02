@@ -1,23 +1,37 @@
 .main-wrapper {
     div > main,
     &:not(:has(> div)) {
-        background-image: url("/img/doc-bg.png");
+        background-image: url("/img/background/main-bg.png");
         z-index: 0;
         background-attachment: fixed;
         background-size: cover;
     }
 
-    &.archive-page {
+    &.minecraft-page {
         div > main,
         &:not(:has(> div)) {
-            background-image: url("/img/doc-bg-archive.png");
+            background-image: url("/img/background/minecraft-bg.png");
         }
     }
 
-    &.creative-page {
+    &.minecraft-archive-page {
         div > main,
         &:not(:has(> div)) {
-            background-image: url("/img/doc-bg-creative.png");
+            background-image: url("/img/background/minecraft-archive-bg.png");
+        }
+    }
+
+    &.lethal-company-page {
+        div > main,
+        &:not(:has(> div)) {
+            background-image: url("/img/background/lethal-company-bg.png");
+        }
+    }
+
+    &.repo-page {
+        div > main,
+        &:not(:has(> div)) {
+            background-image: url("/img/background/repo-bg.png");
         }
     }
 }

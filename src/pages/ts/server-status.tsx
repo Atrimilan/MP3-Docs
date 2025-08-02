@@ -13,7 +13,7 @@ const ServerBackgroundImage = ({ src, alt }) => {
     const [imgSrc, setImgSrc] = useState(src);
 
     const handleImageError = () => {
-        setImgSrc('/img/default-server-bg.png');
+        setImgSrc('/img/server_thumbnail/default-server-bg.png');
     };
 
     return <img src={imgSrc} alt={alt} onError={handleImageError} />;
@@ -37,7 +37,7 @@ export const ServerStatus = () => {
                 servers?.map((server, index) => (
                     <div key={server.id} className={`info-box ${index > 0 ? 'spaced' : ''}`}>
 
-                        <ServerBackgroundImage src={`/img/${server.id}.png`} alt="Photo du serveur" />
+                        <ServerBackgroundImage src={`/img/server_thumbnail/${server.id}.png`} alt="Photo du serveur" />
 
                         <div className="content">
 

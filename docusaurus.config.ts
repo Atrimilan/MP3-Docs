@@ -10,7 +10,7 @@ const config: Config = {
     './modules/route-based-background.js' // Executed on each loaded page
   ],
   // Set the production url of your site here
-  url: 'http://mp3.pixelfucker.com',
+  url: 'https://mp3.pixelfucker.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -135,7 +135,7 @@ const config: Config = {
           items: [
             {
               label: 'mp3.pixelfucker.com',
-              href: 'http://mp3.pixelfucker.com',
+              href: 'https://mp3.pixelfucker.com',
             },
           ],
         },

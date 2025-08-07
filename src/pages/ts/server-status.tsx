@@ -3,7 +3,7 @@ import WifiOffOutlinedIcon from '@mui/icons-material/WifiOffOutlined';
 import { useEffect, useState } from "react";
 
 const fetchStatus = () => {
-    return fetch("http://mp3.pixelfucker.com:3000/proxy-status", { method: "GET", redirect: "follow" })
+    return fetch("https://api.mp3.pixelfucker.com/proxy-status", { method: "GET", redirect: "follow" })
         .then((response) => response.json())
         .then((result) => result.data)
         .catch((error) => console.error(error));

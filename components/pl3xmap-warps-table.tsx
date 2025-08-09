@@ -3,7 +3,7 @@ import { CoordinatesTable } from './coordinates-table';
 import { Blocks } from 'react-loader-spinner';
 
 const fetchStatus = (server, world, file) => {
-    return fetch(`https://modellum.mp3.pixelfucker.com/pl3xmap/${server}/${world}/${file}`, { method: "GET", redirect: "follow" })
+    return fetch(`https://api.mp3.pixelfucker.com/pl3xmap/${server}/${world}/${file}`, { method: "GET", redirect: "follow" })
         .then((response) => response.json())
         .catch((error) => console.error(error));
 };

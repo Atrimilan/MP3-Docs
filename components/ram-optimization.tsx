@@ -33,12 +33,13 @@ export const MinecraftJvmFlags = () => {
                 <div style={{ display: "flex", alignItems: "center", width: "80%", gap: "2rem" }}>
                     {/* RAM slider */}
                     <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
-                        <label title="Ceci est une petite description"
-                            style={{ display: "flex", alignItems: "center", gap: "0.3rem", accentColor: "var(--ifm-color-primary)", flex: 1 }}>
+                        <label style={{ display: "flex", alignItems: "center", gap: "0.3rem", accentColor: "var(--ifm-color-primary)", flex: 1 }}>
                             <input type="range" min="2" max="10" step="0.5" value={ram} onChange={(e) => setRam(parseFloat(e.target.value))} style={{ flex: 1 }} />
-                            {ram} Go
+                            <span style={{ width: '4rem', display: "flex", alignItems: "center" }}>
+                                {ram} Go
+                                <InfoTooltip text={ramSliderTooltip} />
+                            </span>
                         </label>
-                        <InfoTooltip text={ramSliderTooltip} />
                     </div>
 
                     {/* JVM >= 21 toggle */}

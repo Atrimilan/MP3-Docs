@@ -27,37 +27,33 @@ export const MinecraftJvmFlags = () => {
 
     return (
         <div style={{ borderRadius: "8px", border: "1px solid var(--ifm-toc-border-color)", marginBottom: "1rem" }}>
-
-            {/* Header with inputs */}
+            {/* Header */}
             <div style={{ padding: "0.5rem", background: "var(--ifm-background-color)", borderTopLeftRadius: "8px", borderTopRightRadius: "8px", display: "flex" }}>
+                {/* Inputs */}
                 <div style={{ display: "flex", alignItems: "center", width: "80%", gap: "2rem" }}>
                     {/* RAM slider */}
-                    <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
-                        <label style={{ display: "flex", alignItems: "center", gap: "0.3rem", accentColor: "var(--ifm-color-primary)", flex: 1 }}>
-                            <input type="range" min="2" max="10" step="0.5" value={ram} onChange={(e) => setRam(parseFloat(e.target.value))} style={{ flex: 1 }} />
-                            <span style={{ width: '4rem', display: "flex", alignItems: "center" }}>
-                                {ram} Go
-                                <InfoTooltip text={ramSliderTooltip} />
-                            </span>
-                        </label>
+                    <div style={{ display: "flex", alignItems: "center", flex: 1, accentColor: "var(--ifm-color-primary)" }}>
+                        <input type="range" min="2" max="10" step="0.5" value={ram} onChange={(e) => setRam(parseFloat(e.target.value))} style={{ flex: 1 }} />
+                        <span style={{ whiteSpace: 'nowrap', width: '4rem', marginLeft: '0.5rem', display: "flex", alignItems: "center" }}>
+                            {ram} Go
+                            <InfoTooltip text={ramSliderTooltip} />
+                        </span>
                     </div>
 
                     {/* JVM >= 21 toggle */}
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <label style={{ display: "flex", alignItems: "center", gap: "0.3rem", accentColor: "var(--ifm-color-primary)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "2rem", accentColor: "var(--ifm-color-primary)" }}>
+                        <label style={{ display: "flex", alignItems: "center", accentColor: "var(--ifm-color-primary)" }}>
                             <input type="checkbox" checked={jvm21} onChange={(e) => setJvm21(e.target.checked)} />
-                            Java ≥ 21
+                            <span style={{ whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>Java ≥ 21</span>
+                            <InfoTooltip text={jvm21Tooltip} />
                         </label>
-                        <InfoTooltip text={jvm21Tooltip} />
-                    </div>
 
-                    {/* Always PreTouch toggle */}
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <label style={{ display: "flex", alignItems: "center", gap: "0.3rem", accentColor: "var(--ifm-color-primary)" }}>
+                        {/* Always PreTouch toggle */}
+                        <label style={{ display: "flex", alignItems: "center", accentColor: "var(--ifm-color-primary)" }}>
                             <input type="checkbox" checked={alwaysPreTouch} onChange={(e) => setAlwaysPreTouch(e.target.checked)} />
-                            RAM dédiée
+                            <span style={{ whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>RAM dédiée</span>
+                            <InfoTooltip text={alwaysPreTouchTooltip} />
                         </label>
-                        <InfoTooltip text={alwaysPreTouchTooltip} />
                     </div>
                 </div>
 

@@ -1,0 +1,55 @@
+---
+sidebar_position: 1
+title: Liste des jeux solo
+tags: [Jeu]
+description: Liste des jeux solo joués par les membres de MP3
+slug: /solo
+---
+
+import { GameInfo } from '/components/game-info';
+import { LinkButton } from '/components/link-button';
+
+Voici une liste non exhaustive de jeux solo auxquels les membres de MP3 jouent.
+
+{/* Some games below are not on Steam or Ubisoft, then we display them manually */}
+
+<GameInfo data={{ id : "255710" }} />
+<GameInfo data={{ id : "1091500" }} />
+
+<div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
+    <div style={{ flex: "0 0 200px" }}>
+        <a href="https://genshin.hoyoverse.com/" target="_blank">
+            <img alt="Genshin Impact thumbnail" src="https://fastcdn.hoyoverse.com/content-v2/plat/124031/5d2ba4371115d26de4c574b28311aed8_7030933762969526950.jpeg" />
+        </a>
+    </div>
+    <div>
+        <h3>Genshin Impact – <span className="mp3-gradient-effect">Gratuit</span></h3>
+        <LinkButton data={{ url: "https://genshin.hoyoverse.com/",  label: "Site officiel", isTransparent: true, targetBlank: true }} />
+    </div>
+</div>
+
+<GameInfo data={{ id : "322170" }} />
+
+<div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
+    <div style={{ flex: "0 0 200px" }}>
+        <a href="https://hsr.hoyoverse.com/" target="_blank">
+            <img alt="Honkai Star Rail thumbnail" src="https://fastcdn.hoyoverse.com/content-v2/hkrpg/127373/49c48419e93934e116d67a60bee4f26b_1682317202764340861.jpg" />
+        </a>
+    </div>
+    <div>
+        <h3>Honkai: Star Rail – <span className="mp3-gradient-effect">Gratuit</span></h3>
+        <LinkButton data={{ url: "https://hsr.hoyoverse.com/",  label: "Site officiel", isTransparent: true, targetBlank: true }} />
+    </div>
+</div>
+
+<div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
+    <div style={{ flex: "0 0 200px" }}>
+        <a href="https://zenless.hoyoverse.com/" target="_blank">
+            <img alt="Zenless Zone Zero thumbnail" src="https://fastcdn.hoyoverse.com/content-v2/plat/122905/5b53376af55b765dafcbda03b101b9e4_8385513241144283103.jpg" />
+        </a>
+    </div>
+    <div>
+        <h3>Zenless Zone Zero – <span className="mp3-gradient-effect">Gratuit</span></h3>
+        <LinkButton data={{ url: "https://zenless.hoyoverse.com/",  label: "Site officiel", isTransparent: true, targetBlank: true }} />
+    </div>
+</div>

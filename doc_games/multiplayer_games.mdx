@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+title: Liste des jeux multijoueurs
+tags: [Jeu]
+description: Liste des jeux multijoueurs joués par les membres de MP3
+slug: /
+---
+
+import { GameInfo, GamePlatform } from '/components/game-info';
+
+{/* Default game platform is STEAM */}
+{/* For UBISOFT, a list of UPlay game id is available here: https://github.com/Haoose/UPLAY_GAME_ID */}
+
+## I. Jeux principaux
+
+<GameInfo data={{ id : "2208570" }} />
+<GameInfo data={{ id : "2507950" }} />
+<GameInfo data={{ id : "3059070" }} />
+<GameInfo data={{ id : "359550", gamePlatform: GamePlatform.UBISOFT, overrideGameId: "635/0" }} />
+<GameInfo data={{ id : "1407200" }} />
+
+## II. Autres jeux
+
+<GameInfo data={{ id : "550" }} />
+<GameInfo data={{ id : "2853730" }} />
+<GameInfo data={{ id : "2231380", gamePlatform: GamePlatform.UBISOFT, overrideGameId: "11903/0" }} />

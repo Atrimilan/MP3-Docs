@@ -8,7 +8,8 @@ export function onRouteDidUpdate({ location, previousLocation }) {
             '/archives/Minecraft': 'minecraft-archive-page',
             '/Minecraft': 'minecraft-page',
             '/Lethal_Company': 'lethal-company-page',
-            '/REPO': 'repo-page'
+            '/REPO': 'repo-page',
+            '/games': 'games-page'
         };
 
         const mainWrapper = document.querySelector('.main-wrapper');

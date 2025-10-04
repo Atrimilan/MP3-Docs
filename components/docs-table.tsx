@@ -49,25 +49,25 @@ export const DocsTable = ({ data }) => {
                     {filteredData.map((row, index) => (
                         <tr key={index}>
                             <td>
-                                <a href={row[1]} target='_blank'
+                                <a href={row[1]} target='_blank' rel="noopener noreferrer"
                                     className={'link use-accordion-decoration' + (row[5] ? ' gold-gradient-effect' : '')}>
                                     {(row[5] ? "⭐ " : "") + row[0]}
                                 </a>
                             </td>
                             <td className='center-text'>
-                                <a href={row[4]} target='_blank'
+                                <a href={row[4]} target='_blank' rel="noopener noreferrer"
                                     className={'link wiki use-accordion-decoration' + (row[5] ? ' gold-gradient-effect' : '')}>
                                     {row[3]} {!!row[3] && <SearchRoundedIcon className='search-icon' />}
                                 </a>
                             </td>
                             <td className='center-text'>{row[2]}</td>
                             {/* <td>
-                                <a href={"https://modrinth.com/mods?q=" + row[0]} target='_blank'>
+                                <a href={"https://modrinth.com/mods?q=" + row[0]} target='_blank'  rel="noopener noreferrer">
                                     Modrinth
                                 </a>
                             </td>
                             <td>
-                                <a href={"https://www.curseforge.com/minecraft/mc-mods/search?search=" + row[0]} target='_blank'>
+                                <a href={"https://www.curseforge.com/minecraft/mc-mods/search?search=" + row[0]} target='_blank'  rel="noopener noreferrer">
                                     Curseforge
                                 </a>
                             </td> */}

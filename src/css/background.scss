@@ -34,4 +34,11 @@
             background-image: url("/img/background/repo-bg.png");
         }
     }
+
+    &.games-page {
+        div > main,
+        &:not(:has(> div)) {
+            background-image: url("/img/background/hive-bg.png");
+        }
+    }
 }

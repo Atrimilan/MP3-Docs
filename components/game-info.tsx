@@ -14,7 +14,17 @@ export const GamePlatform = {
     UBISOFT: { name: "Ubisoft", uriScheme: "uplay://launch/" },
 }
 
-export const GameInfo = ({ data }) => {
+function getGamePriceElement(gameInfo: any): JSX.Element {
+    if (gameInfo.is_free) {
+        return <span className="gold-gradient-effect">Gratuit</span>;
+    } else if (gameInfo.price_overview?.final_formatted !== "") {
+        const { final_formatted, discount_percent } = gameInfo.price_overview;
+        return <span className="mp3-gradient-effect">{final_formatted + (discount_percent > 0 ? ` (-${discount_percent}%)` : "")}</span>;
+    }
+    return <span>-,--€</span>;
+}
+
+export const GameInfoFromStore = ({ data }) => {
 
     const [gameInfo, setGameInfo] = useState(null);
 
@@ -26,18 +36,23 @@ export const GameInfo = ({ data }) => {
         <div>
             {gameInfo ?
                 <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
-                    <div style={{ flex: "0 0 200px" }}>
-                        <a href={`steam://store/${data.id}`}>
-                            <img alt={`${gameInfo.name} thumbnail`} src={gameInfo.header_image} />
+                    <div style={{ width: '200px', maxHeight: '120px', alignItems: 'center', justifyContent: 'center', display: 'flex', overflow: 'hidden' }}>
+                        <a
+                            href={`steam://store/${data.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center' }}
+                        >
+                            <img
+                                alt={`${gameInfo.name} thumbnail`}
+                                src={gameInfo.header_image}
+                                style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '100%' }}
+                                onDragStart={(e) => e.preventDefault()}
+                            />
                         </a>
                     </div>
                     <div>
-                        <h3>{gameInfo.name} – {gameInfo.is_free
-                            ? <span className="mp3-gradient-effect">Gratuit</span>
-                            : gameInfo.price_overview
-                                ? <span className="gold-gradient-effect">{gameInfo.price_overview.final_formatted}</span>
-                                : <span className="gold-gradient-effect">-,--€</span>}
-                        </h3>
+                        <h3 style={{ whiteSpace: 'nowrap' }}>{gameInfo.name} – {getGamePriceElement(gameInfo)}</h3>
 
                         {/* Start game */}
                         <LinkButton data={{
@@ -60,3 +75,32 @@ export const GameInfo = ({ data }) => {
         </div>
     );
 };
+
+/**
+ * Games not available on Steam or Ubisoft
+ */
+export const GameInfoManual = ({ data }) => {
+    return (
+        <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
+            <div style={{ width: '200px', height: '120px', alignItems: 'center', justifyContent: 'center', display: 'flex', overflow: 'hidden' }}>
+                <a
+                    href={data.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center' }}
+                >
+                    <img
+                        alt={data.name + " thumbnail"}
+                        src={data.thumbnail}
+                        style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '100%' }}
+                        onDragStart={(e) => e.preventDefault()}
+                    />
+                </a>
+            </div>
+            <div>
+                <h3 style={{ whiteSpace: 'nowrap' }}>{data.name} – <span className="gold-gradient-effect">Gratuit</span></h3>
+                <LinkButton data={{ url: data.url, label: "Site officiel", isTransparent: true, targetBlank: true }} />
+            </div>
+        </div>
+    );
+}

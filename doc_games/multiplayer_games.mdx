@@ -6,7 +6,7 @@ description: Liste des jeux multijoueurs joués par les membres de MP3
 slug: /
 ---
 
-import { GameInfoFromStore, GamePlatform } from '/components/game-info';
+import { GameInfoFromStore, GameInfoManually, GamePlatform, GamePriceToGet } from '/components/game-info';
 
 {/* Default game platform is STEAM */}
 {/* For UBISOFT, a list of UPlay game id is available here: https://github.com/Haoose/UPLAY_GAME_ID */}
@@ -17,6 +17,14 @@ Jeux multijoueurs principalement joués sur MP3 :
 
 <GameInfoFromStore data={{ id : "2208570" }} />
 <GameInfoFromStore data={{ id : "2507950" }} />
+<GameInfoFromStore data={{ id : "1966720" }} />
+<GameInfoManually data={{
+    name: "Minecraft",
+    url: "https://www.minecraft.net/", 
+    thumbnail: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_image1280w.jpg",
+    gamePriceToGet: GamePriceToGet.MINECRAFT
+}} />
+<GameInfoFromStore data={{ id : "3241660" }} />
 <GameInfoFromStore data={{ id : "3059070" }} />
 <GameInfoFromStore data={{ id : "359550", gamePlatform: GamePlatform.UBISOFT, overrideGameId: "635/0" }} />
 <GameInfoFromStore data={{ id : "1407200" }} />
@@ -25,5 +33,5 @@ Jeux multijoueurs principalement joués sur MP3 :
 Autres jeux multijoueurs plus rarement joués sur MP3 :
 
 <GameInfoFromStore data={{ id : "550" }} />
-<GameInfoFromStore data={{ id : "2853730" }} />
+<GameInfoFromStore data={{ id : "2853730", gamePlatform: GamePlatform.UBISOFT, overrideGameId: "1713/0" }} />
 <GameInfoFromStore data={{ id : "2231380", gamePlatform: GamePlatform.UBISOFT, overrideGameId: "11903/0" }} />

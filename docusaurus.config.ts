@@ -116,7 +116,7 @@ const config: Config = {
         },
         {
           to: '/games',
-          label: 'Autres jeux 🎮',
+          label: 'Bibliothèque de jeux 🎮',
           position: 'left'
         },
         // { to: '/blog', label: 'Blog', position: 'left' },

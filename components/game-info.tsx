@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Blocks } from "react-loader-spinner";
 import { LinkButton } from "./link-button";
 
+/**
+ * Fetch game info using MP3 API
+ */
 const fetchGameInfo = (id: string) => {
     return fetch(`https://api.mp3.pixelfucker.com/steam/${id}`, { method: "GET", redirect: "follow" })
         .then((response) => response.json())
@@ -14,18 +17,23 @@ export const GamePlatform = {
     UBISOFT: { name: "Ubisoft", uriScheme: "uplay://launch/" },
 }
 
-function getGamePriceElement(gameInfo: any): JSX.Element {
-    if (gameInfo.is_free) {
+/**
+ * Get JSX element of the game price
+ */
+function getGamePriceElement(free, price): JSX.Element {
+    if (free) {
         return <span className="gold-gradient-effect">Gratuit</span>;
-    } else if (gameInfo.price_overview?.final_formatted !== "") {
-        const { final_formatted, discount_percent } = gameInfo.price_overview;
+    } else if (price?.final_formatted !== "") {
+        const { final_formatted, discount_percent } = price;
         return <span className="mp3-gradient-effect">{final_formatted + (discount_percent > 0 ? ` (-${discount_percent}%)` : "")}</span>;
     }
     return <span>-,--€</span>;
 }
 
+/**
+ * Get JSX element of game info based on their fetched data
+ */
 export const GameInfoFromStore = ({ data }) => {
-
     const [gameInfo, setGameInfo] = useState(null);
 
     useEffect(() => {
@@ -52,7 +60,7 @@ export const GameInfoFromStore = ({ data }) => {
                         </a>
                     </div>
                     <div>
-                        <h3 style={{ whiteSpace: 'nowrap' }}>{gameInfo.name} – {getGamePriceElement(gameInfo)}</h3>
+                        <h3 style={{ whiteSpace: 'nowrap' }}>{gameInfo.name} – {getGamePriceElement(gameInfo.is_free, gameInfo.price_overview)}</h3>
 
                         {/* Start game */}
                         <LinkButton data={{
@@ -77,9 +85,37 @@ export const GameInfoFromStore = ({ data }) => {
 };
 
 /**
- * Games not available on Steam or Ubisoft
+ * For games not in stores, define a function to fetch the game price
  */
-export const GameInfoManual = ({ data }) => {
+export const GamePriceToGet = {
+    MINECRAFT: {
+        fetchPrice: async () => {
+            return await fetch(
+                "https://displaycatalog.mp.microsoft.com/v7/products?" + new URLSearchParams({ bigIds: "9NXP44L49SHJ", languages: "fr-fr", market: "fr", actionFilte: "purchase" }))
+                .then((response) => response.json())
+                .then((response) => response?.Products[0]?.DisplaySkuAvailabilities[0]?.Availabilities?.find(a => a.OrderManagementData?.Price?.ListPrice > 0)?.OrderManagementData?.Price?.ListPrice)
+                + "€";
+        }
+    },
+}
+
+/**
+ * Get JSX element of game info based on hardcoded data
+ */
+export const GameInfoManually = ({ data }) => {
+    const [priceElement, setPriceElement] = useState<JSX.Element>(<span>--,--€</span>);
+
+    // Define JSX element of the price
+    useEffect(() => {
+        if (data.gamePriceToGet?.fetchPrice) {
+            data.gamePriceToGet.fetchPrice().then((price) =>
+                setPriceElement(getGamePriceElement(false, { final_formatted: price, discount_percent: 0 }))
+            );
+        } else {
+            setPriceElement(getGamePriceElement(true, null));
+        }
+    }, [data.gamePriceToGet]);
+
     return (
         <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
             <div style={{ width: '200px', height: '120px', alignItems: 'center', justifyContent: 'center', display: 'flex', overflow: 'hidden' }}>
@@ -98,7 +134,7 @@ export const GameInfoManual = ({ data }) => {
                 </a>
             </div>
             <div>
-                <h3 style={{ whiteSpace: 'nowrap' }}>{data.name} – <span className="gold-gradient-effect">Gratuit</span></h3>
+                <h3 style={{ whiteSpace: 'nowrap' }}>{data.name} – {priceElement}</h3>
                 <LinkButton data={{ url: data.url, label: "Site officiel", isTransparent: true, targetBlank: true }} />
             </div>
         </div>

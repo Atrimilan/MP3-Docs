@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Permis de construire
+title: Règles & infos
 tags: [Datapacks, Mods, Plugins, Serveur]
 description: Détails importants pour construire sur le serveur
 slug: /creatif/construire
@@ -8,46 +8,40 @@ slug: /creatif/construire
 
 import IconExternalLink from '@theme/Icon/ExternalLink';
 
-# Permis de construire
+## I. Informations principales
 
-<p className='gold-gradient-effect' style={{ fontWeight: 'bold', fontSize: '18px' }}
->Cette page liste tous les outils disponibles et recommandés pour améliorer votre expérience de construction.</p>
+**Mondes :**
+* Monde créatif : **<span className='gold-gradient-effect'>`/world creatif`</span>** – Carte circulaire d'un rayon de `5000 blocs`, vous y êtes totalement libres.
+* Monde plat : **<span className='gold-gradient-effect'>`/world flatmap`</span>** – Carte `1000 × 1000 blocs` pour vos tests et vos copies.
 
-## I. Présentation
-
-Modellum est un serveur créatif mettant à disposition un terrain détaillé et immersif grâce à l'utilisation de datapacks, 
-surpassant les générations classiques de Minecraft vanilla.
-
-* **Monde créatif : <span className='gold-gradient-effect'>`/world creatif`</span>** – Carte circulaire d'un rayon de `5000 blocs`, vous y êtes totalement libres.
-* **Monde plat : <span className='gold-gradient-effect'>`/world flatmap`</span>** – Carte `1000 × 1000 blocs` pour vos tests et vos copies.
-
-## II. Configuration du serveur
-
+**Informations utiles :**
+* **Les commandes blocs sont autorisés**, mais il faut me demander pour être `/op` 😉
 * Le Nether, l'End et la génération de structures sont **désactivés**.
-
-* le serveur est en **difficulté paisible**, les mobs hostiles sont désactivés.
-
+* Le serveur est en **difficulté paisible**.
 * La distance d'affichage sur le serveur est de `20 chunks`.
 
-* J'ai ajouté des commandes personnalisées :
-    * `/cadre_invisible` : Obtenir un cadre invisible, et `/cadre_invisible_lumineux` pour qu'il soit lumineux.
-    * `/site` : Afficher un lien cliquable vers https://mp3.pixelfucker.com/Minecraft/creatif/rejoindre dans le chat.
-    * `/spawn` : Se téléporte au premier point d'apparition.
-    * `/night_vision` : Recevoir l'effet de vision nocturne, qui peut être retiré avec `/night_vision_clear`.
-    * `/debug_stick` : Obtenir un bâton de débogage.
+**Commandes :**
+* `/spawn` - Retourner au spawn
+* `/debug_stick` - Obtenir un bâton de débogage
+* `/cadre_invisible` - Obtenir un cadre invisible
+* `/cadre_invisible_lumineux` - Obtenir un cadre invisible lumineux
+* `/night_vision` - Recevoir l'effet de vision nocturne
+* `/night_vision_clear` - Retirer l'effet de vision nocturne
+* `/site` - Afficher un lien cliquable vers ce site
 
+**Configuration :**
 <div style={{marginLeft: '14px'}}>
     <details className="accordion" id="plugins">
     <summary><h3>🧩 Plugins disponibles</h3></summary>
 
     :::warning Utiliser Axiom
     Pour utiliser Axiom sur le serveur, vous devez installer le mod
-    [Axiom 1.21.4](https://modrinth.com/mod/axiom/versions?g=1.21.4) de votre côté,
-    qui requiert [Fabric 1.21.4](https://fabricmc.net/use/installer/).<br/>
+    [Axiom](https://modrinth.com/mod/axiom/versions?g=1.21.4) de votre côté,
+    qui requiert [Fabric](https://fabricmc.net/use/installer/).<br/>
     **Cependant Axiom n'est pas obligatoire pour rejoindre Modellum !**
     :::
 
-    | Plugin | Information |
+    | Plugin | Informations |
     |---|---|
     | [**Axiom&nbsp;Paper**](https://modrinth.com/plugin/axiom-paper-plugin) | Ce plugin permet l'utilisation du mod Axiom sur le serveur. [[Documentation<IconExternalLink/>](https://axiomdocs.moulberry.com/)] |
     | [**EssentialsX**](https://modrinth.com/plugin/essentialsx) | Plugin ajoutant de nombreuses commandes qui améliorent l'expérience de jeu, il s'agit des commandes que l'on retrouve sur la plupart des serveurs Minecraft. [[Liste des commandes<IconExternalLink/>](https://essinfo.xeya.me/commands.html)] |
@@ -58,10 +52,10 @@ surpassant les générations classiques de Minecraft vanilla.
 
     <details className="accordion" id="datapacks">
     <summary><h3>📦 Datapacks utilisés</h3></summary>
-    | Datapack | Information |
+    | Datapack | Informations |
     |---|---|
     | [**Terralith**](https://modrinth.com/datapack/terralith) | Améliore la génération du terrain et ajoute de nombreux biomes à partir des blocs de Minecraft vanilla. [[Documentation<IconExternalLink/>](https://stardustlabs.miraheze.org/wiki/Terralith)] |
-    | [**Geophilic**](https://modrinth.com/datapack/geophilic) | Retravail subtilement la génération des biomes vanilla, il n'impacte donc pas la génération des biomes de Terralith. [[Gallerie<IconExternalLink/>](https://modrinth.com/datapack/geophilic/gallery)] |
+    | [**Geophilic**](https://modrinth.com/datapack/geophilic) | Retravail subtilement la génération des biomes vanilla, il n'impacte donc pas la génération des biomes de Terralith. [[Galerie<IconExternalLink/>](https://modrinth.com/datapack/geophilic/gallery)] |
     | [**Biome&nbsp;Saplings**](https://modrinth.com/datapack/terralith-biome-saplings) | Permet de faire pousser les arbres customisés de Terralith en utilisant simplement de la poudre d'os.<br/> Pour faire pousser un arbre dans le style vanilla, il suffit de s'accroupir. |
     </details>
 
@@ -73,7 +67,7 @@ surpassant les générations classiques de Minecraft vanilla.
         <span>La gamerule `tntExplodes` n'est disponible qu'en `1.21.5`, je vous fais confiance pour ne pas tout faire exploser !</span>
     </p>
 
-    | Gamerule | Valeur | Information |
+    | Gamerule | Valeur | Informations |
     |---|---|---|
     | `announceAdvancements` | `false` | |
     | `disableElytraMovementCheck` | `true` | |
@@ -89,33 +83,21 @@ surpassant les générations classiques de Minecraft vanilla.
     | `doWeatherCycle ` | `false` | La météo ne change pas. Vous pouvez utiliser  `/pweather <type>` pour modifier votre météo, ou `/weather <type>` pour modifier celui du serveur. |
     | `mobGriefing` | `false` | |
     </details>
-
-    :::note Besoin de quelque chose d'autre ?
-    S'il vous manque des permissions, ou que vous souhaitez d'autres plugins pour construire, prévenez-moi et je m'en occuperai !
-
-    <p style={{display: 'flex', alignItems: 'center'}}>
-        <img src="https://minecraft.wiki/images/Invicon_Command_Block.gif" 
-        style={{maxHeight: '1.5em', paddingRight: '6px'}}/>
-        <span>**Les blocs de commande sont autorisés**, mais comme cela nécessite d'être `/op` il faut me demander l'accès. 😉</span>
-    </p>
-    :::
 </div>
 
-## III. Mods recommandés
-
-**Aucun mod n'est requis sur Modellum**, mais voici quelques suggestions pour [Fabric 1.21.4](https://fabricmc.net/use/installer/) :
+## II. Mods recommandés
 
 <details className="accordion" id="building-tools">
-<summary><h3>🏗️ Mods pour le build</h3></summary>
-| Plugin | Information |
+<summary><h3>🏗️ Pour le build</h3></summary>
+| Mod | Informations |
 |---|---|
 | [**Axiom**](https://modrinth.com/mod/axiom/versions?g=1.21.4&l=fabric) | Outil tout-en-un facilitant le terraforming, la construction de bâtiments, la création de structures organiques, etc. avec des outils de visuatlisation en temps réel.<br/> Il offre aussi des fonctionnalités pertinentes comme le noclip, le placement de blocs à distance, un sélecteur de blocs par couleur, etc. [[Documentation<IconExternalLink/>](https://axiomdocs.moulberry.com/)] |
 | [**Item&nbsp;Swapper**](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4&l=fabric) | Permet de changer rapidement l'item que vous tenez en main, en vous suggérant des items similaires.<br/> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/planktypes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/woodoptions.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/dyes.png" style={{ borderRadius: '10px', maxHeight: '150px'}} /> |
 </details>
 
 <details className="accordion" id="performance-mods">
-<summary><h3>⚡ Mods pour les performances</h3></summary>
-| Plugin | Information |
+<summary><h3>⚡ Pour les performances</h3></summary>
+| Mod | Informations |
 |---|---|
 | [**Sodium**](https://modrinth.com/mod/sodium/versions?g=1.21.4&l=fabric) | Améliore grandement les performances de Minecraft. |
 | [**Iris&nbsp;Shaders**](https://modrinth.com/mod/iris/versions?g=1.21.4&l=fabric)&nbsp;_(requiert&nbsp;Sodium)_ | Permet le chargement de shaders avec Sodium. Vous pouvez trouver des shaders sur [Modrinth](https://modrinth.com/shaders?v=1.21.4&s=downloads) ou sur [shaderLABS](https://shaderlabs.org/wiki/Shaderpacks). |
@@ -125,12 +107,12 @@ surpassant les générations classiques de Minecraft vanilla.
 | [**ModernFix**](https://modrinth.com/mod/modernfix/versions?g=1.21.4&l=fabric) | Améliore les performances du jeu et corrige de nombreux bugs. |
 </details>
 
-> Tous les mods sont autorisés, vous pouvez aussi utiliser [Mod&nbsp;Menu](https://modrinth.com/mod/modmenu/versions?g=1.21.4&l=fabric),
+> Notez qu'**aucun mod n'est requis sur Modellum**, et tous les autres mods sont autorisés : [Mod&nbsp;Menu](https://modrinth.com/mod/modmenu/versions?g=1.21.4&l=fabric),
 [Distant&nbsp;Horizons](https://modrinth.com/mod/distanthorizons/versions?g=1.21.4&l=fabric), [Xaero's&nbsp;Minimap](https://modrinth.com/mod/xaeros-minimap/versions?g=1.21.4&l=fabric),
-[3D&nbsp;Skin&nbsp;Layers](https://modrinth.com/mod/3dskinlayers/versions?g=1.21.4&l=fabric), [Zume](https://modrinth.com/mod/zume/versions?g=1.21.4&l=fabric), etc.<br/>
-Si vous préférez le modloader [Neoforge 1.21.4](https://projects.neoforged.net/neoforged/neoforge), c'est aussi possible.
+[3D&nbsp;Skin&nbsp;Layers](https://modrinth.com/mod/3dskinlayers/versions?g=1.21.4&l=fabric), [Zume](https://modrinth.com/mod/zume/versions?g=1.21.4&l=fabric), etc.
+Si vous préférez le modloader [Neoforge](https://projects.neoforged.net/neoforged/neoforge), c'est aussi possible.
 
-## IV. Détails techniques <span style={{fontSize: '15px'}}>pour les nerds ☝️🤓</span>
+## III. Détails techniques <span style={{fontSize: '15px'}}>pour les nerds ☝️🤓</span>
 
 <details className="accordion" id="technical-details">
 <summary><h3>🔧 Afficher les détails techniques</h3></summary>

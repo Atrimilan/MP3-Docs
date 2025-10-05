@@ -1,7 +1,7 @@
-import { ServerStatus } from './server-status';
-import { ProxyStatus } from './proxy-status';
+import ServerStatus from './server-status';
+import ProxyStatus from './proxy-status';
 
-export const Index = () => {
+export default function Index() {
 
     return (
         <div className="index">

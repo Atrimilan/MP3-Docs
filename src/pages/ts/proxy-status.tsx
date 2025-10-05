@@ -20,8 +20,7 @@ const fetchProxyStatus = () => {
         .catch((error) => console.error(error));
 };
 
-
-export const ProxyStatus = () => {
+export default function ProxyStatus() {
     const [serverInfo, setServerInfo] = useState(null);
 
     useEffect(() => {

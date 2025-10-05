@@ -21,8 +21,13 @@ const config: Config = {
   projectName: 'MP3-Docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+  
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr'],

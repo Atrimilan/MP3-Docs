@@ -19,7 +19,7 @@ const ServerBackgroundImage = ({ src, alt }) => {
     return <img src={imgSrc} alt={alt} onError={handleImageError} />;
 };
 
-export const ServerStatus = () => {
+export default function ServerStatus() {
     const [servers, setServers] = useState(null);
 
     useEffect(() => {

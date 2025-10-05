@@ -1,0 +1,90 @@
+---
+sidebar_position: 1
+title: Coordonnées du serveur
+tags: [Coordonnées, Tableau]
+description: Tableaux de coordonnées du serveur survie
+slug: /survie/coordonnees
+---
+
+import {CoordinatesTable} from '/components/coordinates-table';
+
+:::info Limites de l'Overworld
+Une bordure est définie dans l'Overworld, vous pouvez aller de `-5000` à `5000` (en X et en Z).
+:::
+
+<details className="accordion" id="main">
+<summary><h3>Coordonnées principales</h3></summary>
+<CoordinatesTable data={[
+    ['Village du nord (Base principale)', '200 -700'],
+    ['Ancient City (Warden)', '-1700 -49 1665'],
+    ['Entrée dans l\'Ancient City', '-1645 114 1634'],
+    ['Manoir', '-3700 -1000'],
+    ['Portail de l\'End (Stronghold)', '1300 1100'],
+    ['Spawner à zombies - 1', '468 -29 -360'],
+    ['Spawner à zombies - 2', '645 -41 -913'],
+    ['Temple de la Mer - 1', '200 4350'],
+    ['Temple de la Mer - 2', '830 -2930'],
+    ['Temple de la Mer - 3', '1700 -3800'],
+    ['Temple de la Mer - 4', '3660 -2570'],
+    ['Tour de pillagers', '1550 1200'],
+    ['Trial chambers', '1300 -28 -1000'],
+    ['Village du désert', '107 -4783'],
+]} />
+</details>
+
+<details className="accordion" id="bioms">
+<summary><h3>Liste des biomes</h3></summary>
+<CoordinatesTable data={[
+    ['Abîmes (Deep Dark)', '-1360 13 1485'],
+    ['Désert', '47 -3720'],
+    ['Désert (petit)', '800 -3900'],
+    ['Forêt de bouleau', '-834 69 -178'],
+    ['Forêt sombre (Dark Forest)', '-1670 -953'],
+    ['Forêt enneigée + Glace', '-1710 170 -4880'],
+    ['Île champignon (Mushroom Fields) - 1', '100 3600'],
+    ['Île champignon (Mushroom Fields) - 2', '150 -2900'],
+    ['Mangrove - 1', '425 -2150'],
+    ['Mangrove - 2', '862 -4422'],
+    ['Marais', '2100 -976'],
+    ['Mesa et Badlands (Terre cuite + Sable rouge)', '-124 -4570'],
+    ['Mesa (Terre cuite)', '-2900 4250'],
+    ['Neige (grand) + Glace au sud', '580 120 1620'],
+    ['Taïga', '-3300 62 1359'],
+]} />
+</details>
+
+<details className="accordion" id="nether">
+<summary><h3>Le Nether</h3></summary>
+<CoordinatesTable data={[
+    ['Portail vers le Village du nord (Base principale)', '50 -100'],
+    ['Forteresse du Nether - 1', '-150 67 -250'],
+    ['Forteresse du Nether - 2 (dans un biome Basalt)', '-400 68 -650'],
+]} />
+</details>
+
+<details className="accordion" id="end">
+<summary><h3>Dans l'End</h3></summary>
+{/* :::warning Attention
+Les coordonnées de l'End ne sont pas définitives, **en cas de réinitialisation elles seront retirées de ce tableau**.
+::: */}
+
+:::danger Attention
+**Les coordonnées de l'End ont été réinitialisées.** N'hésitez pas à partagez vos portails de sortie de l'End sur le Discord.
+:::
+
+<br/>
+
+<CoordinatesTable data={[
+    //['Sortie de l\'End - 1', '??? ??? ???'],
+]} />
+</details>
+
+<details className="accordion" id="misc">
+<summary><h3>Coordonnées diverses</h3></summary>
+<CoordinatesTable data={[
+    ['Grottes idéales pour construire un repère de pirates [Shiro]', '-530 -1500'],
+    ['Îles volantes avec bambou', '480 140 -2055'],
+    ['Trou au sommet d\'une montagne [Defroi]', '1439 116  1470'],
+    ['Village sur une belle montagne avec des Sakuras [Atrimilan]', '1200 -950'],
+]} />
+</details>

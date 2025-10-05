@@ -1,0 +1,53 @@
+.accordion {
+    /* Minecraft index */
+
+    &#colored-pseudo {
+        --accordion-decoration-color: #ffb7a6;
+    }
+
+    /* Minecraft survival coordinates */
+
+    &#main {
+        --accordion-decoration-color: #c0ff74;
+    }
+
+    &#bioms {
+        --accordion-decoration-color: #36d636;
+    }
+
+    &#nether {
+        --accordion-decoration-color: #ff6358;
+    }
+
+    &#end {
+        --accordion-decoration-color: #b68cff;
+    }
+
+    &#misc {
+        --accordion-decoration-color: #bec9f0;
+    }
+
+    /* Minecraft creative */
+
+    &#commands,
+    &#gamerules,
+    &#technical-details {
+        --accordion-decoration-color: #d6cee5;
+    }
+
+    &#datapacks {
+        --accordion-decoration-color: #ffc07c;
+    }
+
+    &#building-tools {
+        --accordion-decoration-color: #f33b57;
+    }
+
+    &#plugins {
+        --accordion-decoration-color: #a6e277;
+    }
+
+    &#performance-mods {
+        --accordion-decoration-color: #fb8b48;
+    }
+}

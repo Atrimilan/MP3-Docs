@@ -50,14 +50,15 @@
   --status-off: #e64769;
 }
 
+@import "./accordion-colors.scss";
+@import "./accordion-menu.scss";
+@import "./background.scss";
 @import "./coordinates-table.scss";
 @import "./docs-table.scss";
-@import "./search-bar.scss";
-@import "./background.scss";
-@import "./server-infobox.scss";
-@import "./index.scss";
 @import "./download-button.scss";
-@import "./accordion-menu.scss";
+@import "./index.scss";
+@import "./link-button.scss";
+@import "./search-bar.scss";
+@import "./server-infobox.scss";
 @import "./text-effects.scss";
 @import "./world-map-iframe.scss";
-@import "./link-button.scss";

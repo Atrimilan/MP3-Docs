@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const InfoTooltip = ({ text }) => {
+export default function InfoTooltip({ text }) {
     const [hover, setHover] = useState(false);
 
     return (

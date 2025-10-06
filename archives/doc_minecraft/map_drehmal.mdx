@@ -6,7 +6,7 @@ description: Installation des mods et du pack pour jouer sur le serveur Drehmal
 slug: /drehmal
 ---
 
-import { DownloadButton } from '/components/download-button';
+import DownloadButton from '/components/download-button';
 
 # Serveur Drehmal
 
@@ -17,14 +17,13 @@ Le serveur Drehmal a fermé, **mais vous pouvez toujours suivre cette documentat
 
 ## I. Télécharger le pack
 
-* Téléchargez le <DownloadButton data={{url: "https://drive.usercontent.google.com/download?id=1DfIqVMOAEAFs94kSylZ9lmRJqmEsPrkp&export=download&authuser=0&confirm=t", important: true}}/>
+* Téléchargez le <DownloadButton data={{url: "https://drive.usercontent.google.com/download?id=1DfIqVMOAEAFs94kSylZ9lmRJqmEsPrkp&export=download&authuser=0&confirm=t", important: true, targetBlank: true}}/>
   **Primordial Pack v2.2.1**
 * Déplacez le fichier dans `%appdata%/.minecraft/resourcepacks`.
 
 ## II. Installer les mods conseillés
 
 * Téléchargez <DownloadButton data={{url: "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe", important: true}}/> **Fabric** et installez la version **1.20.1**.<br/>
-  <img src="/img/tuto-fabric-installer-1-20-1.png" style={{ borderRadius: '10px', maxHeight: '230px'}} /><br/>
 * Augmentez la mémoire allouée au jeu en suivant la même procédure qu'ici : ~~[Allocation de mémoire vive](#)~~.
 
 

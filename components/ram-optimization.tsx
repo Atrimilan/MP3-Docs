@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded';
-import { InfoTooltip } from './info-tooltip';
+import InfoTooltip from './info-tooltip';
 
-export const MinecraftJvmFlags = () => {
+export default function MinecraftJvmFlags() {
     const [ram, setRam] = useState(4);
     const [jvm21, setJvm21] = useState(true);
     const [alwaysPreTouch, setAlwaysPreTouch] = useState(false);
@@ -12,8 +12,8 @@ export const MinecraftJvmFlags = () => {
     const ramMB = Math.round(ram * 1024); // Convert GB to MB
 
     const ramSliderTooltip = "Il est conseillé d'allouer au moins 4 Go de mémoire vive à Minecraft.";
-    const jvm21Tooltip = "⚠️ Désactivez cette option si vous utilisez une version de Java antérieure à 21.";
-    const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds. ⚠️ Elle est à éviter si vous disposez de peu de mémoire vive.";
+    const jvm21Tooltip = "⚠️ Si vous n'êtes pas sûr, ne cochez que si vous utilisez une version de Minecraft supérieure ou égale à la 1.20.5.";
+    const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds.\n⚠️ Cependant, elle est à éviter si vous disposez de peu de mémoire vive, ou si plusieurs autres applications sont en cours d'utilisation.";
 
     // Based on https://noflags.sh/
     const baseFlags = [

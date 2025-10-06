@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Blocks } from "react-loader-spinner";
-import { LinkButton } from "./link-button";
+import LinkButton from "./link-button";
 
 /**
  * Fetch game info using MP3 API

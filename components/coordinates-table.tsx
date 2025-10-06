@@ -5,7 +5,7 @@ import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 import { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-export const CoordinatesTable = ({ data }) => {
+export default function CoordinatesTable({ data }) {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [isPressed, setIsPressed] = useState({});

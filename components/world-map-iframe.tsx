@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Blocks } from 'react-loader-spinner';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 
-export const WorldMapIframe = ({ data }) => {
+export default function WorldMapIframe({ data }) {
     const [isLoading, setIsLoading] = useState(true);
 
     const handleLoad = () => {

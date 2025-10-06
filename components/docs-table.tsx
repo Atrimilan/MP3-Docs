@@ -3,7 +3,7 @@ import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { useState } from 'react';
 
-export const DocsTable = ({ data }) => {
+export default function DocsTable({ data }) {
 
     const [searchTerm, setSearchTerm] = useState('');
 

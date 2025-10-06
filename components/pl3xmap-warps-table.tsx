@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CoordinatesTable } from './coordinates-table';
+import CoordinatesTable from './coordinates-table';
 import { Blocks } from 'react-loader-spinner';
 
 const fetchStatus = (server, world, file) => {
@@ -8,7 +8,7 @@ const fetchStatus = (server, world, file) => {
         .catch((error) => console.error(error));
 };
 
-export const Pl3xmapWarps = ({ data }) => {
+export default function Pl3xmapWarps({ data }) {
     const [warps, setWarps] = useState(null);
     const { server, world, file } = data;
 

@@ -6,37 +6,32 @@ description: Mods et configurations Minecraft recommandées pour améliorer votr
 slug: /optimisation
 ---
 
-import { MinecraftJvmFlags } from '/components/ram-optimization';
-import { DownloadButton } from '/components/download-button';
+import MinecraftJvmFlags from '/components/ram-optimization';
+import DownloadFabricInstaller from '/components/download-fabric-installer';
+import DownloadButton from '/components/download-button';
 
-# Mods recommandés
+# Améliorer les performances de Minecraft
 
-## Arguments JVM
+## I. Configurer Java
 
 <MinecraftJvmFlags />
 
-## ----- WIP -----
+<details className="accordion" id="">
+<summary><h3>Où mettre cette configuration ?</h3></summary>
 
-:::warning 🏗️ Work In Progress
-Cette page est en cours de révision.
-:::
+Si vous utilisez le launcher officiel, vous pouvez configurer votre version de jeu ici :
+<img src="/img/optimization/edit-version-configuration.png" style={{ borderRadius: '10px' }} />
 
-Cette page vous explique comment optimiser votre jeu et améliorer votre expérience Minecraft à l'aide de mods Fabric. <br/>
-Suivez simplement la documentation ci-dessous pour tout configurer pas à pas ! ✨
+<br/>Dépliez le menu "Plus d'options" et remplacez tout le texte dans "Arguments JVM" comme suit :
+<img src="/img/optimization/edit-jvm-arguments.png" style={{ borderRadius: '10px' }} />
 
-:::info ⚡ Besoin d'aide ?
-Si vous avez besoin d'aide pour l'installation des mods, demandez-moi directement sur Discord 😉 !
-:::
+<br/>⚠️ Vous devez refaire ces étapes manuellement pour chaque version de jeu.
+</details>
 
-## I. Installation de Fabric
+## II. Utiliser des mods
 
-* Téléchargez <DownloadButton data={{url: "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.1/fabric-installer-1.0.1.exe", important: true}}/> [Fabric](https://fabricmc.net/use/installer/).
-* Démarrez l'installateur, et **installez la version `1.21`**.<br/>
-  <img src="/img/tuto-fabric-installer-1-21.png" style={{ borderRadius: '10px', maxHeight: '230px'}} /><br/>
+Téléchargez <DownloadFabricInstaller /> **[Fabric](https://fabricmc.net/use/installer/)**, installez la version Minecraft souhaitée et redémarrez votre launcher.
 
-Une nouvelle version de Minecraft est automatiquement créée et ajoutée à votre launcher.
-
-## II. Installation des mods
 
 Les mods suivants doivent être téléchargés pour la version `Fabric 1.21` (ou `1.21.x`) :
 * <DownloadButton data={{url: "https://cdn.modrinth.com/data/P7dR8mSH/versions/oGwyXeEI/fabric-api-0.102.0%2B1.21.jar", important: true}}/>
@@ -75,17 +70,3 @@ _Par exemple : [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/version
 
 **Vérifiez bien qu'il s'agit de mods pour `Fabric 1.21` (ou `1.21.x`).**
 :::
-
-## III. Allocation de mémoire vive
-
-Allouez davantage de mémoire RAM à votre jeu dans les paramètres du launcher.
-
-Voici les étapes avec le launcher Minecraft officiel :
-* Allez dans **Configuration**.
-* Survolez la version du jeu `fabric-loader-1.21`, cliquez sur les trois petits points puis sur **Modifier**.<br/>
-  <img src="/img/tuto-edit-configuration.png" style={{ borderRadius: '10px', maxHeight: '100px'}} /><br/>
-* Déroulez le menu **Plus d'options**.
-* Dans **Arguments JVM**, le premier paramètre `-Xmx2G` correspond à la mémoire allouée à votre jeu (ici 2 Go).
-  Selon la mémoire RAM dont vous disposez, vous pouvez mettre à 4 ou 5 Go, ou plus s'il s'agit d'une configuration pour un modpack lourd.<br/>
-  <img src="/img/tuto-edit-jvm-argument.png" style={{ borderRadius: '10px', maxHeight: '180px'}} /><br/>
-* Pensez à enregister.

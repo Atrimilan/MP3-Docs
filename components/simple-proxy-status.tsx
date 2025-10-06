@@ -10,7 +10,7 @@ const fetchStatus = () => {
         .catch((error) => console.error(error));
 };
 
-export const SimpleProxyStatus = () => {
+export default function SimpleProxyStatus() {
     const [servers, setServers] = useState(null);
 
     useEffect(() => {

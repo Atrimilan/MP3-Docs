@@ -1,8 +1,8 @@
 import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 
-export const DownloadButton = ({ data }) => {
+export default function DownloadButton({ data }) {
     return (
-        <a href={data.url} target='_blank' rel="noopener noreferrer" download className={data.important ? "important-download-button" : "download-button"}>
+        <a href={data.url} target={data.targetBlank ? '_blank' : '_self'} rel="noopener noreferrer" download className={data.important ? "important-download-button" : "download-button"}>
             <DownloadRoundedIcon className="download-icon" />
         </a>
     );

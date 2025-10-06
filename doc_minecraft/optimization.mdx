@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Optimiser le jeu
+title: Mods & optimisations
 tags: [Mods, Optimisation]
 description: Mods et configurations Minecraft recommandées pour améliorer votre expérience de jeu
 slug: /optimisation
@@ -9,64 +9,58 @@ slug: /optimisation
 import MinecraftJvmFlags from '/components/ram-optimization';
 import DownloadFabricInstaller from '/components/download-fabric-installer';
 import DownloadButton from '/components/download-button';
+import ModrinthDownloadList from '/components/modrinth-download-list';
 
-# Améliorer les performances de Minecraft
+# Améliorer l'expérience de jeu Minecraft
 
 ## I. Configurer Java
 
 <MinecraftJvmFlags />
 
-<details className="accordion" id="">
-<summary><h3>Où mettre cette configuration ?</h3></summary>
+<details className="accordion" id="jvm">
+<summary><h3>❓ Où mettre cette configuration ?</h3></summary>
 
-Si vous utilisez le launcher officiel, vous pouvez configurer votre version de jeu ici :
+Commencez par copier les paramètres ci-dessus en fonction de vos besoins.
+
+Ensuite, si vous utilisez le launcher officiel, vous pouvez configurer votre version de jeu ici :
 <img src="/img/optimization/edit-version-configuration.png" style={{ borderRadius: '10px' }} />
 
-<br/>Dépliez le menu "Plus d'options" et remplacez tout le texte dans "Arguments JVM" comme suit :
+<br/>Cliquez sur "Plus d'options" et remplacez **TOUT** le texte dans "Arguments JVM" avec vos paramètres, par exemple :
 <img src="/img/optimization/edit-jvm-arguments.png" style={{ borderRadius: '10px' }} />
 
-<br/>⚠️ Vous devez refaire ces étapes manuellement pour chaque version de jeu.
+<br/>**⚠️ Notez que vous devrez refaire ces étapes manuellement pour chaque version de Minecraft.**
 </details>
 
 ## II. Utiliser des mods
 
-Téléchargez <DownloadFabricInstaller /> **[Fabric](https://fabricmc.net/use/installer/)**, installez la version Minecraft souhaitée et redémarrez votre launcher.
+Téléchargez et installez <DownloadFabricInstaller /> **[Fabric](https://fabricmc.net/use/installer/)** pour la version de Minecraft souhaitée, puis redémarrez votre launcher.
 
+Choisissez une version, téléchargez les mods qui apparaissent et placez-les dans `%appdata%\.minecraft\mods` :
+<ModrinthDownloadList data={{
+  defaultLoader: "fabric",
+  projects: [
+    { name: "Fabric API", id: "P7dR8mSH", description: "Dépendance obligatoire", important: true },
+    { name: "Sodium", id: "AANobbMI", description: "Optimise et accélère le rendu" },
+    { name: "Iris Shaders", id: "YL57xq9U", description: "Permet d'utiliser des shaders (requiert Sodium)" },
+    { name: "LambDynamicLights", id: "yBW8D80W", description: "Ajoute de la lumière dynamique" },
+    { name: "Sodium Extra", id: "PtjYWJkn", description: "Addon pour Sodium" },
+    { name: "Lithium", id: "gvQqBUqZ", description: "Optimise la physique du jeu et des IA" },
+    { name: "FerriteCore", id: "uXXizFIs", description: "Réduit l'utilisation de la RAM" },
+    { name: "ModernFix", id: "nmDcB62a", description: "Réduit l'utilisation de la RAM" },
+    { name: "Entity Culling", id: "NNAgCjsB", description: "Optimise le rendu des entités" },
+    { name: "ImmediatelyFast", id: "5ZwdcRci", description: "Accélère le rendu" },
+    { name: "Mod Menu", id: "mOgUt4GM", description: "Permet de voir la liste des mods installés" },
+    { name: "Logical Zoom", id: "8bOImuGU", description: "Offre un zoom similaire à celui d'Optifine (pensez à changer la touche assignée)" },
+  ]
+}}/>
 
-Les mods suivants doivent être téléchargés pour la version `Fabric 1.21` (ou `1.21.x`) :
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/P7dR8mSH/versions/oGwyXeEI/fabric-api-0.102.0%2B1.21.jar", important: true}}/>
-  **[Fabric API](https://modrinth.com/mod/fabric-api/version/0.102.0+1.21) : Dépendance sans laquelle les autres mods ne peuvent pas fonctionner.**
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/AANobbMI/versions/RncWhTxD/sodium-fabric-0.5.11%2Bmc1.21.jar"}}/>
-  [Sodium](https://modrinth.com/mod/sodium/version/mc1.21-0.5.11) : Optimisation du jeu.
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NTZCh7rb/lithium-fabric-mc1.21-0.13.0.jar"}}/>
-  [Lithium](https://modrinth.com/mod/lithium/version/mc1.21-0.13.0) : Optimisation du jeu.
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/YL57xq9U/versions/kuOV4Ece/iris-1.7.3%2Bmc1.21.jar"}}/>
-  [Iris Shaders](https://modrinth.com/mod/iris/version/1.7.3+1.21) : Permet d'utiliser des shaders.
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/uCdwusMi/versions/NCz4yZ3v/DistantHorizons-2.1.2-a-1.21-neo-fabric.jar"}}/>
-  [Distant Horizons](https://modrinth.com/mod/distanthorizons/version/2.1.2-a-1.21) et
-  <DownloadButton data={{url: "https://cdn.modrinth.com/data/Orvt0mRa/versions/Z8VpxxGh/indium-1.0.35%2Bmc1.21.jar"}}/>
-  [Indium](https://modrinth.com/mod/indium/version/1.0.35+mc1.21) : Augmente **énormément** la distance d'affichage.
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/reCfnRvJ/versions/eFFsHtIr/RyoamicLights-fabric-0.2.11%2Bmc1.21.1.jar"}}/>
-  [RyoamicLights](https://modrinth.com/mod/ryoamiclights/version/0.2.11+mc1.21.1-fabric) et
-  <DownloadButton data={{url: "https://cdn.modrinth.com/data/E0L8mfJZ/versions/Yt9IWzuL/ObsidianUI-fabric-0.2.7%2Bmc1.21.jar"}}/>
-  [ObsidianUI](https://modrinth.com/mod/obsidianui/version/0.2.7+mc1.21-fabric) : Lumières dynamiques.
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/8bOImuGU/versions/pfmJF32p/logical_zoom-0.0.25.jar"}}/>
-  [Logical Zoom](https://modrinth.com/mod/logical-zoom/version/0.0.25) : Permet de zoomer comme avec **Optifine** (⚠️ la touche doit réassignée dans les contrôles du jeu).
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/mOgUt4GM/versions/3ib3Uvvv/modmenu-11.0.2.jar"}}/>
-  [Mod Menu](https://modrinth.com/mod/modmenu/version/11.0.2) : Permet de configurer tous les mods depuis le jeu.
+<details className="accordion" id="suggestions">
+<summary><h3>💡 Autre mods conseillés</h3></summary>
 
-Si vous possédez une Nvidia GTX 16xx, RTX 20xx ou plus récent, vous pouvez ajouter :
-* <DownloadButton data={{url: "https://cdn.modrinth.com/data/SfMw2IZN/versions/cl0HrTL6/nvidium-0.2.9-beta.jar"}}/>
-  [Nvidium](https://modrinth.com/mod/nvidium/version/0.2.9-beta) (**Sodium** est obligatoire).
-  > Notez que **Nvidium** se désactive automatiquement lorsque vous mettez un shader, car il n'est pas compatible avec **Iris Shaders**.
-  > Donc si vous ne désactivez jamais les shaders, vous n'avez pas besoin de **Nvidium**.
-
-Enfin, placez tout simplement tous les mods dans votre dossier `%appdata%\.minecraft\mods`.
-
-:::tip Autres mods optionnels
-D'autres mods optionnels peuvent être ajoutés selon vos préférence, n'hésitez pas à parcourir [Modrinth](https://modrinth.com/mods?g=categories:fabric&v=1.21&e=client) !<br/>
-_Par exemple : [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/version/24.3.0_Fabric_1.21), [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map/version/1.39.0_Fabric_1.21),
-[AmbientSounds](https://modrinth.com/mod/ambientsounds/version/TWIsleX6), etc._
-
-**Vérifiez bien qu'il s'agit de mods pour `Fabric 1.21` (ou `1.21.x`).**
-:::
+Vous pouvez utiliser d'autres mods si vous le souhaitez, par exemple :
+* [Distant Horizons](https://modrinth.com/mod/distanthorizons/) (qui nécessite [Indium](https://modrinth.com/mod/indium/)) pour augmenter votre distance d'affichage
+* [Nvidium](https://modrinth.com/mod/nvidium) pour gagner davantage de performances (si vous possédez une Nvidia GTX 16xx, RTX 20xx ou plus récent)
+* [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/) et [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map/)
+* [AmbientSounds](https://modrinth.com/mod/ambientsounds/)
+* etc.
+</details>

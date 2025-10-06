@@ -13,7 +13,7 @@ export default function MinecraftJvmFlags() {
 
     const ramSliderTooltip = "Il est conseillé d'allouer au moins 4 Go de mémoire vive à Minecraft.";
     const jvm21Tooltip = "⚠️ Si vous n'êtes pas sûr, ne cochez que si vous utilisez une version de Minecraft supérieure ou égale à la 1.20.5.";
-    const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds.\n⚠️ Cependant, elle est à éviter si vous disposez de peu de mémoire vive, ou si plusieurs autres applications sont en cours d'utilisation.";
+    const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds.\n⚠️ Cependant, elle est à éviter si vous disposez de peu de mémoire vive, ou si plusieurs autres logiciels sont en cours d'exécution.";
 
     // Based on https://noflags.sh/
     const baseFlags = [

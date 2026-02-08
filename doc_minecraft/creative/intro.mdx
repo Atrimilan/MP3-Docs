@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Rejoindre le serveur
+title: Intro & carte interactive
 tags: [Datapacks, Mods, Plugins, Serveur]
 description: Présentation du serveur créatif
 slug: /creatif/rejoindre
@@ -10,9 +10,6 @@ import WorldMapIframe from '/components/world-map-iframe';
 import DownloadButton from '/components/download-button';
 
 # Serveur Créatif
-
-Connectez-vous sur MP3 en `1.21.4` et exécutez <span className='mp3-gradient-effect'>**`/server Modellum`**</span>
-ou <span className='mp3-gradient-effect'>**`/modellum`**</span>.
 
 <WorldMapIframe data={{url: "https://modellum.mp3.pixelfucker.com/"}} />
 
@@ -25,35 +22,36 @@ ou <span className='mp3-gradient-effect'>**`/modellum`**</span>.
 * `/world creatif` - Rejoindre le monde principal
 
 #### Téléportation
-* `/warp`&nbsp; `/setwarp`&nbsp; `/delwarp` - Gérer les warps du serveur
-* `/home`&nbsp; `/sethome`&nbsp; `/delhome`&nbsp; `/renamehome` - Gérer vos homes personnels
-* `/tp` - Se téléporter à un joueur, ou à des coordonnées
-* `/back` - Retourner à votre dernière position
+* `/warp`&nbsp; `/setwarp`&nbsp; `/delwarp` - Gestion des warps du serveur
+* `/home`&nbsp; `/sethome`&nbsp; `/delhome`&nbsp; `/renamehome` - Gestion de vos homes
+* `/tp` - Téléportation classique (à un joueur ou à des coordonnées)
+* `/back` - Téléportation à la position précédente
 
 #### Temps
-* `/time` - Changer l'heure du serveur
-* `/ptime` - Changer votre heure uniquement
-* `/weather` - Changer la météo du serveur
-* `/pweather` - Changer votre météo uniquement
+* `/ptime`&nbsp; `/pweather` - Changer l'heure ou la météo personnelle (à privilégier)
+* `/time`&nbsp; `/weather` - Changer l'heure ou la météo du serveur
 
 #### Autres
-* `/speed`&nbsp; `/flyspeed`&nbsp; `/walkspeed` - Gérer votre vitesse de déplacement
-* `/sign` - Modifier le texte d'un panneau ([les couleurs sont disponibles 😉](https://essentialsx.net/wiki/Color-Permissions.html))
-* `/locate biome` - Retrouver un biome dans la carte
+* `/speed`&nbsp; `/flyspeed`&nbsp; `/walkspeed` - Gérer votre vitesse
+* `/night_vision`&nbsp; `/night_vision_clear` - Activer la vision nocturne
 * `/cadre_invisible`&nbsp; `/cadre_invisible_lumineux` - Obtenir un cadre invisible
-* `/night_vision`&nbsp; `/night_vision_clear` - Recevoir l'effet de vision nocturne
+* `/porte_armure` - Obtenir l'outil d'édition de porte-armures
+* `/light <0-15>` - Obtenir un bloc de lumière avec l'intensité spécifiée
+* `/sign` - Modifier le texte d'un panneau ([les couleurs sont disponibles 😉](https://essentialsx.net/wiki/Color-Permissions.html))
+* `/hdb` - Obtenir des têtes personnalisées
+* `/locate biome` - Trouver un biome dans le monde
 </details>
 
 <details className="accordion" id="building-tools">
-<summary><h3>🏗️ Plugins installés</h3></summary>
+<summary><h3>🏗️ Plugins de build</h3></summary>
 
 * Les plugins suivants sont installés :
+  * **Axiom** - [Documentation](https://axiomdocs.moulberry.com/) _(le [mod Axiom](https://modrinth.com/mod/axiom/versions?g=1.21.11&l=fabric) est requis pour être utilisé sur le serveur)_
   * **WorldEdit** - [Documentation](https://intellectualsites.gitbook.io/fastasyncworldedit)
   * **VoxelSniper** - [Documentation](https://intellectualsites.gitbook.io/fastasyncvoxelsniper)
-  * **Axiom** - [Documentation](https://axiomdocs.moulberry.com/) _(le [mode Axiom](https://modrinth.com/mod/axiom/versions?g=1.21.4&l=fabric) est requis pour être utilisé sur le serveur)_
 
-* Je recommande le [mode ItemSwapper](https://modrinth.com/plugin/itemswapper/versions?g=1.21.4&l=fabric) qui permet de changer rapidement l'item tenu en main :<br/>
-  <a href="https://modrinth.com/plugin/itemswapper/versions?g=1.21.4" style={{ display: "flex", gap: "1rem" }}>
+* Je recommande le [mode ItemSwapper](https://modrinth.com/plugin/itemswapper/versions?g=1.21.11&l=fabric) qui permet de changer rapidement l'item tenu en main :<br/>
+  <a href="https://modrinth.com/plugin/itemswapper/versions?g=1.21.11" style={{ display: "flex", gap: "1rem" }}>
     <img src="https://raw.githubusercontent.com/tr7zw/ItemSwapper/1.19/img/planktypes.png"
       alt="Exemple d'utilisation de ItemSwapper 1"
       style={{ borderRadius: '10px', maxHeight: '100px'}} />
@@ -83,6 +81,5 @@ ou <span className='mp3-gradient-effect'>**`/modellum`**</span>.
 <br/>
 
 :::tip Détails complémentaires
-Pour plus de détails sur le serveur et sur les outils que vous pouvez utiliser,
-consultez l'onglet [Règles & infos](/Minecraft/creatif/construire) ! 😄
+Pour plus de détails sur le serveur et sur les outils que vous pouvez utiliser, consultez l'onglet [Détails avancés](/Minecraft/creatif/construire) ! 😄
 :::

@@ -12,7 +12,7 @@ export default function MinecraftJvmFlags() {
     const ramMB = Math.round(ram * 1024); // Convert GB to MB
 
     const ramSliderTooltip = "Il est conseillé d'allouer au moins 4 Go de mémoire vive à Minecraft.";
-    const jvm21Tooltip = "⚠️ Si vous n'êtes pas sûr, ne cochez que si vous utilisez une version de Minecraft supérieure ou égale à la 1.20.5.";
+    const jvm21Tooltip = "A partir de la 1.20.5, Minecraft utilise Java 21.\n⚠️ A partir de Minecraft 26.1, le jeu utilisera probablement Java 25 et la configuration ci-dessous sera peut-être obsolète.";
     const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds.\n⚠️ Cependant, elle est à éviter si vous disposez de peu de mémoire vive, ou si plusieurs autres logiciels sont en cours d'exécution.";
 
     // Based on https://noflags.sh/
@@ -44,7 +44,7 @@ export default function MinecraftJvmFlags() {
                     <div style={{ display: "flex", alignItems: "center", gap: "2rem", accentColor: "var(--ifm-color-primary)" }}>
                         <label style={{ display: "flex", alignItems: "center", accentColor: "var(--ifm-color-primary)" }}>
                             <input type="checkbox" checked={jvm21} onChange={(e) => setJvm21(e.target.checked)} />
-                            <span style={{ whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>Java ≥ 21</span>
+                            <span style={{ whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>Minecraft ≥ 1.20.5</span>
                             <InfoTooltip text={jvm21Tooltip} />
                         </label>
 

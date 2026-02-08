@@ -1,6 +1,6 @@
 # MP3-Docs
 
-MP3 is a friends-only private Discord server. Since I created a private Minecraft server network, configured modpacks, etc., I wanted set up this French website for our common use, mainly related to Minecraft.
+MP3 is a friends-only private Discord server. Since I created a private Minecraft server network, configured modpacks, etc., I wanted to set up this French website for our common use, mainly related to Minecraft.
 
 You can't join us, but you can check out the source code of this [Docusaurus](https://docusaurus.io/) project if you find it useful.
 

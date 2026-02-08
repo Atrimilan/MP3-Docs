@@ -11,46 +11,30 @@ import DownloadFabricInstaller from '/components/download-fabric-installer';
 import DownloadButton from '/components/download-button';
 import ModrinthDownloadList from '/components/modrinth-download-list';
 
-# Améliorer l'expérience de jeu Minecraft
+# Mods importants pour Minecraft
 
-## I. Configurer Java
+## I. Installation
 
-<MinecraftJvmFlags />
+Installez <DownloadFabricInstaller /> **[Fabric](https://fabricmc.net/use/installer/)**, puis téléchargez les mods ci-dessous.
 
-<details className="accordion" id="jvm">
-<summary><h3>❓ Où mettre cette configuration ?</h3></summary>
+Placez les mods dans `%appdata%\.minecraft\mods`, redémarrez le launcher et lancez la version Fabric installée.
 
-Commencez par copier les paramètres ci-dessus en fonction de vos besoins.
-
-Ensuite, si vous utilisez le launcher officiel, vous pouvez configurer votre version de jeu ici :
-<img src="/img/optimization/edit-version-configuration.png" style={{ borderRadius: '10px' }} />
-
-<br/>Cliquez sur "Plus d'options" et remplacez **TOUT** le texte dans "Arguments JVM" avec vos paramètres, par exemple :
-<img src="/img/optimization/edit-jvm-arguments.png" style={{ borderRadius: '10px' }} />
-
-<br/>**⚠️ Notez que vous devrez refaire ces étapes manuellement pour chaque version de Minecraft.**
-</details>
-
-## II. Utiliser des mods
-
-Téléchargez et installez <DownloadFabricInstaller /> **[Fabric](https://fabricmc.net/use/installer/)** pour la version de Minecraft souhaitée, puis redémarrez votre launcher.
-
-Choisissez une version, téléchargez les mods qui apparaissent et placez-les dans `%appdata%\.minecraft\mods` :
 <ModrinthDownloadList data={{
   defaultLoader: "fabric",
   projects: [
     { name: "Fabric API", id: "P7dR8mSH", description: "Dépendance obligatoire", important: true },
-    { name: "Sodium", id: "AANobbMI", description: "Optimise et accélère le rendu" },
-    { name: "Iris Shaders", id: "YL57xq9U", description: "Permet d'utiliser des shaders (requiert Sodium)" },
-    { name: "LambDynamicLights", id: "yBW8D80W", description: "Ajoute de la lumière dynamique" },
+    { name: "Sodium", id: "AANobbMI", description: "Optimise le rendu", important: true },
+    { name: "Iris Shaders", id: "YL57xq9U", description: "Shaders (requiert Sodium)", important: true },
+    { name: "LambDynamicLights", id: "yBW8D80W", description: "Lumière dynamique" },
     { name: "Sodium Extra", id: "PtjYWJkn", description: "Addon pour Sodium" },
-    { name: "Lithium", id: "gvQqBUqZ", description: "Optimise la physique du jeu et des IA" },
-    { name: "FerriteCore", id: "uXXizFIs", description: "Réduit l'utilisation de la RAM" },
-    { name: "ModernFix", id: "nmDcB62a", description: "Réduit l'utilisation de la RAM" },
+    { name: "Lithium", id: "gvQqBUqZ", description: "Optimise la physique et les IA" },
+    { name: "FerriteCore", id: "uXXizFIs", description: "Optimise l'utilisation de la RAM" },
+    { name: "ModernFix", id: "nmDcB62a", description: "Optimise l'utilisation de la RAM" },
     { name: "Entity Culling", id: "NNAgCjsB", description: "Optimise le rendu des entités" },
-    { name: "ImmediatelyFast", id: "5ZwdcRci", description: "Accélère le rendu" },
-    { name: "Mod Menu", id: "mOgUt4GM", description: "Permet de voir la liste des mods installés" },
-    { name: "Logical Zoom", id: "8bOImuGU", description: "Offre un zoom similaire à celui d'Optifine (pensez à changer la touche assignée)" },
+    { name: "ImmediatelyFast", id: "5ZwdcRci", description: "Optimise le rendu" },
+    { name: "Mod Menu", id: "mOgUt4GM", description: "Liste les mods installés" },
+    { name: "WI Zoom", id: "o7DitHWP", description: "Zoom (pensez à changer la touche)" },
+    { name: "Not Enough Crashes", id: "yM94ont6", description: "Garde le jeu ouvert en cas de crash" },
   ]
 }}/>
 
@@ -58,9 +42,28 @@ Choisissez une version, téléchargez les mods qui apparaissent et placez-les da
 <summary><h3>💡 Autre mods conseillés</h3></summary>
 
 Vous pouvez utiliser d'autres mods si vous le souhaitez, par exemple :
-* [Distant Horizons](https://modrinth.com/mod/distanthorizons/) (qui nécessite [Indium](https://modrinth.com/mod/indium/)) pour augmenter votre distance d'affichage
-* [Nvidium](https://modrinth.com/mod/nvidium) pour gagner davantage de performances (si vous possédez une Nvidia GTX 16xx, RTX 20xx ou plus récent)
+* [Distant Horizons](https://modrinth.com/mod/distanthorizons/) (nécessite [Indium](https://modrinth.com/mod/indium/)), pour augmenter votre distance d'affichage
+* [Voxy](https://modrinth.com/mod/voxy/), une altenative récente à Distant Horizons
+* [Nvidium](https://modrinth.com/mod/nvidium) pour gagner davantage de performances (nécessite un GPU Nvidia GTX 16xx, RTX 20xx, ou plus récent)
 * [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap/) et [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map/)
-* [AmbientSounds](https://modrinth.com/mod/ambientsounds/)
 * etc.
+</details>
+
+
+## II. Configuration Java
+
+<MinecraftJvmFlags />
+
+<details className="accordion" id="jvm">
+<summary><h3>❓ Où mettre cette configuration ?</h3></summary>
+
+Premièrement, copiez le texte généré ci-dessus.
+
+Ensuite, si vous utilisez le launcher officiel, vous pouvez configurer votre version de jeu ici :
+<img src="/img/optimization/edit-version-configuration.png" style={{ borderRadius: '10px' }} />
+
+<br/>Cliquez sur "Plus d'options" et remplacez **TOUT** le texte dans "Arguments JVM" avec vos paramètres :
+<img src="/img/optimization/edit-jvm-arguments.png" style={{ borderRadius: '10px' }} />
+
+<br/>**⚠️ Notez que vous devrez refaire ces étapes manuellement pour chaque version de Minecraft.**
 </details>

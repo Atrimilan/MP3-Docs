@@ -58,7 +58,7 @@ export default function ModrinthDownloadList({ data }) {
         let versionParam = params.get("version");
 
         if (!versionParam) {
-            versionParam = "1.21.8";
+            versionParam = "1.21.11";
             params.set("version", versionParam);
             history.replace({ search: params.toString() });
         }
@@ -124,7 +124,7 @@ export default function ModrinthDownloadList({ data }) {
                     padding: "0.4rem 1rem",
                     borderRadius: "8px 0 0 8px",
                     backgroundColor: "var(--ifm-background-color)"
-                }}>Sélectionnez une version Minecraft :</p>
+                }}>Sélectionnez votre version Minecraft :</p>
                 <select
                     value={selectedVersion}
                     onChange={handleVersionChange}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory, useLocation } from "@docusaurus/router";
 import DownloadButton from "./download-button";
+import IconExternalLink from '@theme/Icon/ExternalLink';
 
 const fetchFabricVersions = async () => {
     try {
@@ -41,7 +42,7 @@ export default function ModrinthDownloadList({ data }) {
     /**
      * Change the selected version and update the "version" query param
      */
-    const handleVersionChange = (e) => {
+    const handleVersionChange = (e: any) => {
         e?.preventDefault();
         setSelectedVersion(e.target.value);
 
@@ -85,16 +86,17 @@ export default function ModrinthDownloadList({ data }) {
         setUnavailableProjects(0);
 
         if (projects.length > 0 && selectedVersion) {
-            projects.forEach(async (project) => {
+            projects.forEach(async (project: any) => {
                 const result = await fetchModrinthApi(project.id, `?loaders=${loader}&game_versions=${version}`); // Could also add &version_type=release
-                
+
                 if (cancelled) return;
-                
+
                 if (result && result.length > 0 && result[0].files?.length > 0) {
                     setProjectsData((prev) => ({
                         ...prev,
                         [project.id]: {
                             url: result[0].files[0].url,
+                            filename: result[0].files[0].filename,
                             important: project.important === true
                         },
                     }));
@@ -103,10 +105,10 @@ export default function ModrinthDownloadList({ data }) {
                 }
             });
         }
-        return () => { cancelled = true }; // Cancel fetch if selecteVersion has changed
+        return () => { cancelled = true }; // Cancel fetch if selectedVersion has changed
     }, [projects, selectedVersion]);
 
-    const availableProjects = projects.filter((p) => projectsData[p.id]);
+    const availableProjects = projects.filter((p: any) => projectsData[p.id]);
 
     return (
         <>
@@ -153,11 +155,21 @@ export default function ModrinthDownloadList({ data }) {
                                     <li key={id}>
                                         <DownloadButton data={{ url: projectsData[id]?.url, important: projectsData[id]?.important }} />
                                         {" "}
+                                        <a href={projectsData[id]?.url}
+                                            target="_self"
+                                            style={{ fontWeight: projectsData[id]?.important ? "bold" : "" }}
+                                            title={`Télécharger ${projectsData[id]?.filename}`}
+                                            aria-label={`Télécharger ${projectsData[id]?.filename}`}>
+                                            {name}
+                                        </a>
+                                        {" "}
                                         <a href={`https://modrinth.com/project/${id}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            style={{ fontWeight: projectsData[id]?.important ? "bold" : "" }} >
-                                            {name}
+                                            style={{ fontWeight: projectsData[id]?.important ? "bold" : "" }}
+                                            title={`Voir ${name} sur Modrinth`}
+                                            aria-label={`Voir ${name} sur Modrinth`}>
+                                            <IconExternalLink />
                                         </a>
                                         {" - "}
                                         {description}

@@ -126,7 +126,7 @@ const config: Config = {
         },
         // { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/Atrimilan/',
+          href: 'https://github.com/Atrimilan/MP3-Docs',
           label: 'GitHub',
           position: 'right',
         },

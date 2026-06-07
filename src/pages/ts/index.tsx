@@ -9,24 +9,26 @@ const fetchStatus = () => {
         .catch((error) => console.error(error));
 };
 
-const ServerBackgroundImage = ({ src, alt }) => {
-    const [imgSrc, setImgSrc] = useState(src);
+const ServerBackgroundImage = ({ src, alt }: { src: string; alt?: string }) => {
+    const [imgSrc, setImgSrc] = useState<string>(src);
     const handleImageError = () => setImgSrc('/img/server_thumbnail/default-server-bg.png');
     return <img src={imgSrc} alt={alt} onError={handleImageError} />;
 };
 
+type OnlinePlayers = { online: number; max: number; playerNames: string[] } | null;
+
 export default function Index() {
-    const [onlinePlayers, setOnlinePlayers] = useState(null);
-    const [servers, setServers] = useState(null);
+    const [onlinePlayers, setOnlinePlayers] = useState<OnlinePlayers>(null);
+    const [servers, setServers] = useState<any[] | null>(null);
 
     useEffect(() => {
         fetchStatus().then(data => {
-            const online = data?.reduce((acc, item) => acc + item.online, 0) || 0;
-            const max = data?.reduce((acc, item) => acc + item.max, 0) || 0;
+            const online = data?.reduce((acc: any, item: any) => acc + item.online, 0) || 0;
+            const max = data?.reduce((acc: any, item: any) => acc + item.max, 0) || 0;
             
-            const playerNames = data?.map(item => item.players)
-                .filter(str => str !== 'False')
-                .map(str => JSON.parse(str.replace(/'/g, '"')))
+            const playerNames = data?.map((item: any) => item.players)
+                .filter((str: string) => str !== 'False')
+                .map((str: string) => JSON.parse(str.replace(/'/g, '"')))
                 .flat().sort();
 
             setServers(data)

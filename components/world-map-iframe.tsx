@@ -28,7 +28,7 @@ export default function WorldMapIframe({ data }) {
             />
             {!isLoading && (
                 // Custom button over the iframe to open the map in a new tab
-                <div className="new-tab-link">
+                <div className="new-tab-link bottom">
                     <a href={data.url} target="_blank" rel="noopener noreferrer">
                         <span>Ouvrir dans un nouvel onglet</span><IconExternalLink />
                     </a>

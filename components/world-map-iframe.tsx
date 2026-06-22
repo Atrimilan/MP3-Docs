@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Blocks } from 'react-loader-spinner';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 
 export default function WorldMapIframe({ data }) {
     const [isLoading, setIsLoading] = useState(true);
 
-    const handleLoad = () => {
-        setIsLoading(false);
-    };
+    useEffect(() => {
+        setIsLoading(true);
+    }, [data.url]);
 
     return (
         <div className="iframe-container" style={{ position: 'relative' }}>
@@ -17,7 +17,10 @@ export default function WorldMapIframe({ data }) {
                 </div>
             )}
             <iframe
-                onLoad={handleLoad} // Display the loader until the iframe is fully loaded
+                key={data.url}
+                onLoad={() => {
+                    setIsLoading(false); // Display the loader until the iframe is fully loaded
+                }}
                 className='world-map-iframe'
                 src={data.url}
                 title="World Map"

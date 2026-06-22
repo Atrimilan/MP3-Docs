@@ -6,8 +6,11 @@ description: Carte du serveur Litchi
 slug: /survie-modpack/carte
 ---
 
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import WorldMapIframe from '/components/world-map-iframe';
 
 # Carte du serveur Litchi
 
-<WorldMapIframe data={{url: "https://map.litchi.mp3.pixelfucker.com/", height:'60vh' }} />
+<BrowserOnly>
+  {() => <WorldMapIframe data={{url: "https://map.litchi.mp3.pixelfucker.com/", height:'60vh' }} />}
+</BrowserOnly>

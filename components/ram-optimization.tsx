@@ -3,23 +3,55 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded';
 import InfoTooltip from './info-tooltip';
 
+export const MINECRAFT_JVM_PROFILES = {
+    FROM_26_1: {
+        id: "from-26.1",
+        label: "Minecraft ≥ 26.1",
+        flags: "-XX:+UseZGC -XX:+UseCompactObjectHeaders"
+    },
+    FROM_1_20_5_TO_1_21_11: {
+        id: "from-1.20.5-to-1.21.11",
+        label: "Minecraft 1.20.5 - 1.21.11",
+        flags: "-XX:+UseZGC -XX:+ZGenerational"
+    },
+    TO_1_20_4: {
+        id: "to-1.20.4",
+        label: "Minecraft ≤ 1.20.4",
+        flags: "-XX:+UseShenandoahGC"
+    }
+} as const;
+
+export type MinecraftJvmProfileId = typeof MINECRAFT_JVM_PROFILES[keyof typeof MINECRAFT_JVM_PROFILES]["id"];
+
 export default function MinecraftJvmFlags() {
     const [ram, setRam] = useState(4);
-    const [jvm21, setJvm21] = useState(true);
+    const [selectedProfileId, setSelectedProfileId] = useState<MinecraftJvmProfileId>(MINECRAFT_JVM_PROFILES.FROM_1_20_5_TO_1_21_11.id);
     const [alwaysPreTouch, setAlwaysPreTouch] = useState(false);
     const [isCopyPressed, setIsCopyPressed] = useState(false);
 
     const ramMB = Math.round(ram * 1024); // Convert GB to MB
 
     const ramSliderTooltip = "Il est conseillé d'allouer au moins 4 Go de mémoire vive à Minecraft.";
-    const jvm21Tooltip = "A partir de la 1.20.5, Minecraft utilise Java 21.\n⚠️ A partir de Minecraft 26.1, le jeu utilisera probablement Java 25 et la configuration ci-dessous sera peut-être obsolète.";
+    const minecraftProfileTooltip = "Sélectionnez la tranche de versions Minecraft pour obtenir la configuration JVM associée.";
     const alwaysPreTouchTooltip = "Cette option peut être légèrement bénéfique pour les modpacks lourds.\n⚠️ Cependant, elle est à éviter si vous disposez de peu de mémoire vive, ou si plusieurs autres logiciels sont en cours d'exécution.";
 
-    // Based on https://noflags.sh/
+    const selectedProfileConfig = Object.values(MINECRAFT_JVM_PROFILES).find(p => p.id === selectedProfileId)!;
+
+    const isMinecraftJvmProfile = (value: string): value is MinecraftJvmProfileId => {
+        return Object.values(MINECRAFT_JVM_PROFILES).some(profile => profile.id === value);
+    };
+
+    const handleProfileChange = (value: string) => {
+        if (isMinecraftJvmProfile(value)) {
+            setSelectedProfileId(value);
+        }
+    };
+
+    // Based on https://exa.y2k.diy/garden/jvm-args/
     const baseFlags = [
-        `-Xms${ramMB}M`,
+        `-Xms2048M`,
         `-Xmx${ramMB}M`,
-        ...(jvm21 ? ["-XX:+UseZGC", "-XX:+ZGenerational"] : ["-XX:+UseShenandoahGC"]),
+        selectedProfileConfig.flags,
         alwaysPreTouch ? "-XX:+AlwaysPreTouch" : null
     ].filter(Boolean); // Remove any null values
 
@@ -40,12 +72,28 @@ export default function MinecraftJvmFlags() {
                         </span>
                     </div>
 
-                    {/* JVM >= 21 toggle */}
+                    {/* Minecraft version selector */}
                     <div style={{ display: "flex", alignItems: "center", gap: "2rem", accentColor: "var(--ifm-color-primary)" }}>
                         <label style={{ display: "flex", alignItems: "center", accentColor: "var(--ifm-color-primary)" }}>
-                            <input type="checkbox" checked={jvm21} onChange={(e) => setJvm21(e.target.checked)} />
-                            <span style={{ whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>Minecraft ≥ 1.20.5</span>
-                            <InfoTooltip text={jvm21Tooltip} />
+                            <select
+                                value={selectedProfileId}
+                                onChange={(e) => handleProfileChange(e.target.value)}
+                                style={{
+                                    borderRadius: "6px",
+                                    border: "1px solid var(--ifm-color-emphasis-300)",
+                                    backgroundColor: "var(--ifm-background-surface-color)",
+                                    color: "var(--ifm-font-color-base)",
+                                    font: "inherit",
+                                    padding: "0.3rem 0.6rem"
+                                }}
+                            >
+                                {Object.values(MINECRAFT_JVM_PROFILES).map((profile) => (
+                                    <option key={profile.id} value={profile.id}>
+                                        {profile.label}
+                                    </option>
+                                ))}
+                            </select>
+                            <InfoTooltip text={minecraftProfileTooltip} />
                         </label>
 
                         {/* Always PreTouch toggle */}
